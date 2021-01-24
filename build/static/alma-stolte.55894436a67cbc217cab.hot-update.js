@@ -1,0 +1,17 @@
+webpackHotUpdate("alma-stolte",{
+
+/***/ "./packages/alma-stolte-theme/src/BackgroundImage.js":
+/*!***********************************************************!*\
+  !*** ./packages/alma-stolte-theme/src/BackgroundImage.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/packages/alma-stolte-theme/src/BackgroundImage.js: Unexpected token, expected \\\"}\\\" (31:4)\\n\\n\\u001b[0m \\u001b[90m 29 | \\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 30 | \\u001b[39m\\u001b[32mconst BackgroundImageStyle = styled.div`\\u001b[39m\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 31 | \\u001b[39m    background\\u001b[33m-\\u001b[39mimage\\u001b[33m:\\u001b[39m url(${almaBackground})\\u001b[33m;\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m    | \\u001b[39m    \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 32 | \\u001b[39m    max\\u001b[33m-\\u001b[39mwidth\\u001b[33m:\\u001b[39m \\u001b[35m100\\u001b[39m\\u001b[33m%\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 33 | \\u001b[39m    height\\u001b[33m:\\u001b[39m auto\\u001b[33m;\\u001b[39m \\u001b[0m\\n\\u001b[0m \\u001b[90m 34 | \\u001b[39m\\u001b[32m`;\\u001b[39m\\u001b[0m\\n    at Object._raise (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:60:45)\\n    at Object.raiseWithData (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:55:17)\\n    at Object.raise (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:39:17)\\n    at Object.unexpected (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/util.js:139:16)\\n    at Object.expect (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/util.js:116:28)\\n    at Object.jsxParseExpressionContainer (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:365:12)\\n    at Object.jsxParseAttributeValue (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:299:23)\\n    at Object.jsxParseAttribute (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:381:43)\\n    at Object.jsxParseOpeningElementAfterName (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:405:30)\\n    at Object.jsxParseOpeningElementAt (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:397:19)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3BhY2thZ2VzL2FsbWEtc3RvbHRlLXRoZW1lL3NyYy9CYWNrZ3JvdW5kSW1hZ2UuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./packages/alma-stolte-theme/src/BackgroundImage.js\n");
+
+/***/ }),
+
+/***/ "./packages/alma-stolte-theme/src/assets/images/almaBackground.jpg":
+false
+
+})

@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "7679eac179d70b48ec74",
+  "hash": "f3b4ab708d71ad9dac0e",
   "publicPath": "/static/",
-  "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/alma-stolte/build/static",
+  "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+      "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "7b1f750b8ad9a3b7a845.hot-update.json",
+      "name": "48d7b70ff4a6f5fe644d.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js",
-      "size": 13418,
+      "name": "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js",
+      "size": 24725,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 4987217,
+      "size": 6893671,
       "chunks": [
         "alma-stolte"
       ],
@@ -49,6 +49,31 @@
       ],
       "info": {},
       "emitted": false
+    },
+    {
+      "name": "fonts/LibreBaskervilleBold.ttf",
+      "size": 155428,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "fonts/LibreBaskervilleRegular.ttf",
+      "size": 154676,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/almaBackground.jpg",
+      "size": 10590602,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false,
+      "isOverSizeLimit": true
     }
   ],
   "filteredAssets": 0,
@@ -59,7 +84,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+        "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -72,7 +97,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+        "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

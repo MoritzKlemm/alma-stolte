@@ -1,13 +1,13 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
+import BackgroundImage from './BackgroundImage';
 import Link from './Link'
 import List from './List';
 import Post from './Post';
 import NavbarCustom from './NavbarCustom';
-
-
-// import LibreBaskervilleRegular from './fonts/LibreBaskerville/LibreBaskervilleRegular'
-
+import LibreBaskervilleRegular from './assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
+import LibreBaskervilleBold from './assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
+import almaBackground from './assets/images/almaBackground.jpg'
 
 const Root = ({ state, actions }) => {
     const data = state.source.get(state.router.link)
@@ -28,34 +28,50 @@ const Root = ({ state, actions }) => {
                 crossorigin="anonymous"
                 />
             </Head>
+                     
+            <main >
+                <NavbarCustom />
+                
+                {<List />}
+            </main>
 
             <Global
                 styles={css`
                   body {
                     background-color: rgba(235,221,209,100);
+                    font-family: "LibreBaskervilleRegular";
                     margin: 0px;
                     padding: 0px; 
                   }
                 `}
             />
-
-            
-            <main>
-                <NavbarCustom />
-                
-                <p>test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set </p>
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                test setset set set est set set set set test setset set set est set set set set test setset set set est set set set set 
-                {<List />}
-            </main>
-
-            
         </div>
     );
 };
 
 export default connect(Root);
+
+
+
+const LBVRegular = css`
+  @font-face {
+    font-family: "LibreBaskervilleRegular";
+    font-style: normal;
+    font-weight: 400;
+
+    /* Use it inside the CSS */
+    src: url(${LibreBaskervilleRegular});
+  }
+`;
+
+const LBVBold = css`
+  @font-face {
+    font-family: "LibreBaskervilleRegular";
+    font-style: normal;
+    font-weight: 400;
+
+    /* Use it inside the CSS */
+    src: url(${LibreBaskervilleBold});
+  }
+`;
+

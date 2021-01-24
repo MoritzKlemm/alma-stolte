@@ -6,22 +6,22 @@ import MenuModal from "./menu-modal";
 function MobileMenu({ state, actions }) {
   const { isMobileMenuOpen } = state.theme;
   return (
-    <>
+    <div>
       <MenuToggle onClick={actions.theme.toggleMobileMenu}>
         {isMobileMenuOpen ? (
-          <>
+          <div>
             {/* Add some style to the body when menu is open,
             to prevent body scroll */}
             <Global styles={{ body: { overflowY: "hidden" } }} />
             <CloseIcon color="white" size="20px" />
-          </>
+          </div>
         ) : (
           <HamburgerIcon color="white" size="24px" />
         )}
       </MenuToggle>
       {/* If the menu is open, render the menu modal */}
       {isMobileMenuOpen && <MenuModal />}
-    </>
+    </div>
   );
 }
 
