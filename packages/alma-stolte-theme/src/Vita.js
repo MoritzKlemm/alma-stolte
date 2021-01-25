@@ -23,6 +23,7 @@ const StyledParagraph = styled.p`
     letter-spacing: 1.09px;
     text-align: justify;
     line-height: 33.25px;
+    margin-bottom: 60px; 
 
     &::first-letter {
         font-size: 200%;

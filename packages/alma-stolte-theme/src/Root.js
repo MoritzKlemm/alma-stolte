@@ -7,6 +7,8 @@ import ProjectGrid from './ProjectGrid';
 import Vita from './Vita';
 import CelloBackground from './CelloBackground';
 import Gallery from './Gallery';
+import Contact from './Contact';
+import Footer from './Footer';
 import LibreBaskervilleRegular from './assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from './assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
@@ -36,6 +38,9 @@ const Root = ({ state, actions }) => {
                 <CelloBackground />
                 <Vita />
                 <Gallery />
+                <Contact />
+                
+
                 {<List />}
             </main>
 

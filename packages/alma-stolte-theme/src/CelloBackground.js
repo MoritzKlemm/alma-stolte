@@ -18,6 +18,6 @@ const StyledBackgroundImage = styled.div`
     background-position: center center; 
     background-repeat: no-repeat;
     width: 100vw;
-    height: 50vh; 
+    height: 35vh; 
     margin: 60px 0px; 
 `;

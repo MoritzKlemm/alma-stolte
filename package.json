@@ -25,6 +25,7 @@
     "alma-stolte-theme": "file:packages/alma-stolte-theme",
     "bootstrap": "^4.6.0",
     "frontity": "^1.13.0",
-    "react-bootstrap": "^1.4.3"
+    "react-bootstrap": "^1.4.3",
+    "react-icons": "^4.1.0"
   }
 }

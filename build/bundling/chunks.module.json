@@ -2,45 +2,16 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "c28d12bec115a7f91c19",
+  "hash": "5c93b30c7caf6d90eddf",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
-    "alma-stolte": [
-      "alma-stolte.module.js",
-      "alma-stolte.20f6167971b664a535ef.hot-update.js"
-    ]
+    "alma-stolte": "alma-stolte.module.js"
   },
   "assets": [
     {
-      "name": "20f6167971b664a535ef.hot-update.json",
-      "size": 53,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "alma-stolte.20f6167971b664a535ef.hot-update.js",
-      "size": 20791,
-      "chunks": [
-        "alma-stolte"
-      ],
-      "chunkNames": [
-        "alma-stolte"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "alma-stolte.module.js",
-      "size": 6974196,
+      "size": 7116657,
       "chunks": [
         "alma-stolte"
       ],
@@ -48,7 +19,8 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": false
+      "emitted": false,
+      "isOverSizeLimit": true
     },
     {
       "name": "fonts/LibreBaskervilleBold.ttf",
@@ -154,8 +126,7 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js",
-        "alma-stolte.20f6167971b664a535ef.hot-update.js"
+        "alma-stolte.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -167,8 +138,7 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js",
-        "alma-stolte.20f6167971b664a535ef.hot-update.js"
+        "alma-stolte.module.js"
       ],
       "children": {},
       "childAssets": {}
