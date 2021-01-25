@@ -1,13 +1,11 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
-import BackgroundImage from './BackgroundImage';
 import Link from './Link'
 import List from './List';
-import Post from './Post';
 import NavbarCustom from './NavbarCustom';
+import ProjectGrid from './ProjectGrid';
 import LibreBaskervilleRegular from './assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from './assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
-import almaBackground from './assets/images/almaBackground.jpg'
 
 const Root = ({ state, actions }) => {
     const data = state.source.get(state.router.link)
@@ -31,6 +29,7 @@ const Root = ({ state, actions }) => {
                      
             <main >
                 <NavbarCustom />
+                <ProjectGrid />
                 
                 {<List />}
             </main>
@@ -42,6 +41,15 @@ const Root = ({ state, actions }) => {
                     font-family: "LibreBaskervilleRegular";
                     margin: 0px;
                     padding: 0px; 
+                  }
+
+                  .row, col-md-6 {
+                      margin: 0px;
+                      padding: 0px; 
+                  }
+
+                  .container {
+                      padding: 0px; 
                   }
                 `}
             />

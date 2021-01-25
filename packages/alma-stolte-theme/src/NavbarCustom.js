@@ -7,10 +7,10 @@ import almaBackground from './assets/images/almaBackground.jpg'
 
 //             <p>this is an {state.router.link}</p>
 
-const NavbarCustom = ({ state, className }) => {
+const NavbarCustom = ({ state }) => {
     return(
         <StyledMainDiv>
-            <Navbar bg="transparent" expand="lg" fixed="top">
+            <Navbar bg="transparent" expand="lg" fixed="top" css={css`padding: 40px`}>
                 <Navbar.Brand href="#home"><StyledLogo>ALMA STOLTE</StyledLogo></Navbar.Brand>
                 <Navbar.Toggle aria-controls="toggle-connection"/>
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
@@ -34,9 +34,7 @@ const StyledMainDiv = styled.div`
     background-image: url(${almaBackground});
     background-size:cover;
     background-position: top;
-    height: 100vh;
-
-   
+    height: 100vh; 
 `;
 
 const StyledNavLink = styled.div`
@@ -45,7 +43,7 @@ const StyledNavLink = styled.div`
     letter-spacing: 3.56px;
     text-align: center;
     curser: pointer;
-    margin: 0px 20px;
+    margin: 0px 15px;
 `;
 
 const StyledNavLinkLast = styled.div`

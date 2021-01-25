@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "f3b4ab708d71ad9dac0e",
+  "hash": "85c5e09208b8bca51451",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
+      "alma-stolte.459003f7a97c2b06552f.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "48d7b70ff4a6f5fe644d.hot-update.json",
+      "name": "459003f7a97c2b06552f.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js",
-      "size": 24725,
+      "name": "alma-stolte.459003f7a97c2b06552f.hot-update.js",
+      "size": 20076,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 6893671,
+      "size": 6927853,
       "chunks": [
         "alma-stolte"
       ],
@@ -74,6 +74,15 @@
       "info": {},
       "emitted": false,
       "isOverSizeLimit": true
+    },
+    {
+      "name": "images/projektAmusana.jpg",
+      "size": 1687523,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false,
+      "isOverSizeLimit": true
     }
   ],
   "filteredAssets": 0,
@@ -84,7 +93,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
+        "alma-stolte.459003f7a97c2b06552f.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -97,7 +106,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.48d7b70ff4a6f5fe644d.hot-update.js"
+        "alma-stolte.459003f7a97c2b06552f.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
