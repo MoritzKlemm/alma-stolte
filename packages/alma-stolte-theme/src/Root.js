@@ -4,6 +4,9 @@ import Link from './Link'
 import List from './List';
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
+import Vita from './Vita';
+import CelloBackground from './CelloBackground';
+import Gallery from './Gallery';
 import LibreBaskervilleRegular from './assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from './assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
@@ -30,7 +33,9 @@ const Root = ({ state, actions }) => {
             <main >
                 <NavbarCustom />
                 <ProjectGrid />
-                
+                <CelloBackground />
+                <Vita />
+                <Gallery />
                 {<List />}
             </main>
 
@@ -43,7 +48,7 @@ const Root = ({ state, actions }) => {
                     padding: 0px; 
                   }
 
-                  .row, col-md-6 {
+                  .row, col-md-6, .col-md-12 {
                       margin: 0px;
                       padding: 0px; 
                   }

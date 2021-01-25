@@ -1,0 +1,20 @@
+webpackHotUpdate("alma-stolte",{
+
+/***/ "./packages/alma-stolte-theme/src/Project.js":
+false,
+
+/***/ "./packages/alma-stolte-theme/src/ProjectGrid.js":
+/*!*******************************************************!*\
+  !*** ./packages/alma-stolte-theme/src/ProjectGrid.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/packages/alma-stolte-theme/src/ProjectGrid.js: Expected corresponding JSX closing tag for <StyledRowDiv> (22:12)\\n\\n\\u001b[0m \\u001b[90m 20 | \\u001b[39m                    \\u001b[33m/\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 21 | \\u001b[39m                \\u001b[33m<\\u001b[39m\\u001b[33m/\\u001b[39m\\u001b[33mdiv\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 22 | \\u001b[39m            \\u001b[33m<\\u001b[39m\\u001b[33m/\\u001b[39m\\u001b[33mdiv\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m    | \\u001b[39m            \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 23 | \\u001b[39m            \\u001b[33m<\\u001b[39m\\u001b[33mdiv\\u001b[39m className\\u001b[33m=\\u001b[39m\\u001b[32m\\\"row\\\"\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 24 | \\u001b[39m                \\u001b[33m<\\u001b[39m\\u001b[33mdiv\\u001b[39m className\\u001b[33m=\\u001b[39m\\u001b[32m\\\"col-md-6\\\"\\u001b[39m\\u001b[33m>\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 25 | \\u001b[39m                    \\u001b[33m<\\u001b[39m\\u001b[33mProject\\u001b[39m \\u001b[0m\\n    at Object._raise (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:60:45)\\n    at Object.raiseWithData (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:55:17)\\n    at Object.raise (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/error.js:39:17)\\n    at Object.jsxParseElementAt (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:495:18)\\n    at Object.jsxParseElementAt (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:452:34)\\n    at Object.jsxParseElement (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:531:19)\\n    at Object.parseExprAtom (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/plugins/jsx/index.js:542:21)\\n    at Object.parseExprSubscripts (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/expression.js:565:23)\\n    at Object.parseUpdate (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/expression.js:545:21)\\n    at Object.parseMaybeUnary (/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/node_modules/@babel/parser/src/parser/expression.js:529:17)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3BhY2thZ2VzL2FsbWEtc3RvbHRlLXRoZW1lL3NyYy9Qcm9qZWN0R3JpZC5qcy5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./packages/alma-stolte-theme/src/ProjectGrid.js\n");
+
+/***/ }),
+
+/***/ "./packages/alma-stolte-theme/src/assets/images/projektAmusana.jpg":
+false
+
+})
