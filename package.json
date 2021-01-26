@@ -26,6 +26,7 @@
     "bootstrap": "^4.6.0",
     "frontity": "^1.13.0",
     "react-bootstrap": "^1.4.3",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "react-scroll": "^1.8.1"
   }
 }

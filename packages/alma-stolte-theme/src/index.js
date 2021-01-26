@@ -1,9 +1,13 @@
-import Root from './Root'
+import Theme from "./components";
+
+const AlmaStolteTheme = {
+}
 
 export default {
+  
   name: "alma-stolte-theme",
   roots: {
-    theme: Root
+    theme: Theme
   },
   state: {
     theme: {
@@ -21,3 +25,4 @@ export default {
     }
   }
 };
+

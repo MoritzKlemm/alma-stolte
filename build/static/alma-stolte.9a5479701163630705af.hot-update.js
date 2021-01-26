@@ -1,0 +1,15 @@
+webpackHotUpdate("alma-stolte",{
+
+/***/ "./packages/alma-stolte-theme/src/Link.js":
+/*!************************************************!*\
+  !*** ./packages/alma-stolte-theme/src/Link.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var frontity__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! frontity */ \"./node_modules/frontity/dist/src/index.js\");\n/* harmony import */ var frontity__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(frontity__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ \"./node_modules/@emotion/core/dist/core.browser.esm.js\");\nvar Link=(_ref)=>{var{href,actions,children}=_ref;return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__[\"jsx\"])(\"div\",null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__[\"jsx\"])(\"a\",{href:href,onClick:event=>{event.preventDefault();actions.router.set(href);}},children));};/* harmony default export */ __webpack_exports__[\"default\"] = (Object(frontity__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(Link));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWNrYWdlcy9hbG1hLXN0b2x0ZS10aGVtZS9zcmMvTGluay5qcz9hNWEyIl0sIm5hbWVzIjpbIkxpbmsiLCJocmVmIiwiYWN0aW9ucyIsImNoaWxkcmVuIiwiZXZlbnQiLCJwcmV2ZW50RGVmYXVsdCIsInJvdXRlciIsInNldCIsImNvbm5lY3QiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUdBLEdBQU1BLEtBQUksQ0FBRyxRQUFpQyxJQUFoQyxDQUFFQyxJQUFGLENBQVFDLE9BQVIsQ0FBaUJDLFFBQWpCLENBQWdDLE1BQzVDLE1BQ0Usc0VBQ0UsK0RBQ0UsSUFBSSxDQUFFRixJQURSLENBQ2MsT0FBTyxDQUFFRyxLQUFLLEVBQUksQ0FDNUJBLEtBQUssQ0FBQ0MsY0FBTixHQUNBSCxPQUFPLENBQUNJLE1BQVIsQ0FBZUMsR0FBZixDQUFtQk4sSUFBbkIsRUFBMEIsQ0FIOUIsRUFJR0UsUUFKSCxDQURGLENBREYsQ0FVRCxDQVhELENBYWVLLHVIQUFPLENBQUNSLElBQUQsQ0FBdEIiLCJmaWxlIjoiLi9wYWNrYWdlcy9hbG1hLXN0b2x0ZS10aGVtZS9zcmMvTGluay5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IGNvbm5lY3QgfSBmcm9tIFwiZnJvbnRpdHlcIjtcblxuY29uc3QgTGluayA9ICh7IGhyZWYsIGFjdGlvbnMsIGNoaWxkcmVuIH0pID0+IHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2PlxuICAgICAgPGFcbiAgICAgICAgaHJlZj17aHJlZn0gb25DbGljaz17ZXZlbnQgPT4ge1xuICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG4gICAgICAgICAgYWN0aW9ucy5yb3V0ZXIuc2V0KGhyZWYpO319PlxuICAgICAgICB7Y2hpbGRyZW59XG4gICAgICA8L2E+XG4gICAgPC9kaXY+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KExpbmspOyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./packages/alma-stolte-theme/src/Link.js\n");
+
+/***/ })
+
+})
