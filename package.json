@@ -21,9 +21,12 @@
     "@frontity/html2react": "^1.5.0",
     "@frontity/tiny-router": "^1.2.4",
     "@frontity/wp-source": "^1.10.0",
+    "@material-ui/core": "^4.11.3",
     "alma-stolte-theme": "file:packages/alma-stolte-theme",
     "bootstrap": "^4.6.0",
     "frontity": "^1.13.0",
-    "react-bootstrap": "^1.4.3"
+    "react-bootstrap": "^1.4.3",
+    "react-icons": "^4.1.0",
+    "react-scroll": "^1.8.1"
   }
 }

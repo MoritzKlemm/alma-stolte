@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "7679eac179d70b48ec74",
+  "hash": "4551cd70ba9a13c048ce",
   "publicPath": "/static/",
-  "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/alma-stolte/build/static",
+  "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+      "alma-stolte.2c41eb090880a4772c84.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "7b1f750b8ad9a3b7a845.hot-update.json",
+      "name": "2c41eb090880a4772c84.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js",
-      "size": 13418,
+      "name": "alma-stolte.2c41eb090880a4772c84.hot-update.js",
+      "size": 51158,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 4987217,
+      "size": 8097962,
       "chunks": [
         "alma-stolte"
       ],
@@ -49,6 +49,102 @@
       ],
       "info": {},
       "emitted": false
+    },
+    {
+      "name": "fonts/LibreBaskervilleBold.ttf",
+      "size": 155428,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "fonts/LibreBaskervilleRegular.ttf",
+      "size": 154676,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "images/almaBackground.jpg",
+      "size": 10590602,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/celloBackground.jpg",
+      "size": 16540985,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/galleryFive.jpg",
+      "size": 4048069,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/galleryFour.jpg",
+      "size": 8768000,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/galleryOne.jpg",
+      "size": 4107510,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/gallerySix.jpg",
+      "size": 8001032,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/galleryThree.jpg",
+      "size": 1124737,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/galleryTwo.jpg",
+      "size": 14689136,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "images/projektAmusana.jpg",
+      "size": 1687523,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true,
+      "isOverSizeLimit": true
     }
   ],
   "filteredAssets": 0,
@@ -59,7 +155,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+        "alma-stolte.2c41eb090880a4772c84.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -72,7 +168,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.7b1f750b8ad9a3b7a845.hot-update.js"
+        "alma-stolte.2c41eb090880a4772c84.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
