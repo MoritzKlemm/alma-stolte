@@ -63,7 +63,7 @@ const NavbarCustom = ({ state }, props) => {
             </StyledNavbar>
             <StyledSubHeadingWrapper>
                 <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
-                <StyledSubHeading>Modernes Violoncell</StyledSubHeading>
+                <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
             </StyledSubHeadingWrapper>
         </StyledMainDiv>
     )

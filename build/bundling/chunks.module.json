@@ -2,16 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "b7cd5941f7f6e80431e6",
+  "hash": "4551cd70ba9a13c048ce",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
-    "alma-stolte": "alma-stolte.module.js"
+    "alma-stolte": [
+      "alma-stolte.module.js",
+      "alma-stolte.2c41eb090880a4772c84.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "2c41eb090880a4772c84.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "alma-stolte.2c41eb090880a4772c84.hot-update.js",
+      "size": 51158,
+      "chunks": [
+        "alma-stolte"
+      ],
+      "chunkNames": [
+        "alma-stolte"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "alma-stolte.module.js",
-      "size": 8097961,
+      "size": 8097962,
       "chunks": [
         "alma-stolte"
       ],
@@ -19,8 +48,7 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     },
     {
       "name": "fonts/LibreBaskervilleBold.ttf",
@@ -28,7 +56,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "fonts/LibreBaskervilleRegular.ttf",
@@ -36,7 +64,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/almaBackground.jpg",
@@ -44,7 +72,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -53,7 +81,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -62,7 +90,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -79,7 +107,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -88,7 +116,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -97,7 +125,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -106,7 +134,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     },
     {
@@ -115,7 +143,7 @@
       "chunks": [],
       "chunkNames": [],
       "info": {},
-      "emitted": false,
+      "emitted": true,
       "isOverSizeLimit": true
     }
   ],
@@ -126,7 +154,8 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js"
+        "alma-stolte.module.js",
+        "alma-stolte.2c41eb090880a4772c84.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -138,7 +167,8 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js"
+        "alma-stolte.module.js",
+        "alma-stolte.2c41eb090880a4772c84.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
