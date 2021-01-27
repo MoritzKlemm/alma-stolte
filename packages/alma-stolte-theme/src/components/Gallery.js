@@ -12,7 +12,7 @@ import gallerySix from '../assets/images/gallerySix.jpg';
 
 const Gallery = () => {
     return(
-        <StyledContainer>
+        <StyledContainer id="gallery-smooth-scroll">
             <Row>
                 <Col md={6} css={css`padding: 0px`}>
                     <StyledGalleryOne></StyledGalleryOne>

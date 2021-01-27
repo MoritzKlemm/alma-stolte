@@ -1,40 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect, styled, css } from 'frontity';
 import {Navbar, Nav} from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
-import {Link} from 'react-scroll'
+import {Link, animateScroll} from 'react-scroll'
+import { VscMenu } from 'react-icons/vsc';
 
-
-//             <p>this is an {state.router.link}</p>
 
 const NavbarCustom = ({ state }, props) => {
+
+    // useState() is declaring a state variable "backgroundColor"
+    // const [backgroundColor, setBackgroundColor] = useState(false);
+
+    // function changeBackground() {
+    //    if(window.scrollY <= 755) {
+    //        console.log("true")
+    //        console.log(window.scrollY)
+    //        setBackgroundColor("red")
+    //        console.log("red")
+
+    //    } else {
+    //         console.log("false")
+    //         console.log(window.scrollY)
+    //         setBackgroundColor("blue")
+    //         console.log("blue")
+
+    //    }
+    // }
+
+    // React.useEffect(() => {
+    //     window.addEventListener('scroll', changeBackground)
+    // }, [])
+
+    const [clickedLink, setClickedLink] = useState('white'); 
+
+    function handleClick(e) {
+        setClickedLink("red");
+        console.log("licked!")
+    }
+
     
     return(
-        <StyledMainDiv>
-            <StyledNavbar expand="lg" fixed="top">
+        <StyledMainDiv onScroll={() => animateScroll.scrollToTop()}>
+            <StyledNavbar variant="dark" expand="xl" fixed="top">
                 <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
                 <Navbar.Toggle aria-controls="toggle-connection"/>
-                <Navbar.Collapse id="toggle-connection" className="justify-content-end">
-                
-                    <Nav className="mr-auto" className="justify-content-end">
-                        <Nav.Link href="">
-                            <StyledLink to="" smooth={true} duration={1100}>KALENDER</StyledLink>
-                        </Nav.Link>                        
-                        <Nav.Link href="">
-                            <StyledLink to="projekte-smooth-scroll" smooth={true} duration={1100}>PROJEKTE</StyledLink>
-                        </Nav.Link>                        
-                        <Nav.Link href="">
-                            <StyledLink to="vita-smooth-scroll" smooth={true} duration={1100}>VITA</StyledLink>
-                        </Nav.Link>                        
-                        <Nav.Link href="">
-                            <StyledLink to="" smooth={true} duration={1100}>MEDIA</StyledLink>
-                        </Nav.Link>   
-                        <Nav.Link href="">
-                            <StyledLink to="contact-smooth-scroll" smooth={true} duration={1100}>KONTAKT</StyledLink>
-                        </Nav.Link>   
-                    </Nav>
-                </Navbar.Collapse>
+                    <Navbar.Collapse id="toggle-connection" className="justify-content-end">
+                    
+                        <Nav className="mr-auto" className="justify-content-end">
+                                
+                                <StyledLink to="" smooth={true} duration={1100}>KALENDER</StyledLink>
+                                
+                                <StyledLink onClick={(e) => {handleClick()}} to="projekte-smooth-scroll" smooth={true} duration={1100} spy={true}>PROJEKTE</StyledLink>
+                        
+                                <StyledLink to="vita-smooth-scroll" smooth={true} duration={1100}>VITA</StyledLink>
+                            
+                                <StyledLink to="gallery-smooth-scroll" smooth={true} duration={1100}>MEDIA</StyledLink>
+                                
+                                <StyledLink to="contact-smooth-scroll" smooth={true} duration={1100}>KONTAKT</StyledLink>
+                        
+                        </Nav>
+                    </Navbar.Collapse>
             </StyledNavbar>
+            <StyledSubHeadingWrapper>
+                <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
+                <StyledSubHeading>Modernes Violoncell</StyledSubHeading>
+            </StyledSubHeadingWrapper>
         </StyledMainDiv>
     )
 }
@@ -50,7 +80,8 @@ const StyledMainDiv = styled.div`
 `;
 
 const StyledNavbar = styled(Navbar)`
-    padding: 40px;
+    padding: 10px 50px;
+    background-color: rgba(0,0,0,0.4);
 `
 
 const StyledLink = styled(Link)`
@@ -58,12 +89,13 @@ const StyledLink = styled(Link)`
     color: #EDE4E5 !important;
     letter-spacing: 3.56px;
     text-align: center;
-    margin: 0px 15px;
+    margin: 0px 6%;
     
-    &::hover {
-        text-decoration: none; 
+    &:hover {
+        cursor: pointer; 
     }
 `;
+
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
     font-family: LibreBaskerville-Regular;
@@ -72,3 +104,14 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
     letter-spacing: 10.86px;
 `;
 
+const StyledSubHeading = styled.h4 `
+    font-family: LibreBaskerville-Italic;
+    font-size: 20px;
+    color: #DBCCCD;
+    letter-spacing: 3.33px;
+    line-height: 30px;
+`
+
+const StyledSubHeadingWrapper = styled.div `
+    padding: 120px 50px;
+`

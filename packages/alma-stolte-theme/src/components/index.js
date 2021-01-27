@@ -16,7 +16,7 @@ import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaske
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
 const Theme = ({ state }) => {
-    const data = state.source.get(state.router.link);
+    // const data = state.source.get(state.router.link);
     
     return (
         <div>
@@ -33,9 +33,6 @@ const Theme = ({ state }) => {
             </Head>
             {console.log("heet")}
             <main>
-                {data.isArchive && <List />}
-                {data.isPost && <Post />}
-                {data.isPage && <Post />}
                 <NavbarCustom/>
                 <ProjectGrid />
                 <CelloBackground />

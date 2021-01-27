@@ -49,7 +49,7 @@ const Contact = () => {
 export default connect(Contact);
 
 const StyledContainer = styled(Container)`
-    width: 600px; 
+    width: 40%; 
 `
 
 const StyledFormControl = styled(Form.Control)`
