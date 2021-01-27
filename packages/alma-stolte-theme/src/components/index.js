@@ -8,7 +8,6 @@ import NavbarCustomDynamic from './NavbarCustomDynamic';
 import ProjectGrid from './ProjectGrid';
 import Vita from './Vita';
 import CelloBackground from './CelloBackground';
-import Gallery from './Gallery';
 import Contact from './Contact';
 import SubPage from './SubPage';
 import Footer from './Footer';
@@ -37,6 +36,7 @@ const Theme = ({ state }) => {
                 <ProjectGrid />
                 <CelloBackground />
                 <Vita />
+                <Gallery />
                 <Contact />
 
 
