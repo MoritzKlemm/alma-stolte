@@ -8,39 +8,11 @@ import { VscMenu } from 'react-icons/vsc';
 
 const NavbarCustom = ({ state }, props) => {
 
-    // useState() is declaring a state variable "backgroundColor"
-    // const [backgroundColor, setBackgroundColor] = useState(false);
-
-    // function changeBackground() {
-    //    if(window.scrollY <= 755) {
-    //        console.log("true")
-    //        console.log(window.scrollY)
-    //        setBackgroundColor("red")
-    //        console.log("red")
-
-    //    } else {
-    //         console.log("false")
-    //         console.log(window.scrollY)
-    //         setBackgroundColor("blue")
-    //         console.log("blue")
-
-    //    }
-    // }
-
-    // React.useEffect(() => {
-    //     window.addEventListener('scroll', changeBackground)
-    // }, [])
-
     const [clickedLink, setClickedLink] = useState('white'); 
-
-    function handleClick(e) {
-        setClickedLink("red");
-        console.log("licked!")
-    }
 
     
     return(
-        <StyledMainDiv onScroll={() => animateScroll.scrollToTop()}>
+        <StyledNavbarSection onScroll={() => animateScroll.scrollToTop()}>
             <StyledNavbar variant="dark" expand="xl" fixed="top">
                 <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
                 <Navbar.Toggle aria-controls="toggle-connection"/>
@@ -50,7 +22,7 @@ const NavbarCustom = ({ state }, props) => {
                                 
                                 <StyledLink to="" smooth={true} duration={1100}>KALENDER</StyledLink>
                                 
-                                <StyledLink onClick={(e) => {handleClick()}} to="projekte-smooth-scroll" smooth={true} duration={1100} spy={true}>PROJEKTE</StyledLink>
+                                <StyledLink to="projekte-smooth-scroll" smooth={true} duration={1100} spy={true}>PROJEKTE</StyledLink>
                         
                                 <StyledLink to="vita-smooth-scroll" smooth={true} duration={1100}>VITA</StyledLink>
                             
@@ -65,13 +37,13 @@ const NavbarCustom = ({ state }, props) => {
                 <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
                 <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
             </StyledSubHeadingWrapper>
-        </StyledMainDiv>
+        </StyledNavbarSection>
     )
 }
 
 export default connect(NavbarCustom)
 
-const StyledMainDiv = styled.div`
+const StyledNavbarSection = styled.div`
     background-image: url(${almaBackground});
     background-size:cover;
     background-attachment: fixed; 
@@ -95,7 +67,6 @@ const StyledLink = styled(Link)`
         cursor: pointer; 
     }
 `;
-
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
     font-family: LibreBaskerville-Regular;

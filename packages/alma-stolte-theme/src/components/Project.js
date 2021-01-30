@@ -3,58 +3,58 @@ import { connect, styled, css } from 'frontity';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import projektAmusana from '../assets/images/projektAmusana.jpg';
+
 
 const Project = (props) => {
+
+    function parseImageHtmlTag(postContent) {
+        var str = "The best things in life are free";
+        var patt = new RegExp("<img>*</img>");
+        var res = patt.exec(str);
+        console.log(postContent)
+    }
+
     return(
-        <div>
-            <Container>
-                <Row>
-                    <Col md={12}>
-                        <StyledImage variant="top" src={projektAmusana}/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={12}>
-                        <StyledTitle>{props.title}</StyledTitle>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={12}>
-                        <StyledDescription>{props.description} <StyledButtonMehr href="">MEHR</StyledButtonMehr></StyledDescription>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <Container>
+            <Row>
+                <Col md={12}>
+                    <StyledTitle dangerouslySetInnerHTML={props.title} />
+                    <StyledDescription dangerouslySetInnerHTML={props.content}/>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
 export default connect(Project)
 
 
-const StyledTitle = styled.h3`
+const StyledTitle = styled.div`
     font-family: LibreBaskerville-Regular;
-    font-size: 26.6px;
+    font-size: 26.6px; 
     color: #444C92;
     letter-spacing: 3.99px;
     margin: 20px 0px; 
 `;
 
-const StyledImage = styled.img`
-    border-radius: 6px;
-    object-fit: cover;
-    width: 100%;
-    height: 240px; 
-`;
 
+const StyledDescription = styled.div`
+    & p {
+        font-family: LibreBaskerville-Regular;
+        font-size: 15.2px;
+        color: #0F0D0E;
+        letter-spacing: 1.09px;
+        text-align: justify;
+        line-height: 33.25px;
+    }
 
-const StyledDescription = styled.a`
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #0F0D0E;
-    letter-spacing: 1.09px;
-    text-align: justify;
-    line-height: 33.25px;
+    & img {
+        border-radius: 6px;
+        object-fit: cover;
+        width: 100%;
+        height: 240px; 
+    }
+
 `;
 
 const StyledButtonMehr = styled.button`
@@ -65,4 +65,4 @@ const StyledButtonMehr = styled.button`
     text-align: justify;
     border: none; 
     background-color: transparent;
-`
+` 
