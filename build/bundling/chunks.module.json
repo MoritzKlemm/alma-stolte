@@ -2,19 +2,30 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "cd35c1818d529cb65289",
+  "hash": "ba9c76d8e77c8f8c91aa",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.b4f8a252440251cc742b.hot-update.js"
+      "alma-stolte.17713cae150499dec657.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "alma-stolte.b4f8a252440251cc742b.hot-update.js",
-      "size": 7591,
+      "name": "17713cae150499dec657.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "alma-stolte.17713cae150499dec657.hot-update.js",
+      "size": 13336,
       "chunks": [
         "alma-stolte"
       ],
@@ -29,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 8178848,
+      "size": 8181015,
       "chunks": [
         "alma-stolte"
       ],
@@ -37,17 +48,6 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": false
-    },
-    {
-      "name": "b4f8a252440251cc742b.hot-update.json",
-      "size": 53,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
       "emitted": false
     },
     {
@@ -147,7 +147,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.b4f8a252440251cc742b.hot-update.js"
+        "alma-stolte.17713cae150499dec657.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -160,7 +160,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.b4f8a252440251cc742b.hot-update.js"
+        "alma-stolte.17713cae150499dec657.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

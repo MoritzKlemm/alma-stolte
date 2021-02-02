@@ -10,38 +10,20 @@ import Item from "./list/list-item";
 import Switch from "@frontity/components/switch";
 import Loading from './Loading';
 import postList from './util/PostList';
+import PageError from './PageError';
 
 
 const ProjectGrid = ({state}) => {
     const data = state.source.get(state.router.link);
 
     return(
-        <StyledContainer id="projekte-smooth-scroll">
-            <Row>
-                <List />
-            </Row>
-        </StyledContainer>
+        <Container id="projekte-smooth-scroll">
+        <Switch>
+            <List when={data.isArchive} />
+            <PageError when={data.isError} />
+        </Switch>
+        </Container>
     )
 }
 
 export default connect(ProjectGrid)
-
-const StyledContainer = styled(Container)`
-
-`
-
-const StyledCol = styled(Col)`
-    margin: 30px 0px; 
-    padding: 0px 40px; 
-`
-
-const StyledColDivRight = styled(Col)`
-    margin-top: 30px;
-    margin-bottom: 30px; 
-    padding: 0px 0px 0px 30px; 
-`
-
-const StyledColDivLast = styled.div`
-    margin-top: 30px;
-    padding: 0px; 
-`
