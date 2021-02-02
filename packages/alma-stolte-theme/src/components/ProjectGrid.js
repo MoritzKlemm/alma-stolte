@@ -6,10 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import List from './list/List';
-import Item from "./list/list-item";
 import Switch from "@frontity/components/switch";
-import Loading from './Loading';
-import postList from './util/PostList';
 import PageError from './PageError';
 
 
