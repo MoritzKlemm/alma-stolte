@@ -1,7 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../link";
-import FeaturedMedia from "../featured-media";
 
 const Item = ({ state, item }) => {
 
@@ -41,7 +40,7 @@ const StyledImage = styled.img`
 
 const StyledDescription = styled.a`
     font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
+    font-size: 15.2px; 
     color: #0F0D0E;
     letter-spacing: 1.09px;
     text-align: justify;

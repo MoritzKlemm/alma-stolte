@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { connect, styled, css } from 'frontity';
+import { connect, styled, css, keyframes } from 'frontity';
 import {Navbar, Nav} from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
 import {Link, animateScroll} from 'react-scroll'
@@ -52,9 +52,9 @@ const StyledNavbarSection = styled.div`
 
 const StyledNavbar = styled(Navbar)`
     padding: 10px 50px;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
 `
-
+// link scrolls to target with react-scroll "Link" component
 const StyledLink = styled(Link)`
     font-size: 16px;
     color: #EDE4E5 !important;
@@ -74,14 +74,41 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
     letter-spacing: 10.86px;
 `;
 
+// -----------------------------------------
+
+const appear = keyframes`
+from {
+    color: rgba(219, 204, 205, 0.0);
+  }
+  to {
+    color: rgba(219, 204, 205, 1.0);
+  }
+`;
+
 const StyledSubHeading = styled.h4 `
     font-family: LibreBaskerville-Italic;
     font-size: 20px;
     color: #DBCCCD;
     letter-spacing: 3.33px;
     line-height: 30px;
+    animation: ${appear} 2s ease-in-out;
 `
+
+// -----------------------------------------
+
+const moveup = keyframes`
+from {
+    transform: translateY(110px);
+  }
+  to {
+    transform: translateY(0px);
+    color: rgba(219, 204, 205, 1.0);
+  }
+`;
 
 const StyledSubHeadingWrapper = styled.div `
     padding: 120px 50px;
+    animation: ${moveup} 2.5s ease-in-out;
 `
+
+

@@ -14,7 +14,6 @@ const Vita = ({state}) => {
         <Container id="vita-smooth-scroll">
             <Row>
                 <Col md={12}>
-                {console.log(vitaContent)}
                     <StyledParagraph dangerouslySetInnerHTML={{ __html: vitaContent}} />
                 </Col>
             </Row> 

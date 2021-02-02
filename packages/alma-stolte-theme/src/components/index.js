@@ -2,9 +2,6 @@ import React from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 
-import List from './list/List';
-import PostList from './util/PostList';
-
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
 import Project from './ProjectPreview';
@@ -42,8 +39,10 @@ const Theme = ({ state }) => {
           <CelloBackground />
           <Vita />
           <Contact />
+          <Footer />
         </main>
           
+
         <Global
             styles={css`
               body {

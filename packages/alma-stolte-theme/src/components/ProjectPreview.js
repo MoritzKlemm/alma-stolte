@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, styled, css } from 'frontity';
+import { connect, styled, css, keyframes } from 'frontity';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -26,6 +26,7 @@ const Project = ({state, item}) => {
 export default connect(Project)
 
 
+// animation definitions ------------------------------------------
 const StyledTitle = styled.div`
     font-family: LibreBaskerville-Regular;
     font-size: 26.6px; 

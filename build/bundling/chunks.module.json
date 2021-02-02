@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "04c9565d3fa969a14578",
+  "hash": "46b4846ed01728c08722",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+      "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "9ffe1c069c897d731468.hot-update.json",
+      "name": "aec7e90c6737d82184aa.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.9ffe1c069c897d731468.hot-update.js",
-      "size": 3342,
+      "name": "alma-stolte.aec7e90c6737d82184aa.hot-update.js",
+      "size": 48188,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 7552696,
+      "size": 7506115,
       "chunks": [
         "alma-stolte"
       ],
@@ -74,54 +74,6 @@
       "info": {},
       "emitted": false,
       "isOverSizeLimit": true
-    },
-    {
-      "name": "images/galleryFive.jpg",
-      "size": 4048069,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryFour.jpg",
-      "size": 8768000,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryOne.jpg",
-      "size": 4107510,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/gallerySix.jpg",
-      "size": 8001032,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryThree.jpg",
-      "size": 1124737,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryTwo.jpg",
-      "size": 14689136,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -132,7 +84,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+        "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -145,7 +97,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+        "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
