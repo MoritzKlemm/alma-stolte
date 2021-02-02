@@ -16,7 +16,7 @@ const List = ({ state }) => {
     return (il.filter(({ id, categories }) => {
       // creating new variable to actually "regrab" items with coresponding id
       const item = state.source["post"][id];
-      return item.categories != 4771;
+      return item.categories == 15915;
     }))
   }
 

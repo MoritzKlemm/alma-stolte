@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -8,20 +8,23 @@ import Link from './link'
 
 const Vita = ({state}) => {
 
+    const [vitaContent] = useState(state.source["post"][145].content.rendered);
+
     return(
         <Container id="vita-smooth-scroll">
             <Row>
                 <Col md={12}>
-                    <StyledParagraph dangerouslySetInnerHTML={{ __html: state.source["post"][145].content.rendered  }} />
+                {console.log(vitaContent)}
+                    <StyledParagraph dangerouslySetInnerHTML={{ __html: vitaContent}} />
                 </Col>
-            </Row>
+            </Row> 
         </Container>
     ) 
 }
 
 export default connect(Vita);
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled.div`
     font-family: LibreBaskerville-Regular;
     font-size: 15.2px;
     color: #0F0D0E;
@@ -29,6 +32,7 @@ const StyledParagraph = styled.p`
     text-align: justify;
     line-height: 33.25px;
     margin-bottom: 60px; 
+    padding: 15px; 
 
     &::first-letter {
         font-size: 200%;

@@ -3,7 +3,6 @@ import { connect, styled, css } from 'frontity';
 import {Navbar, Nav} from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
 import {Link, animateScroll} from 'react-scroll'
-import { VscMenu } from 'react-icons/vsc';
 
 
 const NavbarCustom = ({ state }, props) => {
@@ -12,10 +11,9 @@ const NavbarCustom = ({ state }, props) => {
 
     
     return(
-        <StyledNavbarSection onScroll={() => animateScroll.scrollToTop()}>
+        <StyledNavbarSection onScroll={() => animateScroll.scrollToTop()} >
             <StyledNavbar variant="dark" expand="xl" fixed="top">
                 <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
-                {console.log(state.frontity.description)}
                 <Navbar.Toggle aria-controls="toggle-connection"/>
                     <Navbar.Collapse id="toggle-connection" className="justify-content-end">
                     
