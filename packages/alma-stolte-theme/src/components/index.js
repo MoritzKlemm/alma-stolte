@@ -7,7 +7,7 @@ import PostList from './util/PostList';
 
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
-import Project from './Project';
+import Project from './ProjectPreview';
 import Vita from './Vita';
 import CelloBackground from './CelloBackground';
 import Gallery from './Gallery';
@@ -39,7 +39,6 @@ const Theme = ({ state }) => {
         <main>
           <NavbarCustom />
           <ProjectGrid />
-          <Vita />
         </main>
           
         <Global

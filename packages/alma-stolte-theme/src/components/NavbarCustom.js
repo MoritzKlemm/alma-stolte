@@ -15,6 +15,7 @@ const NavbarCustom = ({ state }, props) => {
         <StyledNavbarSection onScroll={() => animateScroll.scrollToTop()}>
             <StyledNavbar variant="dark" expand="xl" fixed="top">
                 <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
+                {console.log(state.frontity.description)}
                 <Navbar.Toggle aria-controls="toggle-connection"/>
                     <Navbar.Collapse id="toggle-connection" className="justify-content-end">
                     

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled, decode } from "frontity";
 import Item from "../list/list-item";
-import Project from '../Project'
+import Project from '../ProjectPreview'
 
 const PostList = ({ state }) => {
   const collectionMain = state.source["post"]
