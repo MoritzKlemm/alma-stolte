@@ -40,8 +40,8 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://public-api.wordpress.com/wp/v2/sites/designedcontainershowcase.wordpress.com",
-          "url": "https://designedcontainershowcase.wordpress.com"
+          "api": "https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com",
+          "url": "https://cmsalmastolte.wordpress.com"
         }
       }
     },

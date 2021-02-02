@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect, styled, css } from 'frontity';
-import celloBackground from '../assets/images/celloBackground.jpg';
+import CelloBackgroundServer from './CelloBackgroundServer';
 
 const CelloBackground = () => {
+
+
     return(
-        <StyledBackgroundImage>
-            
-        </StyledBackgroundImage>
+        <StyledBackgroundImage />
     )
 }
 
 export default connect(CelloBackground);
 
 const StyledBackgroundImage = styled.div`
-    background-image: url(${celloBackground});
+    background-image: url("https://cmsalmastolte.files.wordpress.com/2021/01/12-gambe-bc4o2332.jpg");
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
