@@ -2,45 +2,16 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "46b4846ed01728c08722",
+  "hash": "53b74b658a2012c37302",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
-    "alma-stolte": [
-      "alma-stolte.module.js",
-      "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
-    ]
+    "alma-stolte": "alma-stolte.module.js"
   },
   "assets": [
     {
-      "name": "aec7e90c6737d82184aa.hot-update.json",
-      "size": 53,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
-      "name": "alma-stolte.aec7e90c6737d82184aa.hot-update.js",
-      "size": 48188,
-      "chunks": [
-        "alma-stolte"
-      ],
-      "chunkNames": [
-        "alma-stolte"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "alma-stolte.module.js",
-      "size": 7506115,
+      "size": 8720518,
       "chunks": [
         "alma-stolte"
       ],
@@ -48,14 +19,17 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true,
+      "isOverSizeLimit": true
     },
     {
       "name": "fonts/LibreBaskervilleBold.ttf",
       "size": 155428,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf"
+      },
       "emitted": false
     },
     {
@@ -63,7 +37,9 @@
       "size": 154676,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf"
+      },
       "emitted": false
     },
     {
@@ -71,7 +47,9 @@
       "size": 10590602,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/images/almaBackground.jpg"
+      },
       "emitted": false,
       "isOverSizeLimit": true
     }
@@ -83,8 +61,7 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js",
-        "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
+        "alma-stolte.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -96,13 +73,35 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js",
-        "alma-stolte.aec7e90c6737d82184aa.hot-update.js"
+        "alma-stolte.module.js"
       ],
       "children": {},
       "childAssets": {}
     }
   },
+  "chunks": [
+    {
+      "id": "alma-stolte",
+      "rendered": false,
+      "initial": true,
+      "entry": true,
+      "size": 2117819,
+      "names": [
+        "alma-stolte"
+      ],
+      "files": [
+        "alma-stolte.module.js"
+      ],
+      "hash": "c769dbe448b1cf4656f9",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
@@ -110,5 +109,6 @@
       "debug": false
     }
   },
-  "children": []
+  "children": [],
+  "generator": "loadable-components"
 }

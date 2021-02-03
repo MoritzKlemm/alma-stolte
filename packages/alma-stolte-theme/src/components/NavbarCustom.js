@@ -81,34 +81,33 @@ from {
     color: rgba(219, 204, 205, 0.0);
   }
   to {
-    color: rgba(219, 204, 205, 1.0);
+    color: rgba(219, 204, 205, 0.9);
   }
 `;
 
 const StyledSubHeading = styled.h4 `
     font-family: LibreBaskerville-Italic;
     font-size: 20px;
-    color: #DBCCCD;
-    letter-spacing: 3.33px;
+    color: rgba(219, 204, 205, 0.9);
+    letter-spacing: 3.53px;
     line-height: 30px;
-    animation: ${appear} 2s ease-in-out;
+    animation: ${appear} 1.8s ease-in-out;
 `
 
 // -----------------------------------------
 
 const moveup = keyframes`
 from {
-    transform: translateY(110px);
-  }
+    transform: translateY(50px);
+  } 
   to {
     transform: translateY(0px);
-    color: rgba(219, 204, 205, 1.0);
   }
 `;
 
 const StyledSubHeadingWrapper = styled.div `
     padding: 120px 50px;
-    animation: ${moveup} 2.5s ease-in-out;
+    // animation: ${moveup} 1.8s ease-in-out;
 `
 
 
