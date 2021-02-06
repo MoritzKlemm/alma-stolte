@@ -3,12 +3,6 @@ import { connect, styled, css } from 'frontity';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import galleryOne from '../assets/images/galleryOne.jpg';
-import galleryTwo from '../assets/images/galleryTwo.jpg';
-import galleryThree from '../assets/images/galleryThree.jpg';
-import galleryFour from '../assets/images/galleryFour.jpg';
-import galleryFive from '../assets/images/galleryFive.jpg';
-import gallerySix from '../assets/images/gallerySix.jpg';
 
 const Gallery = () => {
     return(
@@ -39,7 +33,6 @@ const StyledContainer = styled(Container)`
 
 // left gallery column ------------------------------------
 const StyledGalleryOne = styled.div`
-    background-image: url(${galleryOne});
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
@@ -50,7 +43,6 @@ const StyledGalleryOne = styled.div`
 `;
 
 const StyledGalleryThree = styled.div`
-    background-image: url(${galleryThree});
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
@@ -61,7 +53,6 @@ const StyledGalleryThree = styled.div`
 `;
 
 const StyledGalleryFive = styled.div`
-    background-image: url(${galleryFive});
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
@@ -74,7 +65,6 @@ const StyledGalleryFive = styled.div`
 
 // right gallery column ------------------------------------
 const StyledGalleryTwo = styled.div`
-    background-image: url(${galleryTwo});
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
@@ -85,7 +75,6 @@ const StyledGalleryTwo = styled.div`
 `;
 
 const StyledGalleryFour = styled.div`
-    background-image: url(${galleryFour});
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
@@ -96,7 +85,6 @@ const StyledGalleryFour = styled.div`
 `;
 
 const StyledGallerySix = styled.div`
-    background-image: url(${gallerySix});
     background-size: cover;
     background-position: center top; 
     background-repeat: no-repeat;

@@ -1,29 +1,23 @@
 import React from 'react';
-import { connect, styled, css } from 'frontity';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+import { connect, styled, css, keyframes } from 'frontity';
 import Col from 'react-bootstrap/Col'
+import Link from './link'
 
 
-const Project = ({state, item}) => {
-
-    // function parseImageHtmlTag(postContent) {
-    //     var str = "The best things in life are free";
-    //     var patt = new RegExp("<img>*</img>");
-    //     var res = patt.exec(str);
-    //     console.log(postContent)
-    // }
+const ProjectPreview = ({state, item}) => {
 
     return(
         <Col md={6}>
-            <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+            <Link link={item.link}>
+                <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+            </Link>
             <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }}/>
             <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}/>
-        </Col>
+        </Col>  
     )
 }
 
-export default connect(Project)
+export default connect(ProjectPreview)
 
 
 const StyledTitle = styled.div`
@@ -34,7 +28,7 @@ const StyledTitle = styled.div`
     margin: 20px 0px; 
 `;
 
-// hiding full paragraph automatically comming with "item.content.rendered"
+// hiding full paragraph which automatically comes in with "item.content.rendered"
 const StyledImage = styled.div`
     & p {
         display: none;

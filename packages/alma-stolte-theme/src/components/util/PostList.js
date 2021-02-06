@@ -18,7 +18,6 @@ const PostList = ({ state }) => {
 
   return (
     <div>
-      {console.log(state.source["post"][145].categories)}
       
     </div>
   ); 

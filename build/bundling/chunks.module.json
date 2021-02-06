@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "04c9565d3fa969a14578",
+  "hash": "ea54c4b1f5e5f19370e8",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+      "alma-stolte.5fb0b79980dc8827f8c1.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "9ffe1c069c897d731468.hot-update.json",
+      "name": "5fb0b79980dc8827f8c1.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.9ffe1c069c897d731468.hot-update.js",
-      "size": 3342,
+      "name": "alma-stolte.5fb0b79980dc8827f8c1.hot-update.js",
+      "size": 23974,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 7552696,
+      "size": 8790029,
       "chunks": [
         "alma-stolte"
       ],
@@ -55,7 +55,9 @@
       "size": 155428,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf"
+      },
       "emitted": false
     },
     {
@@ -63,7 +65,9 @@
       "size": 154676,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf"
+      },
       "emitted": false
     },
     {
@@ -71,57 +75,11 @@
       "size": 10590602,
       "chunks": [],
       "chunkNames": [],
-      "info": {},
+      "info": {
+        "sourceFilename": "packages/alma-stolte-theme/src/assets/images/almaBackground.jpg"
+      },
       "emitted": false,
       "isOverSizeLimit": true
-    },
-    {
-      "name": "images/galleryFive.jpg",
-      "size": 4048069,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryFour.jpg",
-      "size": 8768000,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryOne.jpg",
-      "size": 4107510,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/gallerySix.jpg",
-      "size": 8001032,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryThree.jpg",
-      "size": 1124737,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
-    },
-    {
-      "name": "images/galleryTwo.jpg",
-      "size": 14689136,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {},
-      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -132,7 +90,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+        "alma-stolte.5fb0b79980dc8827f8c1.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -145,12 +103,36 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.9ffe1c069c897d731468.hot-update.js"
+        "alma-stolte.5fb0b79980dc8827f8c1.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
     }
   },
+  "chunks": [
+    {
+      "id": "alma-stolte",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 2160378,
+      "names": [
+        "alma-stolte"
+      ],
+      "files": [
+        "alma-stolte.module.js",
+        "alma-stolte.5fb0b79980dc8827f8c1.hot-update.js"
+      ],
+      "hash": "92bcdb19c0d1eec49fa1",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
@@ -158,5 +140,6 @@
       "debug": false
     }
   },
-  "children": []
+  "children": [],
+  "generator": "loadable-components"
 }
