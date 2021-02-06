@@ -12,7 +12,8 @@ export default function ContactUs() {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_mbm4nb8', 'template_nn9ukco', e.target, 'user_qyKXt1Dj8Hq0dM0sJ1q8r')
+    // credentials derived from emailjs.com
+    emailjs.sendForm('service_cmv2a0i', 'template_icmanhg', e.target, 'user_qyKXt1Dj8Hq0dM0sJ1q8r')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -22,7 +23,7 @@ export default function ContactUs() {
   }
 
   return (
-      <StyledContainer>
+      <StyledContainer id="contact-smooth-scroll">
         <Form className="contact-form" onSubmit={sendEmail}>
             <Form.Group>
                 <StyledInput type="text" name="user_name" placeholder="Vor -und Nachname"/>
