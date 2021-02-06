@@ -2,33 +2,36 @@ import React, { useState } from 'react';
 import { connect, styled, css, keyframes } from 'frontity';
 import { Navbar, Nav } from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
-import { Link, animateScroll } from 'react-scroll'
+import Link from "./link";
 
 
 const NavbarCustom = ({ state }, props) => {
 
     const [clickedLink, setClickedLink] = useState('white');
 
+    const styleSetter = () => {
+        if (state.theme.menu != "/") {
+            console.log(state.theme.menu);
+        }
+    }
+
 
     return (
-        <StyledNavbarSection onScroll={() => animateScroll.scrollToTop()} >
+        <StyledNavbarSection>
             <StyledNavbar variant="dark" expand="xl" fixed="top">
                 <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
                 <Navbar.Toggle aria-controls="toggle-connection" />
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
-
                     <Nav className="mr-auto" className="justify-content-end">
-
-                        <StyledLink to="" smooth={true} duration={1100}>KALENDER</StyledLink>
-
-                        <StyledLink to="projekte-smooth-scroll" smooth={true} duration={1100} spy={true}>PROJEKTE</StyledLink>
-
-                        <StyledLink to="vita-smooth-scroll" smooth={true} duration={1100}>VITA</StyledLink>
-
-                        <StyledLink to="gallery-smooth-scroll" smooth={true} duration={1100}>MEDIA</StyledLink>
-
-                        <StyledLink to="contact-smooth-scroll" smooth={true} duration={1100}>KONTAKT</StyledLink>
-
+                        {state.theme.menu.map(([name, link]) => {
+                            return (
+                                <StyledLink key={name}>
+                                    <Link link={link}>
+                                        {name}
+                                    </Link>
+                                </StyledLink>
+                            );
+                        })}
                     </Nav>
                 </Navbar.Collapse>
             </StyledNavbar>
@@ -37,7 +40,7 @@ const NavbarCustom = ({ state }, props) => {
                 <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
                 <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
             </StyledSubHeadingWrapper>
-            
+
         </StyledNavbarSection>
     )
 }
@@ -57,7 +60,7 @@ const StyledNavbar = styled(Navbar)`
     background-color: rgba(0,0,0,0.5);
 `
 // link scrolls to target with react-scroll "Link" component
-const StyledLink = styled(Link)`
+const StyledLink = styled.div`
     font-size: 16px;
     color: #EDE4E5 !important;
     letter-spacing: 3.56px;

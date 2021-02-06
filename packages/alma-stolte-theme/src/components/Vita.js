@@ -7,7 +7,7 @@ import Item from "./list/list-item";
 import Link from './link'
 
 const Vita = ({state}) => {
-
+    
     const [vitaContent] = useState(state.source["post"][145].content.rendered);
 
     return(

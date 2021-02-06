@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import NavbarCustomLight from './NavbarCustomLight'
 
 const Project = ({ state }) => {
+
     // Get information about the current URL.
     const data = state.source.get(state.router.link);
     // Get the data of the post.
@@ -13,7 +14,6 @@ const Project = ({ state }) => {
 
     return (
         <div>
-            <NavbarCustomLight />
             <StyledContainer>
                 <Row>
                     <Col md={12}>
@@ -41,5 +41,6 @@ const StyledContent = styled.div`
         text-align: justify;
         line-height: 33.25px;
     }
+    
 
 `;

@@ -5,22 +5,17 @@ import Calender from './Calender'
 
 import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
-import LinkFrontity from "./LinkFrontity";
 
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
-import Project from './ProjectPreview';
-import Vita from './Vita';
-import CelloBackground from './CelloBackground';
-import Gallery from './Gallery';
-import Contact from './Contact';
+import HomeContainer from './HomeContainer';
 import Footer from './Footer';
 import FooterImpressum from "./FooterImpressum";
-import Nav from './nav'
 
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
+
 
   return (
     <div>
@@ -39,11 +34,10 @@ const Theme = ({ state }) => {
 
       <NavbarCustom />
       <main>
-        <switch>
-          <ProjectGrid/>
-          <Vita />
-        </switch>
-        <p>current url: {state.router.link}</p>
+        <ProjectGrid />
+        <Switch>
+          <HomeContainer when={data.isHome} />
+        </Switch>
         <Footer />
       </main>
 
