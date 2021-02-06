@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect, styled, css, keyframes } from 'frontity';
 import Col from 'react-bootstrap/Col'
-import Link from './link'
+import ProjectPreviewLink from './ProjectPreviewLink'
 
 
 const ProjectPreview = ({state, item}) => {
 
     return(
         <Col md={6}>
-            <Link link={item.link}>
+            <ProjectPreviewLink link={item.link}>
                 <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-            </Link>
+            </ProjectPreviewLink>
             <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }}/>
             <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}/>
         </Col>  

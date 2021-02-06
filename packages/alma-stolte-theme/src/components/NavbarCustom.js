@@ -2,46 +2,87 @@ import React, { useState } from 'react';
 import { connect, styled, css, keyframes } from 'frontity';
 import { Navbar, Nav } from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
-import Link from "./link";
+import NavbarCustomLink from "./NavbarCustomLink";
 
 
 const NavbarCustom = ({ state }, props) => {
 
-    const [clickedLink, setClickedLink] = useState('white');
+    const data = state.source.get(state.router.link);
+    const [brandStyleHome] = useState({})
 
     const styleSetter = () => {
-        if (state.theme.menu != "/") {
-            console.log(state.theme.menu);
+        if (data.isHome == false) {
+            setFontColor("red")
+        } else {
+            setFontColor("blue")
         }
     }
 
 
     return (
-        <StyledNavbarSection>
-            <StyledNavbar variant="dark" expand="xl" fixed="top">
-                <StyledNavbarBrand href="#home">ALMA STOLTE</StyledNavbarBrand>
+        <div css={data.isHome ? 
+                    css`
+                    background-image: url(${almaBackground});
+                    background-size:cover;
+                    background-attachment: fixed; 
+                    background-position: top;
+                    height: 100vh;`
+                    :
+                    css`
+                    margin-bottom: 100px; 
+                    `}>
+            <StyledNavbar variant="dark" expand="xl" fixed="top" css={data.isHome ? 
+                css`
+                padding: 10px 50px;
+                background-color: rgba(0,0,0,0.5);
+                `
+                :
+                css`
+                padding: 10px 50px;
+                background-color: rgba(235,221,209,0.8);
+                `
+                }>
+                <div href="#home" css={data.isHome ? 
+                    css`
+                    color: #EDE4E5;
+                    font-family: LibreBaskerville-Regular;
+                    font-size: 30px;
+                    letter-spacing: 10.86px;
+                    `
+                    : 
+                    css`color:#333232
+                    font-family: LibreBaskerville-Regular;
+                    font-size: 30px;
+                    letter-spacing: 10.86px;`}>ALMA STOLTE
+                </div>
                 <Navbar.Toggle aria-controls="toggle-connection" />
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
                     <Nav className="mr-auto" className="justify-content-end">
                         {state.theme.menu.map(([name, link]) => {
                             return (
-                                <StyledLink key={name}>
-                                    <Link link={link}>
+                                <StyledDiv key={name}>
+                                    <NavbarCustomLink link={link} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
                                         {name}
-                                    </Link>
-                                </StyledLink>
+                                    </NavbarCustomLink>
+                                </StyledDiv>
                             );
                         })}
                     </Nav>
                 </Navbar.Collapse>
             </StyledNavbar>
 
-            <StyledSubHeadingWrapper>
+            <div css={data.isHome ?
+                css`
+                padding: 120px 50px;`
+                : 
+                css`
+                display: none;
+                `}>
                 <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
                 <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
-            </StyledSubHeadingWrapper>
+            </div>
 
-        </StyledNavbarSection>
+        </div>
     )
 }
 
@@ -59,24 +100,17 @@ const StyledNavbar = styled(Navbar)`
     padding: 10px 50px;
     background-color: rgba(0,0,0,0.5);
 `
-// link scrolls to target with react-scroll "Link" component
-const StyledLink = styled.div`
-    font-size: 16px;
-    color: #EDE4E5 !important;
-    letter-spacing: 3.56px;
-    text-align: center;
+
+const StyledDiv = styled.div`
     margin: 0px 6%;
     
-    &:hover {
-        cursor: pointer; 
-    }
 `;
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
     font-family: LibreBaskerville-Regular;
     font-size: 30px;
-    color: #EDE4E5 !important;
     letter-spacing: 10.86px;
+    // color: #EDE4E5 !important;
 `;
 
 // -----------------------------------------

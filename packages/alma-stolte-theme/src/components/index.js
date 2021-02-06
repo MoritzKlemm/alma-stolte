@@ -1,11 +1,13 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
-import Calender from './Calender'
+import Loading from './loading'
+import PageError from './PageError'
 
 import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
+import Calender from './Calender'
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
 import HomeContainer from './HomeContainer';
@@ -36,7 +38,9 @@ const Theme = ({ state }) => {
       <main>
         <ProjectGrid />
         <Switch>
+          <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />
+          <PageError when={data.isError} />
         </Switch>
         <Footer />
       </main>
@@ -48,6 +52,7 @@ const Theme = ({ state }) => {
 };
 
 export default connect(Theme);
+
 
 const globalStyles = css`
   body {

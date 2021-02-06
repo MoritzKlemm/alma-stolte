@@ -28,7 +28,8 @@ const Project = ({ state }) => {
 export default connect(Project);
 
 const StyledContainer = styled(Container)`
-
+    margin-top: 60px; 
+    max-width: 1000px; 
 `
 
 // styling excerpt which only comes with a paragraph 
@@ -40,6 +41,12 @@ const StyledContent = styled.div`
         letter-spacing: 1.09px;
         text-align: justify;
         line-height: 33.25px;
+    }
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; 
     }
     
 
