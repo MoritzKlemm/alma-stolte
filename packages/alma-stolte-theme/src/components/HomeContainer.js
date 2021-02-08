@@ -8,11 +8,15 @@ const HomeContainer = ({ state }) => {
     const data = state.source.get(state.router.link);
 
     return (
-        <Container>
+        <StyledContainer>
             <Vita />
             <Contact />
-        </Container>
+        </StyledContainer>
     )
 }
 
 export default connect(HomeContainer);
+
+const StyledContainer = styled(Container)`
+    justify-content: center; 
+`

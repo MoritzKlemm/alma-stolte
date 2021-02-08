@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "frontity";
+import { connect, styled, css } from "frontity";
 
 const LinkFrontity = ({ state, href, actions, children }) => {
 
@@ -10,10 +10,27 @@ const LinkFrontity = ({ state, href, actions, children }) => {
   };
 
   return (
-    <a href={href} onClick={onClick}>
+    // here only inline style overwrites default <a> behavior
+    <a href={href} onClick={onClick} css={css`
+        text-decoration: none; 
+        font-family: LibreBaskerville-Regular;
+        color: rgba(115,115,115);
+        font-size: 12px;
+        letter-spacing: 1.3px;
+    
+        &:hover {
+            curser: pointer; 
+            text-decoration: none; 
+            color: rgba(100,100,100);
+        }`}
+    >
       {children}
     </a>
   );
 };
 
 export default connect(LinkFrontity);
+
+const StyledLink = styled.a`
+  text-decroation: none;
+`

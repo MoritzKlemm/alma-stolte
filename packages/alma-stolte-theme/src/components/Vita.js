@@ -14,6 +14,11 @@ const Vita = ({state}) => {
         <Container id="vita-smooth-scroll">
             <Row>
                 <Col md={12}>
+                    <StyledLine></StyledLine>
+                </Col>
+            </Row> 
+            <Row>
+                <Col md={12}>
                     <StyledParagraph dangerouslySetInnerHTML={{ __html: vitaContent}} />
                 </Col>
             </Row> 
@@ -22,6 +27,11 @@ const Vita = ({state}) => {
 }
 
 export default connect(Vita);
+
+const StyledLine = styled.div `
+    border-top: 1px solid grey; 
+    margin: 40px 15px; 
+`
 
 const StyledParagraph = styled.div`
     font-family: LibreBaskerville-Regular;

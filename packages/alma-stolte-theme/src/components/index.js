@@ -7,10 +7,18 @@ import PageError from './PageError'
 import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
+import HomeContainer from './HomeContainer';
+import PagesContainer from './PagesContainer';
+
 import Calender from './Calender'
+
+import List from './list/List';
+import Project from './Project';
+import Gallery from './Gallery';
+
 import NavbarCustom from './NavbarCustom';
 import ProjectGrid from './ProjectGrid';
-import HomeContainer from './HomeContainer';
+import FooterContainer from './FooterContainer';
 import Footer from './Footer';
 import FooterImpressum from "./FooterImpressum";
 
@@ -34,9 +42,10 @@ const Theme = ({ state }) => {
       </Head>
       <Global styles={globalStyles} />
 
-      <NavbarCustom />
       <main>
+        <NavbarCustom />
         <ProjectGrid />
+
         <Switch>
           <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />

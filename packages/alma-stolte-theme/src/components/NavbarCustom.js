@@ -8,48 +8,39 @@ import NavbarCustomLink from "./NavbarCustomLink";
 const NavbarCustom = ({ state }, props) => {
 
     const data = state.source.get(state.router.link);
-    const [brandStyleHome] = useState({})
-
-    const styleSetter = () => {
-        if (data.isHome == false) {
-            setFontColor("red")
-        } else {
-            setFontColor("blue")
-        }
-    }
 
 
     return (
-        <div css={data.isHome ? 
-                    css`
+        <div css={data.isHome ?
+            css`
                     background-image: url(${almaBackground});
                     background-size:cover;
                     background-attachment: fixed; 
                     background-position: top;
                     height: 100vh;`
-                    :
-                    css`
-                    margin-bottom: 100px; 
+            :
+            css`
+                    margin-bottom: 80px; 
                     `}>
-            <StyledNavbar variant="dark" expand="xl" fixed="top" css={data.isHome ? 
-                css`
-                padding: 10px 50px;
+            <StyledNavbar variant="dark" expand="xl" fixed="top" css={data.isHome ?
+                css`    
+                padding: 15px 50px;
                 background-color: rgba(0,0,0,0.5);
                 `
                 :
                 css`
-                padding: 10px 50px;
+                padding: 15px 50px;
                 background-color: rgba(235,221,209,0.8);
                 `
-                }>
-                <div href="#home" css={data.isHome ? 
+            }>
+                <div href={"/"} css={data.isHome ?
                     css`
                     color: #EDE4E5;
                     font-family: LibreBaskerville-Regular;
                     font-size: 30px;
                     letter-spacing: 10.86px;
                     `
-                    : 
+                    :
                     css`color:#333232
                     font-family: LibreBaskerville-Regular;
                     font-size: 30px;
@@ -74,7 +65,7 @@ const NavbarCustom = ({ state }, props) => {
             <div css={data.isHome ?
                 css`
                 padding: 120px 50px;`
-                : 
+                :
                 css`
                 display: none;
                 `}>

@@ -4,21 +4,41 @@ import Col from 'react-bootstrap/Col'
 import ProjectPreviewLink from './ProjectPreviewLink'
 
 
-const ProjectPreview = ({state, item}) => {
+const ProjectPreview = ({ state, item }) => {
 
-    return(
-        <Col md={6}>
+    return (
+        <StyledCol md={6}>
             <ProjectPreviewLink link={item.link}>
                 <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+                <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
+                <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
             </ProjectPreviewLink>
-            <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }}/>
-            <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}/>
-        </Col>  
+        </StyledCol>
     )
 }
 
 export default connect(ProjectPreview)
 
+const generalWidth = "90%"
+
+// const backGroundHighlight = keyframes`
+// from {
+//     background-color: rgb(235, 221, 209);
+//   }
+//   to {
+//     background-color: rgb(226,211,200);
+//   }
+// `;
+
+const StyledCol = styled(Col)`
+    // border-radius: 5px; 
+
+    &:hover {
+        // animation: ${backGroundHighlight} 0.2s ease-in-out;  
+        // animation-fill-mode: forwards;  
+        // box-shadow: 10px 10px 5px rgb(226, 207,192);
+    }
+`
 
 const StyledTitle = styled.div`
     font-family: LibreBaskerville-Regular;
@@ -35,7 +55,7 @@ const StyledImage = styled.div`
     }
 
     & img {
-        border-radius: 6px;
+        // border-radius: 6px;
         object-fit: cover;
         width: 100%;
         height: 240px; 
@@ -55,13 +75,3 @@ const StyledExcerpt = styled.div`
     }
 
 `;
-
-const StyledButtonMehr = styled.button`
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #3E59E8;
-    letter-spacing: 1.09px;
-    text-align: justify;
-    border: none; 
-    background-color: transparent;
-` 

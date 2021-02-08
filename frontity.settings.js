@@ -14,7 +14,7 @@ const settings = {
           "menu": [
             [
               "KALENDER",
-              "/"
+              "/kalender/"
             ],
             [
               "PROJEKTE",

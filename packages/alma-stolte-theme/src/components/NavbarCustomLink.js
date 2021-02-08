@@ -26,3 +26,4 @@ const StyledLink = styled(Link)`
     color: #EDE4E5;
   }
 `
+
