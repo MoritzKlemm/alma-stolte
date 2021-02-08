@@ -3,8 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { connect, styled, css } from 'frontity';
-import Item from "./list/list-item";
-import Link from './link'
 
 const Vita = ({state}) => {
     
@@ -18,9 +16,9 @@ const Vita = ({state}) => {
                 </Col>
             </Row> 
             <Row>
-                <Col md={12}>
+                <Col md={12}> 
                     <StyledParagraph dangerouslySetInnerHTML={{ __html: vitaContent}} />
-                </Col>
+                </Col> 
             </Row> 
         </Container>
     ) 

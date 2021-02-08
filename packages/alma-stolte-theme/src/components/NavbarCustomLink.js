@@ -23,7 +23,7 @@ const StyledLink = styled(Link)`
   &:hover {
     text-decoration: none;   
     cursor: pointer; 
-    color: #EDE4E5;
+    color: rgb(175,175,175) !important ;
   }
 `
 

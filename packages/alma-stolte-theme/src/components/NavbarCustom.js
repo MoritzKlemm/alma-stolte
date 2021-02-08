@@ -49,15 +49,31 @@ const NavbarCustom = ({ state }, props) => {
                 <Navbar.Toggle aria-controls="toggle-connection" />
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
                     <Nav className="mr-auto" className="justify-content-end">
-                        {state.theme.menu.map(([name, link]) => {
-                            return (
-                                <StyledDiv key={name}>
-                                    <NavbarCustomLink link={link} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                        {name}
-                                    </NavbarCustomLink>
-                                </StyledDiv>
-                            );
-                        })}
+                        <StyledMargin>
+                            <NavbarCustomLink link={"/kalender/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                                KALENDER
+                            </NavbarCustomLink>
+                        </StyledMargin>
+                        <StyledMargin>
+                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                                PROJEKTE
+                            </NavbarCustomLink>
+                        </StyledMargin>
+                        <StyledMargin>
+                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                                VITA
+                            </NavbarCustomLink>
+                        </StyledMargin>
+                        <StyledMargin>
+                            <NavbarCustomLink link={"/media/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                                MEDIA
+                            </NavbarCustomLink>
+                        </StyledMargin>
+                        <StyledMargin>
+                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                                KONTAKT
+                            </NavbarCustomLink>
+                        </StyledMargin>
                     </Nav>
                 </Navbar.Collapse>
             </StyledNavbar>
@@ -92,9 +108,8 @@ const StyledNavbar = styled(Navbar)`
     background-color: rgba(0,0,0,0.5);
 `
 
-const StyledDiv = styled.div`
+const StyledMargin = styled.div`
     margin: 0px 6%;
-    
 `;
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
