@@ -7,7 +7,6 @@ import PageError from './PageError'
 import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
-import CalenderPreview from './CalenderPreview';
 import HomeContainer from './HomeContainer';
 
 import NavbarCustom from './NavbarCustom';
@@ -16,6 +15,10 @@ import VitaPage from "./VitaPage";
 import CalenderPage from "./CalenderPage";
 import MediaPage from "./MediaPage";
 import ContactPage from "./ContactPage";
+import ProjectGrid from "./ProjectGrid";
+import ProjectPage from "./ProjectPage";
+import Project from "./Project";
+import ImpressumPage from "./ImpressumPage";
 
 
 const Theme = ({ state }) => {
@@ -39,14 +42,17 @@ const Theme = ({ state }) => {
       <main>
 
         <NavbarCustom />
-
+        
         <Switch>
           <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />
+          <Project when={data.isPost}/>
           <CalenderPage when={data.isPage && state.router.link == "/kalender/"} />
+          <ProjectPage when={data.isPage && state.router.link == "/projekte/"} />
           <MediaPage when={data.isPage && state.router.link == "/media/"} />
           <VitaPage when={data.isPage && state.router.link == "/vita/"} />
           <ContactPage when={data.isPage && state.router.link == "/kontakt/"} />
+          <ImpressumPage when={data.isPage && state.router.link == "/impressum/"} />
           <PageError when={data.isError} /> 
         </Switch>
 

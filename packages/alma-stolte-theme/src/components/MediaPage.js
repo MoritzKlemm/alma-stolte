@@ -31,6 +31,5 @@ const StyledCol = styled(Col)`
 `
 
 const StyledRenderDiv = styled.div`
-
     
 ` 

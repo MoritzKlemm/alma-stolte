@@ -7,6 +7,8 @@ const List = ({ state }) => {
 
   // saving all posts 
   const [initialList] = useState(state.source.get(state.router.link).items);
+  console.log("intial list below");
+  console.log(state.source.get(state.router.link));
 
   // filtering posts returning only category "projekte" aka 4771.
   const filterProjects = (il) => {

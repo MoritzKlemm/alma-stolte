@@ -9,7 +9,7 @@ import Contact from './Contact';
 
 const ContactPage = ({state}) => {
 
-    // saving ID of "contact" page to be independent from ID when it should be deleted and recreated
+    // saving ID of "contact" page to be independent from ID when it should be deleted and recreated in wp cms
     const [contactPageID] = useState(state.source.get(state.router.link).id)
     const [contactContent] = useState(state.source["page"][contactPageID].content.rendered);
 
