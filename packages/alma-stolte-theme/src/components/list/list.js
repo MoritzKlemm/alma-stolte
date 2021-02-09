@@ -1,11 +1,11 @@
 import {useState} from 'react';
-import { connect, styled, decode } from "frontity";
+import { connect, styled, decode, css } from "frontity";
 import ProjectPreview from '../ProjectPreview'
 import Row from 'react-bootstrap/Row'
 
 const List = ({ state }) => {
 
-  // fetching all posts 
+  // saving all posts 
   const [initialList] = useState(state.source.get(state.router.link).items);
 
   // filtering posts returning only category "projekte" aka 4771.

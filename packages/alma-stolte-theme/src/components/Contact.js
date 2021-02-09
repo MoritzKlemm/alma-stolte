@@ -41,13 +41,12 @@ export default function ContactUs() {
                 <StyledFormButton type="submit" value="Send">senden</StyledFormButton>
             </Form.Group>
         </Form>
-        <StyledPhoneNumber>+400030303</StyledPhoneNumber>
       </StyledContainer>
   );
 }
 
 const StyledContainer = styled(Container)`
-    width: 40%; 
+    max-width: 450px; 
 `
 
 // input styling --------------------------------------

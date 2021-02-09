@@ -11,19 +11,21 @@ import CalenderPreview from './CalenderPreview';
 import HomeContainer from './HomeContainer';
 
 import NavbarCustom from './NavbarCustom';
-import ProjectGrid from './ProjectGrid';
 import Footer from './Footer';
+import VitaPage from "./VitaPage";
+import CalenderPage from "./CalenderPage";
+import MediaPage from "./MediaPage";
+import ContactPage from "./ContactPage";
 
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
 
-
   return (
     <div>
       <Head>
         <title>Alma Stolte</title>
-        <meta name="description" content="This blog is just for being awesome" />
+        <meta name="description"/>
         <html lang="en" />
         <link
           rel="stylesheet"
@@ -37,20 +39,20 @@ const Theme = ({ state }) => {
       <main>
 
         <NavbarCustom />
-        <CalenderPreview />
-        <ProjectGrid />
 
         <Switch>
           <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />
+          <CalenderPage when={data.isPage && state.router.link == "/kalender/"} />
+          <MediaPage when={data.isPage && state.router.link == "/media/"} />
+          <VitaPage when={data.isPage && state.router.link == "/vita/"} />
+          <ContactPage when={data.isPage && state.router.link == "/kontakt/"} />
           <PageError when={data.isError} /> 
         </Switch>
 
         <Footer />
         
       </main>
-
-
 
     </div>
   );

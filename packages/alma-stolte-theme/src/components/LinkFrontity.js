@@ -10,7 +10,7 @@ const LinkFrontity = ({ state, href, actions, children }) => {
   };
 
   return (
-    // here only inline style overwrites default <a> behavior
+    // here only inline styling overwrites default <a> behavior
     <a href={href} onClick={onClick} css={css`
         text-decoration: none; 
         font-family: LibreBaskerville-Regular;

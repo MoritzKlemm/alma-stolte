@@ -16,7 +16,7 @@ const Project = ({ state }) => {
             <StyledContainer>
                 <Row>
                     <Col md={12}>
-                        <StyledContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+                        <StyledContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} /> from project component
                     </Col>
                 </Row>
             </StyledContainer>

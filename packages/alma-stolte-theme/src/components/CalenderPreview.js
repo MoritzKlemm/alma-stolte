@@ -8,16 +8,10 @@ import List from './list/List';
 import PageError from './PageError';
 
 const CalenderPreview = ({ state }) => {
-    const data = state.source.get(state.router.link);
+    const [calenderContent] = useState(state.source["page"][258].content.rendered);
 
     return (
-        <StyledContainer>
-            <Switch>
-                <List when={data.isArchive} />
-                <Loading when={data.isPostType} />
-                <PageError when={data.isError} />
-            </Switch>
-        </StyledContainer>
+        <StyledContainer  dangerouslySetInnerHTML={{ __html: calenderContent}} />
     )
 }
 

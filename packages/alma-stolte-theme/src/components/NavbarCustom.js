@@ -5,7 +5,7 @@ import almaBackground from '../assets/images/almaBackground.jpg'
 import NavbarCustomLink from "./NavbarCustomLink";
 
 
-const NavbarCustom = ({ state }, props) => {
+const NavbarCustom = ({ state }) => {
 
     const data = state.source.get(state.router.link);
 
@@ -33,18 +33,25 @@ const NavbarCustom = ({ state }, props) => {
                 background-color: rgba(235,221,209,0.8);
                 `
             }>
-                <div href={"/"} css={data.isHome ?
-                    css`
-                    color: #EDE4E5;
-                    font-family: LibreBaskerville-Regular;
-                    font-size: 30px;
-                    letter-spacing: 10.86px;
-                    `
-                    :
-                    css`color:#333232
-                    font-family: LibreBaskerville-Regular;
-                    font-size: 30px;
-                    letter-spacing: 10.86px;`}>ALMA STOLTE
+                <div>
+                    <NavbarCustomLink link={"/"} css={data.isHome ?
+                        css`
+                        color: #EDE4E5;
+                        font-family: LibreBaskerville-Regular;
+                        font-size: 30px;
+                        letter-spacing: 10.86px;
+                        white-space: nowrap;
+                        margin: 0px;
+                        `
+                        :
+                        css`color: #333232;
+                        font-family: LibreBaskerville-Regular;
+                        font-size: 30px;
+                        letter-spacing: 10.86px;
+                        white-space: nowrap;
+                        margin: 0px;
+                        `}>ALMA STOLTE
+                    </NavbarCustomLink>
                 </div>
                 <Navbar.Toggle aria-controls="toggle-connection" />
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
@@ -55,12 +62,12 @@ const NavbarCustom = ({ state }, props) => {
                             </NavbarCustomLink>
                         </StyledMargin>
                         <StyledMargin>
-                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                            <NavbarCustomLink link={"/projekte/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
                                 PROJEKTE
                             </NavbarCustomLink>
                         </StyledMargin>
                         <StyledMargin>
-                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                            <NavbarCustomLink link={"/vita/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
                                 VITA
                             </NavbarCustomLink>
                         </StyledMargin>
@@ -70,7 +77,7 @@ const NavbarCustom = ({ state }, props) => {
                             </NavbarCustomLink>
                         </StyledMargin>
                         <StyledMargin>
-                            <NavbarCustomLink link={"/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
+                            <NavbarCustomLink link={"/kontakt/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
                                 KONTAKT
                             </NavbarCustomLink>
                         </StyledMargin>

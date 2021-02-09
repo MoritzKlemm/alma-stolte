@@ -5,6 +5,7 @@ import CalenderPreview from './CalenderPreview';
 import Contact from './Contact';
 import Vita from './Vita';
 import ProjectGrid from './ProjectGrid';
+import List from './list/List';
 
 
 const HomeContainer = ({ state }) => {
@@ -12,6 +13,7 @@ const HomeContainer = ({ state }) => {
 
     return (
         <StyledContainer>
+            <List />
             <Vita />
             <Contact />
         </StyledContainer>
