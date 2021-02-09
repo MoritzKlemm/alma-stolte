@@ -76,8 +76,8 @@ const globalStyles = css`
     padding: 0px; 
   }
   .row, col-md-6, .col-md-12 {
-      margin: 0px;
-      padding: 0px; 
+      // margin: 0px;
+      // padding: 0px; 
   }
   .container {
       padding: 0px; 

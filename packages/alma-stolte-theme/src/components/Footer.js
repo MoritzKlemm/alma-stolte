@@ -28,7 +28,7 @@ const Footer = ({ state }) => {
 export default connect(Footer);
 
 const StyledContainer = styled(Container)`
-    padding: 125px 0px 0px 0px; 
+    padding: 125px 15px 0px 15px ; 
 `;
 
 const StyledRow = styled(Row)`

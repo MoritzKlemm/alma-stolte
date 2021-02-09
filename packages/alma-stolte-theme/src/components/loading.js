@@ -23,8 +23,8 @@ export default Loading;
 
 const bar = index => css`
   background-color: rgba(12, 17, 43, 0.3);
-  width: 4px;
-  height: 24px;
+  width: 6px;
+  height: 30px;
   margin: 3px;
   border-radius: 0;
   display: inline-block;

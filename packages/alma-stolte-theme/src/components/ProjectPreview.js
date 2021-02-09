@@ -44,8 +44,12 @@ const StyledTitle = styled.div`
     font-family: LibreBaskerville-Regular;
     font-size: 26.6px; 
     color: #444C92;
-    letter-spacing: 3.99px;
+    letter-spacing: 3.0px;
     margin: 20px 0px; 
+
+    @media (max-width: 1000px) {
+        font-size: 20px; 
+    }
 `;
 
 // hiding full paragraph which automatically comes in with "item.content.rendered"
@@ -69,9 +73,15 @@ const StyledExcerpt = styled.div`
         font-family: LibreBaskerville-Regular;
         font-size: 15.2px;
         color: #0F0D0E;
-        letter-spacing: 1.09px;
+        letter-spacing: 1.00px;
         text-align: justify;
         line-height: 33.25px;
+
+        @media (max-width: 1000px) {
+            font-size: 14px; 
+        }
+    
     }
 
+   
 `;

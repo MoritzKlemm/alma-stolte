@@ -15,7 +15,7 @@ const MediaPage = ({state}) => {
         <Container>
             <Row>
                 <StyledCol md={12}>
-                    <div dangerouslySetInnerHTML={{ __html: mediaContent}} />
+                    <StyledRenderDiv dangerouslySetInnerHTML={{ __html: mediaContent}} />
                 </StyledCol>
             </Row>
         </Container>
@@ -31,5 +31,5 @@ const StyledCol = styled(Col)`
 `
 
 const StyledRenderDiv = styled.div`
-    
+    display: inline; 
 ` 

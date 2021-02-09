@@ -35,7 +35,7 @@ export default function ContactUs() {
                 <StyledInput type="text" name="subject" placeholder="Betreff"/>
             </Form.Group>
             <Form.Group>
-                <StyledFormControlMessage as="textarea" rows={10} name="message" placeholder="Nachricht"/>
+                <StyledFormControlMessage as="textarea" rows={8} name="message" placeholder="Nachricht"/>
             </Form.Group>
             <Form.Group>
                 <StyledFormButton type="submit" value="Send">senden</StyledFormButton>
@@ -54,9 +54,9 @@ const StyledContainer = styled(Container)`
 // bootstrap <input> component. with type = "x" saying what type 
 const StyledInput = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 16px;
+    font-size: 15.2px;
     color: #595555;
-    letter-spacing: 1.22px;
+    letter-spacing: 1.0px;
     text-align: justify;
     background-color: transparent; 
     border: none; 
@@ -75,13 +75,13 @@ const StyledInput = styled(Form.Control)`
 `
 const StyledFormControlMessage = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 16px;
+    font-size: 15.2px;
     color: #595555;
-    letter-spacing: 1.22px;
+    letter-spacing: 1.0px;
     text-align: justify;
     background-color: transparent; 
     border: 1px solid grey;
-    border-radius: 5px; 
+    border-radius: 0px; 
     height: 200px; 
     padding: 4px 10px; 
     margin-top: 50px; 
@@ -92,29 +92,17 @@ const StyledFormControlMessage = styled(Form.Control)`
 `
 const StyledFormButton = styled.button`
     font-family: LibreBaskerville-Regular;
-    font-size: 16px;
+    font-size: 15.2px;
     color: #595555;
-    letter-spacing: 1.22px;
+    letter-spacing: 1.0px;
     width: 100%; 
     height: 35px; 
     background-color: #6F9353;
     color: white; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 0px; 
 
     &:hover {
         background-color: #5F8046;
     }
-`
-
-// Static phone number -------------------------------
-
-const StyledPhoneNumber = styled.p`
-    font-family: LibreBaskerville-Regular;
-    font-size: 18px;
-    color: #595555;
-    letter-spacing: 2.99px;
-    margin-top: 30px; 
-    display: flex; 
-    justify-content: center; 
 `

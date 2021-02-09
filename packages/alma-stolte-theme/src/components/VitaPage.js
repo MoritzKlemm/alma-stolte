@@ -26,7 +26,7 @@ const StyledParagraph = styled.div`
     font-family: LibreBaskerville-Regular;
     font-size: 15.2px;
     color: #0F0D0E;
-    letter-spacing: 1.09px;
+    letter-spacing: 1.00px;
     text-align: justify;
     line-height: 33.25px;
     margin-bottom: 60px; 

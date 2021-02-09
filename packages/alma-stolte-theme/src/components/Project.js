@@ -12,23 +12,21 @@ const Project = ({ state }) => {
     const post = state.source[data.type][data.id];
 
     return (
-        <div>
-            <StyledContainer>
-                <Row>
-                    <Col md={12}>
-                        <StyledContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} /> from project component
+        <StyledContainer>
+            <Row>
+                <Col md={12}>
+                    <StyledContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                     </Col>
-                </Row>
-            </StyledContainer>
-        </div>
+            </Row>
+        </StyledContainer>
     )
 }
 
 export default connect(Project);
 
 const StyledContainer = styled(Container)`
-    margin-top: 60px; 
-    max-width: 1000px; 
+    margin-top: 75px; 
+    padding: 0px 15px;
 `
 
 // styling excerpt which only comes with a paragraph 
@@ -37,7 +35,7 @@ const StyledContent = styled.div`
         font-family: LibreBaskerville-Regular;
         font-size: 15.2px;
         color: #0F0D0E;
-        letter-spacing: 1.09px;
+        letter-spacing: 1.00px;
         text-align: justify;
         line-height: 33.25px;
     }

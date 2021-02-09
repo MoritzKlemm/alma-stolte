@@ -13,6 +13,7 @@ const HomeContainer = ({ state }) => {
 
     return (
         <StyledContainer>
+            <CalenderPreview />
             <List />
             <Vita />
             <Contact />
