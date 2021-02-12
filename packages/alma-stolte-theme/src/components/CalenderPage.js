@@ -27,6 +27,7 @@ const StyledRenderDiv = styled.div`
 
     & h2 {
         background-color: #D9C9BB; 
+        margin-bottom: 20px; 
     }
 
     font-family: LibreBaskerville-Regular;

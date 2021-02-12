@@ -19,6 +19,7 @@ import ProjectGrid from "./ProjectGrid";
 import ProjectPage from "./ProjectPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
+import CalenderPreview from "./CalenderPreview";
 
 
 const Theme = ({ state }) => {

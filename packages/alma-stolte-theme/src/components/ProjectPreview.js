@@ -42,10 +42,10 @@ const StyledCol = styled(Col)`
 
 const StyledTitle = styled.div`
     font-family: LibreBaskerville-Regular;
-    font-size: 26.6px; 
+    font-size: 26.6px;
     color: #444C92;
     letter-spacing: 3.0px;
-    margin: 20px 0px; 
+    margin: 20px 0px 10px 0px;
 
     @media (max-width: 1000px) {
         font-size: 20px; 
