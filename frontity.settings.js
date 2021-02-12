@@ -13,27 +13,23 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "ALMA STOLTE",
+              "KALENDER",
+              "/kalender/"
+            ],
+            [
+              "PROJEKTE",
               "/"
             ],
             [
-              "Kalender",
+              "VITA",
               "/"
             ],
             [
-              "Projekte",
-              "/"
-            ],
-            [
-              "Vita",
-              "/"
-            ],
-            [
-              "Media",
+              "MEDIA",
               "/media"
             ],
             [
-              "Kontakt",
+              "KONTAKT",
               "/"
             ],
           ]

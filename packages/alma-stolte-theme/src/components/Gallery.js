@@ -17,6 +17,7 @@ const Gallery = () => {
                     <StyledGalleryTwo></StyledGalleryTwo>
                     <StyledGalleryFour></StyledGalleryFour>
                     <StyledGallerySix></StyledGallerySix>
+                    test gallery
                 </Col>
             </Row>
         </StyledContainer>

@@ -1,22 +1,25 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
-import Calender from './Calender'
+import Loading from './loading'
+import PageError from './PageError'
 
 import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaskervilleRegular.ttf'
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
-import LinkFrontity from "./LinkFrontity";
+
+import HomeContainer from './HomeContainer';
 
 import NavbarCustom from './NavbarCustom';
-import ProjectGrid from './ProjectGrid';
-import Project from './ProjectPreview';
-import Vita from './Vita';
-import CelloBackground from './CelloBackground';
-import Gallery from './Gallery';
-import Contact from './Contact';
 import Footer from './Footer';
-import FooterImpressum from "./FooterImpressum";
-import Nav from './nav'
+import VitaPage from "./VitaPage";
+import CalenderPage from "./CalenderPage";
+import MediaPage from "./MediaPage";
+import ContactPage from "./ContactPage";
+import ProjectGrid from "./ProjectGrid";
+import ProjectPage from "./ProjectPage";
+import Project from "./Project";
+import ImpressumPage from "./ImpressumPage";
+import CalenderPreview from "./CalenderPreview";
 
 
 const Theme = ({ state }) => {
@@ -26,7 +29,7 @@ const Theme = ({ state }) => {
     <div>
       <Head>
         <title>Alma Stolte</title>
-        <meta name="description" content="This blog is just for being awesome" />
+        <meta name="description"/>
         <html lang="en" />
         <link
           rel="stylesheet"
@@ -37,23 +40,33 @@ const Theme = ({ state }) => {
       </Head>
       <Global styles={globalStyles} />
 
-      <NavbarCustom />
       <main>
-        <switch>
-          <ProjectGrid/>
-          <Vita />
-        </switch>
-        <p>current url: {state.router.link}</p>
+
+        <NavbarCustom />
+        
+        <Switch>
+          <Loading when={data.isFetching} />
+          <HomeContainer when={data.isHome} />
+          <Project when={data.isPost}/>
+          <CalenderPage when={data.isPage && state.router.link == "/kalender/"} />
+          <ProjectPage when={data.isPage && state.router.link == "/projekte/"} />
+          <MediaPage when={data.isPage && state.router.link == "/media/"} />
+          <VitaPage when={data.isPage && state.router.link == "/vita/"} />
+          <ContactPage when={data.isPage && state.router.link == "/kontakt/"} />
+          <ImpressumPage when={data.isPage && state.router.link == "/impressum/"} />
+          <PageError when={data.isError} /> 
+        </Switch>
+
         <Footer />
+        
       </main>
-
-
 
     </div>
   );
 };
 
 export default connect(Theme);
+
 
 const globalStyles = css`
   body {
@@ -64,8 +77,8 @@ const globalStyles = css`
     padding: 0px; 
   }
   .row, col-md-6, .col-md-12 {
-      margin: 0px;
-      padding: 0px; 
+      // margin: 0px;
+      // padding: 0px; 
   }
   .container {
       padding: 0px; 
