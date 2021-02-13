@@ -9,15 +9,8 @@ import CalenderPreviewItem from './CalenderPreviewItem';
 
 const CalenderPreview = ({ state, actions }) => {
 
-    const [rawData, setRawData] = useState('');
+    // list of extracted <div>'s to map to <CalenderPreviewItem />
     const [extractedItem, setExtractedItem] = useState([]);
-
-    const addItems = () => {
-        setExtractedItem(extractedItem => [...extractedItem, {
-            id: 32,
-            value: "test sssss"
-        }]);
-    }
 
     // starting chain: finished rendering when: data fetched --> calender item <div>'s extracted
     useEffect(() => {
@@ -37,34 +30,28 @@ const CalenderPreview = ({ state, actions }) => {
     // get seperate <div>..</div> calender items from api response
     const extractCalenderItems = (calData) => {
 
-        // remove linebreaks and replace with ''
+        // remove linebreaks and replace'm with ''
         const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g')
         const lineBreaksRemovedData = calData.replace(RegExpFindLineBreaks, '');
-        setRawData(lineBreaksRemovedData);
 
         // seperate divs
         let match;
         let i = 0;
+        // making regex search globally (g) and mulitline (m)
         const RegExpSeperateDivs = RegExp('(<div>.*?<\/div>)', 'gm')
 
         // as long as resultData matches AND it is three or less according to the 3 preview slots on homepage.
         while (((match = RegExpSeperateDivs.exec(lineBreaksRemovedData)) !== null) && i <= 2) {
-            // adding each div to "variable" / hook extractedItem
-            setExtractedItem(prev => [...prev, {
-                key: i,
-                value: match[0]
-            }]);
+            // adding each div to "variable" / hook "extractedItem"
+            setExtractedItem(prev => [...prev, {key: i, value: match[0]}]);
             i++;
         }
     }
 
-
     return (
         <StyledContainer>
             <StyledRow>
-                {console.log(extractedItem)}
                 {extractedItem.map((item) => {
-                    console.log("key: " + item.key, "item" + item)
                     return <CalenderPreviewItem key={item.id} item={item} />
                 })}
             </StyledRow>
@@ -73,12 +60,6 @@ const CalenderPreview = ({ state, actions }) => {
 }
 
 export default connect(CalenderPreview);
-
-const StyledPreview = styled.div`
-    & h2 {
-        display: none; 
-    }
-`
 
 const StyledContainer = styled(Container)`
     margin: 40px 0px; 
@@ -90,55 +71,4 @@ const StyledContainer = styled(Container)`
 const StyledRow = styled(Row)`
     padding: 0px 15px; 
     width: 100%; 
-`
-
-const StyledCol = styled(Col)`
-    width: 100%; 
-    margin: 10px 0px; 
-    padding: 0px; 
-`
-
-const StyledDate = styled.h4`
-    font-family: LibreBaskerville-Regular;
-    font-size: 22.8px;
-    color: #3B487D;
-    letter-spacing: 1.63px;
-
-    @media (max-width: 1000px) {
-        font-size: 20px; 
-    }
-`
-
-const StyledPlace = styled.p`
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #3B487D;
-    letter-spacing: 1.00px;
-
-    @media (max-width: 1000px) {
-        font-size: 14px; 
-    }
-`
-
-const StyledTitle = styled.b`
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #333232;
-    letter-spacing: 1.00px;
-
-    @media (max-width: 1000px) {
-        font-size: 14px; 
-    }
-`
-
-const StyledDescription = styled.p`
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #333232;
-    letter-spacing: 1.00px;
-    margin: 0px; 
-
-    @media (max-width: 1000px) {
-        font-size: 14px; 
-    }
 `

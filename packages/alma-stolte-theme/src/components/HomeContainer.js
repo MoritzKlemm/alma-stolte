@@ -9,7 +9,6 @@ import List from './list/List';
 
 
 const HomeContainer = ({ state }) => {
-    const data = state.source.get(state.router.link);
 
     return (
         <StyledContainer>
