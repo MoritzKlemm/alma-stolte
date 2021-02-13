@@ -21,15 +21,6 @@ export default connect(ProjectPreview)
 
 const generalWidth = "90%"
 
-// const backGroundHighlight = keyframes`
-// from {
-//     background-color: rgb(235, 221, 209);
-//   }
-//   to {
-//     background-color: rgb(226,211,200);
-//   }
-// `;
-
 const StyledCol = styled(Col)`
     // border-radius: 5px; 
 

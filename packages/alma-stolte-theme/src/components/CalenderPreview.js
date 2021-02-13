@@ -1,26 +1,25 @@
 import { React, useState, setState, useEffect } from 'react';
 import { connect, styled, css } from 'frontity';
+import axios from 'axios';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import axios from 'axios';
-import Project from './Project';
-import Loading from './loading';
-import Switch from "@frontity/components/switch";
-import List from './list/List';
-import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
+import CalenderPreviewItem from './CalenderPreviewItem';
 
 
 const CalenderPreview = ({ state, actions }) => {
 
-    const [calenderData, setCalenderData] = useState('test');
-    const [extractedCalendarItems, setExtractedCalendarItems] = useState([]);
+    const [rawData, setRawData] = useState('');
+    const [extractedItem, setExtractedItem] = useState([]);
 
-    const addExtractedCalendarItems = (newItem) => {   
-        setExtractedCalendarItems(prev => [...prev, newItem])
+    const addItems = () => {
+        setExtractedItem(extractedItem => [...extractedItem, {
+            id: 32,
+            value: "test sssss"
+        }]);
     }
 
-    // only renders component one time ([]). when fetchCalenderData finished.
+    // starting chain: finished rendering when: data fetched --> calender item <div>'s extracted
     useEffect(() => {
         fetchCalenderData();
     }, []);
@@ -37,42 +36,37 @@ const CalenderPreview = ({ state, actions }) => {
 
     // get seperate <div>..</div> calender items from api response
     const extractCalenderItems = (calData) => {
-        
-        // remove linebreaks 
+
+        // remove linebreaks and replace with ''
         const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g')
-        const resultOne = calData.replace(RegExpFindLineBreaks, ' ');
-        
+        const lineBreaksRemovedData = calData.replace(RegExpFindLineBreaks, '');
+        setRawData(lineBreaksRemovedData);
+
         // seperate divs
         let match;
-        let i = 0; 
-        const divArray = []
+        let i = 0;
         const RegExpSeperateDivs = RegExp('(<div>.*?<\/div>)', 'gm')
-        while ( ((match = RegExpSeperateDivs.exec(resultOne)) !== null) && i <= 2 ) {
-            divArray.push(match[0])
-            addExtractedCalendarItems(match[0]);
+
+        // as long as resultData matches AND it is three or less according to the 3 preview slots on homepage.
+        while (((match = RegExpSeperateDivs.exec(lineBreaksRemovedData)) !== null) && i <= 2) {
+            // adding each div to "variable" / hook extractedItem
+            setExtractedItem(prev => [...prev, {
+                key: i,
+                value: match[0]
+            }]);
             i++;
         }
-
-        // return result
-        return divArray; 
     }
+
 
     return (
         <StyledContainer>
             <StyledRow>
-                <StyledCol md={4}>
-                    
-                    <StyledDate>12. März 2020</StyledDate>
-                    <StyledPlace>Berlin, Werner-Otto-Saal</StyledPlace>
-                    <StyledTitle>Open your Eyes</StyledTitle>
-                    <StyledDescription>Die Freiheit fühlen - ein klingendes Proträt der Komponisten Sofia Guibadiulina</StyledDescription>
-                </StyledCol>
-                <StyledCol md={4}>
-                    2.
-                </StyledCol>
-                <StyledCol md={4}>
-                    3.
-                </StyledCol>
+                {console.log(extractedItem)}
+                {extractedItem.map((item) => {
+                    console.log("key: " + item.key, "item" + item)
+                    return <CalenderPreviewItem key={item.id} item={item} />
+                })}
             </StyledRow>
         </StyledContainer>
     )
