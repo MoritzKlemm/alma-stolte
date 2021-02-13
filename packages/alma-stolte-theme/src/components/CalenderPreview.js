@@ -13,37 +13,55 @@ import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
 
 const CalenderPreview = ({ state, actions }) => {
 
-    // const [calenderPreview] = useState(state.source["page"][258].content.rendered);
-    // const reponse = fetch('https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com/pages/258')
-
     const [calenderData, setCalenderData] = useState('test');
     const [extractedCalendarItems, setExtractedCalendarItems] = useState([]);
 
+    const addExtractedCalendarItems = (newItem) => {   
+        setExtractedCalendarItems(prev => [...prev, newItem])
+    }
+
+    // only renders component one time ([]). when fetchCalenderData finished.
     useEffect(() => {
         fetchCalenderData();
     }, []);
 
+    // fetch calender data from public wp api
     const fetchCalenderData = async () => {
         try {
-            const result = await axios.get('https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com/pages/258')
-            extractCalenderItems(result.data.content.rendered)
+            const response = await axios.get('https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com/pages/258')
+            extractCalenderItems(response.data.content.rendered)
         } catch (error) {
             console.log("Fetching Calender Data went wrong: " + error)
         }
     }
 
+    // get seperate <div>..</div> calender items from api response
     const extractCalenderItems = (calData) => {
-        const pattern = /(<div>.*?<\/div>)/gm;
-        const x = pattern.exec(calData);
-        console.log(calData)
-        console.log(x)
+        
+        // remove linebreaks 
+        const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g')
+        const resultOne = calData.replace(RegExpFindLineBreaks, ' ');
+        
+        // seperate divs
+        let match;
+        let i = 0; 
+        const divArray = []
+        const RegExpSeperateDivs = RegExp('(<div>.*?<\/div>)', 'gm')
+        while ( ((match = RegExpSeperateDivs.exec(resultOne)) !== null) && i <= 2 ) {
+            divArray.push(match[0])
+            addExtractedCalendarItems(match[0]);
+            i++;
+        }
+
+        // return result
+        return divArray; 
     }
 
     return (
         <StyledContainer>
             <StyledRow>
                 <StyledCol md={4}>
-                    <StyledPreview dangerouslySetInnerHTML={{ __html: calenderData }} />
+                    
                     <StyledDate>12. März 2020</StyledDate>
                     <StyledPlace>Berlin, Werner-Otto-Saal</StyledPlace>
                     <StyledTitle>Open your Eyes</StyledTitle>
@@ -62,7 +80,7 @@ const CalenderPreview = ({ state, actions }) => {
 
 export default connect(CalenderPreview);
 
-const StyledPreview = styled.div `
+const StyledPreview = styled.div`
     & h2 {
         display: none; 
     }
