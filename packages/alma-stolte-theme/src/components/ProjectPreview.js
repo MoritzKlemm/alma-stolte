@@ -19,10 +19,14 @@ const ProjectPreview = ({ state, item }) => {
 
 export default connect(ProjectPreview)
 
-const generalWidth = "90%"
+
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+
 
 const StyledCol = styled(Col)`
-    // border-radius: 5px; 
 
     &:hover {
         // animation: ${backGroundHighlight} 0.2s ease-in-out;  
@@ -36,11 +40,11 @@ const StyledTitle = styled.div`
     font-size: 26.6px;
     color: #444C92;
     letter-spacing: 3.0px;
-    margin: 20px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
 
-    @media (max-width: 1000px) {
-        font-size: 20px; 
-    }
+    // @media (max-width: 1000px) {
+    //     font-size: 20px; 
+    // }
 `;
 
 // hiding full paragraph which automatically comes in with "item.content.rendered"
@@ -65,11 +69,12 @@ const StyledExcerpt = styled.div`
         font-size: 15.2px;
         color: #0F0D0E;
         letter-spacing: 1.00px;
-        text-align: justify;
         line-height: 33.25px;
+        text-align: justify;
+        margin-bottom: 30px; 
 
-        @media (max-width: 1000px) {
-            font-size: 14px; 
+        @media (max-width: ${breakPointSM}px) {
+            line-height: 21px;
         }
     
     }

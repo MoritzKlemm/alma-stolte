@@ -11,14 +11,14 @@ const Vita = ({ state }) => {
     return (
         <Container id="vita-smooth-scroll">
             <Row>
-                <Col md={12}>
+                <StyledCol md={12}>
                     <StyledLine></StyledLine>
-                </Col>
+                </StyledCol>
             </Row>
             <Row>
-                <Col md={12}>
+                <StyledCol md={12}>
                     <StyledParagraph dangerouslySetInnerHTML={{ __html: vitaContent }} />
-                </Col>
+                </StyledCol>
             </Row>
         </Container>
     )
@@ -26,9 +26,19 @@ const Vita = ({ state }) => {
 
 export default connect(Vita);
 
+
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+
+const StyledCol = styled(Col)`
+    padding: 0px; 
+`
+
 const StyledLine = styled.div`
     border-top: 1px solid grey; 
-    margin: 40px 15px; 
+    margin: 5px 0px 30px 0px; 
 `
 
 const StyledParagraph = styled.div`
@@ -39,14 +49,17 @@ const StyledParagraph = styled.div`
     text-align: justify;
     line-height: 33.25px;
     margin-bottom: 60px; 
-    padding: 15px; 
 
     &::first-letter {
         font-size: 200%;
       }
 
-    @media (max-width: 1000px) {
+    @media (max-width: ${breakPointXL}px) {
         font-size: 14px; 
+    }
+
+    @media (max-width: ${breakPointSM}px) {
+        line-height: 21px;
     }
 
 ` 

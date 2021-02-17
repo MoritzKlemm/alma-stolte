@@ -43,7 +43,7 @@ const CalenderPreview = ({ state, actions }) => {
         // as long as resultData matches AND it is three or less according to the 3 preview slots on homepage.
         while (((match = RegExpSeperateDivs.exec(lineBreaksRemovedData)) !== null) && i <= 2) {
             // adding each div to "variable" / hook "extractedItem"
-            setExtractedItem(prev => [...prev, {key: i, value: match[0]}]);
+            setExtractedItem(prev => [...prev, {key: i, value: match[0]} ]);
             i++;
         }
     }
@@ -69,6 +69,5 @@ const StyledContainer = styled(Container)`
 `
 
 const StyledRow = styled(Row)`
-    padding: 0px 15px; 
     width: 100%; 
 `

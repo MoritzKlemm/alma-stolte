@@ -1,10 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { connect, styled, css } from 'frontity';
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
-import List from './list/List';
+import List from './list';
 
 import Switch from "@frontity/components/switch";
 import PageError from './PageError';

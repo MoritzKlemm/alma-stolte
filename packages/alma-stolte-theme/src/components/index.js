@@ -1,6 +1,7 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
+import Container from 'react-bootstrap/Container'
 import Loading from './loading'
 import PageError from './PageError'
 
@@ -13,14 +14,12 @@ import NavbarCustom from './NavbarCustom';
 import Footer from './Footer';
 import VitaPage from "./VitaPage";
 import CalenderPage from "./CalenderPage";
-import MediaPage from "./MediaPage";
 import ContactPage from "./ContactPage";
 import ProjectGrid from "./ProjectGrid";
 import ProjectPage from "./ProjectPage";
+import MediaPage from "./MediaPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
-import CalenderPreview from "./CalenderPreview";
-
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -31,6 +30,7 @@ const Theme = ({ state }) => {
         <title>Alma Stolte</title>
         <meta name="description"/>
         <html lang="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -75,13 +75,6 @@ const globalStyles = css`
     scroll-behavior: smooth; 
     margin: 0px;
     padding: 0px; 
-  }
-  .row, col-md-6, .col-md-12 {
-      // margin: 0px;
-      // padding: 0px; 
-  }
-  .container {
-      padding: 0px; 
   }
 `
 
