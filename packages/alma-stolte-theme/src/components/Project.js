@@ -24,6 +24,11 @@ const Project = ({ state }) => {
 
 export default connect(Project);
 
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+
 const StyledContainer = styled(Container)`
     margin-top: 75px; 
     padding: 0px 15px;
@@ -38,6 +43,15 @@ const StyledContent = styled.div`
         letter-spacing: 1.00px;
         text-align: justify;
         line-height: 33.25px;
+
+        @media (max-width: ${breakPointXL}px) {
+            font-size: 14px; 
+        }
+    
+        @media (max-width: ${breakPointSM}px) {
+            line-height: 22px;
+        }    
+        
     }
 
     & img {
@@ -45,6 +59,7 @@ const StyledContent = styled.div`
         width: 100%;
         height: 100%; 
     }
-    
+
+   
 
 `;

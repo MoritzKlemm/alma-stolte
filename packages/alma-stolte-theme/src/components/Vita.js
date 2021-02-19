@@ -27,7 +27,7 @@ const Vita = ({ state }) => {
 export default connect(Vita);
 
 
-const breakPointXL = 1200;
+const breakPointXL = 1199;
 const breakPointLG = 992;
 const breakPointMD = 768;
 const breakPointSM = 576;
@@ -59,7 +59,7 @@ const StyledParagraph = styled.div`
     }
 
     @media (max-width: ${breakPointSM}px) {
-        line-height: 21px;
-    }
+        line-height: 22px;
+    }  
 
 ` 

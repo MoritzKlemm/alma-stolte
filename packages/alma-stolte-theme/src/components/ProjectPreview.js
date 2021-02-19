@@ -27,12 +27,6 @@ const breakPointSM = 576;
 
 
 const StyledCol = styled(Col)`
-
-    &:hover {
-        // animation: ${backGroundHighlight} 0.2s ease-in-out;  
-        // animation-fill-mode: forwards;  
-        // box-shadow: 10px 10px 5px rgb(226, 207,192);
-    }
 `
 
 const StyledTitle = styled.div`
@@ -42,9 +36,6 @@ const StyledTitle = styled.div`
     letter-spacing: 3.0px;
     margin: 0px 0px 10px 0px;
 
-    // @media (max-width: 1000px) {
-    //     font-size: 20px; 
-    // }
 `;
 
 // hiding full paragraph which automatically comes in with "item.content.rendered"
@@ -74,7 +65,7 @@ const StyledExcerpt = styled.div`
         margin-bottom: 30px; 
 
         @media (max-width: ${breakPointSM}px) {
-            line-height: 21px;
+            line-height: 22px;
         }
     
     }

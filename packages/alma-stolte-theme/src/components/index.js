@@ -9,7 +9,6 @@ import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaske
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
 import HomeContainer from './HomeContainer';
-
 import NavbarCustom from './NavbarCustom';
 import Footer from './Footer';
 import VitaPage from "./VitaPage";
@@ -20,6 +19,8 @@ import ProjectPage from "./ProjectPage";
 import MediaPage from "./MediaPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
+
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -37,6 +38,7 @@ const Theme = ({ state }) => {
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
         />
+        <script type="text/javascript"></script>
       </Head>
       <Global styles={globalStyles} />
 

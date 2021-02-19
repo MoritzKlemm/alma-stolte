@@ -69,5 +69,6 @@ const StyledContainer = styled(Container)`
 `
 
 const StyledRow = styled(Row)`
+    padding: 10px 0px; 
     width: 100%; 
 `

@@ -20,6 +20,12 @@ const CalenderPreviewItem = ({ state, item }) => {
 
 export default connect(CalenderPreviewItem);
 
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+const breakPointXS = 425;
+
 
 const StyledCol = styled(Col)`
     width: 100%; 
@@ -33,12 +39,16 @@ const StyledContent = styled.div`
     font-family: LibreBaskerville-Regular;
     margin: 0px 15px 0px 0px;  
 
+    &:hover {
+        background-color: #DDBBA4;
+    }
+
     // big date
     & h4 {
         font-size: 22.8px;
         color: #3B487D;
         letter-spacing: 1.63px;
-        margin: 0px
+        margin: 0px;
     
         @media (max-width: 1000px) {
             font-size: 20px; 
@@ -47,10 +57,11 @@ const StyledContent = styled.div`
 
 
     // place
-    & p {
+    & p:first-of-type {
         font-size: 15.2px;
         color: #3B487D;
         letter-spacing: 1.00px;
+        margin-bottom: 10px; 
 
         @media (max-width: 1000px) {
             font-size: 14px; 

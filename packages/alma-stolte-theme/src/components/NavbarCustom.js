@@ -1,27 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect, styled, css, keyframes } from 'frontity';
 import { Navbar, Nav } from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
 import NavbarCustomLink from "./NavbarCustomLink";
+import { Share, Download, Menu } from 'react-feather';
+
 
 
 
 const NavbarCustom = ({ state }) => {
 
     const data = state.source.get(state.router.link);
-    
+
     // like bootstrap breakpoints md, lg, xl
     const breakPointXL = 1200;
     const breakPointLG = 992;
     const breakPointMD = 768;
-    const breakPointSM = 576; 
-    const breakPointXS = 425; 
+    const breakPointSM = 576;
+    const breakPointXS = 425;
 
-    // change background when click on toggle
+    // variable which changes color of toggler menu on click
     const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.5)')
+    const [togglerShowHide, setTogglerShowHide] = useState('navbar-toggler collapsed')
+    const [toggleArea, setToggleArea] = useState('justify-content-end navbar-collapse collapse')
+
     const onClickToggleBGColor = () => {
         (toggleBGColor == 'rgba(0,0,0,0.5)' ? setToggleBGColor('rgba(0,0,0,0.9)') : setToggleBGColor('rgba(0,0,0,0.5)'))
     }
+
+    const dynamicLinkStyle = () => {
+        return (data.isHome ? css`color: #EDE4E5 !important;` : css`color: #333232 !important;`)
+    }
+
 
     return (
         <div css={data.isHome ?
@@ -44,8 +54,12 @@ const NavbarCustom = ({ state }) => {
                 :
                 css`padding: 15px 50px;
                     background-color: rgba(235,221,209,0.8);
+
+                    @media (max-width: ${breakPointSM}px) {
+                        padding: 15px 15px;
+                    }
                 `}>
-                
+
                 <div>
                     {/* logo Alma Stolte */}
                     <NavbarCustomLink link={"/"} css={data.isHome ?
@@ -60,55 +74,44 @@ const NavbarCustom = ({ state }) => {
                                 font-size: 26px; 
                             }
 
-                            @media (max-width: ${breakPointMD}px) {
-                                font-size: 22px; 
-                            }
                         
                             @media (max-width: ${breakPointSM}px) {
                                 font-size: 20px; 
                             }`
-                            :
-                            css`color: #333232;
+                        :
+                        css`color: #333232;
                             font-family: LibreBaskerville-Regular;
                             font-size: 30px;
                             letter-spacing: 10.86px;
                             white-space: nowrap;
-                            margin: 0px;`
-                        }>ALMA STOLTE
+                            margin: 0px;
+                            
+                            @media (max-width: ${breakPointLG}px) {
+                                font-size: 26px; 
+                            }
+
+                            @media (max-width: ${breakPointSM}px) {
+                                font-size: 20px; 
+                            }`
+                    }>ALMA STOLTE
                     </NavbarCustomLink>
                 </div>
 
                 {/* hamburger button */}
-                <Navbar.Toggle aria-controls="toggle-connection" onClick={onClickToggleBGColor} />
+                <Navbar.Toggle aria-controls="toggle-connection" css={data.isHome ?
+                    css`background-color: transparent; border: none;` :
+                    css`background-color: transparent; border: none;`} />
 
-                {/* toggle menu */} 
+                {/* toggle menu when uncollapsed */}
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
+
+                    {/* toggle menu when collapsed */}
                     <StyledToggleArea className="mr-auto" className="justify-content-end">
-                        <StyledMargin>
-                            <NavbarCustomLink link={"/kalender/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                KALENDER
-                            </NavbarCustomLink>
-                        </StyledMargin>
-                        <StyledMargin>
-                            <NavbarCustomLink link={"/projekte/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                PROJEKTE
-                            </NavbarCustomLink>
-                        </StyledMargin>
-                        <StyledMargin>
-                            <NavbarCustomLink link={"/vita/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                VITA
-                            </NavbarCustomLink>
-                        </StyledMargin>
-                        <StyledMargin>
-                            <NavbarCustomLink link={"/media/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                MEDIA
-                            </NavbarCustomLink>
-                        </StyledMargin>
-                        <StyledMargin>
-                            <NavbarCustomLink link={"/kontakt/"} css={data.isHome ? css`color: #EDE4E5;` : css`color: #333232`}>
-                                KONTAKT
-                            </NavbarCustomLink>
-                        </StyledMargin>
+                        <StyledNavLink href={"/kalender/"} css={dynamicLinkStyle}>KALENDER</StyledNavLink>
+                        <StyledNavLink href={"/projekte/"} css={dynamicLinkStyle}>PROJEKTE</StyledNavLink>
+                        <StyledNavLink href={"/vita/"} css={dynamicLinkStyle}>VITA</StyledNavLink>
+                        <StyledNavLink href={"/media/"} css={dynamicLinkStyle}>MEDIA</StyledNavLink>
+                        <StyledNavLink href={"/kontakt/"} css={dynamicLinkStyle}>KONTAKT</StyledNavLink>
                     </StyledToggleArea>
                 </Navbar.Collapse>
 
@@ -141,10 +144,10 @@ const NavbarCustom = ({ state }) => {
 export default connect(NavbarCustom)
 
 // like bootstrap breakpoints md, lg, xl
-const breakPointXL = 1200;
+const breakPointXL = 1199;
 const breakPointLG = 992;
 const breakPointMD = 768;
-const breakPointSM = 576; 
+const breakPointSM = 576;
 
 
 // -----------------------------------------
@@ -172,9 +175,6 @@ from {
 
 
 const StyledToggleArea = styled(Nav)`
-@media (max-width: ${breakPointXL}px) {
-        margin-top: 20px; 
-    }
 
 `
 const StyledMargin = styled.div`
@@ -183,6 +183,25 @@ const StyledMargin = styled.div`
         margin: 10px 0px; 
     }
 `;
+
+const StyledNavLink = styled(Nav.Link)`
+    font-size: 16px;
+    color: #EDE4E5 !important;
+    letter-spacing: 3.56px;
+    margin: 0px 6% !important;
+    padding: 0px; 
+
+    // styling link text on hover
+    &:hover {
+    text-decoration: none;   
+    cursor: pointer; 
+    color: rgb(175,175,175) !important;
+    } 
+
+    @media (max-width: ${breakPointXL}px) {
+        margin: 10px 0px !important; 
+    }
+`
 
 const StyledSubHeading = styled.h4`
     font-family: LibreBaskerville-Italic;

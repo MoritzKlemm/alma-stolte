@@ -14,7 +14,7 @@ const NavbarCustomLink = ({ children, ...props }) => {
 
 export default connect(NavbarCustomLink, { injectProps: false });
 
-const breakPointXL = 1200;
+const breakPointXL = 1199;
 const breakPointLG = 992;
 const breakPointMD = 768;
 const breakPointSM = 576; 
