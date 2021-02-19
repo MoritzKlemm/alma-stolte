@@ -10,30 +10,112 @@ import { Share, Download, Menu } from 'react-feather';
 
 const NavbarCustom = ({ state }) => {
 
+    // used to determine if the navbar needs to be styled light / dark
     const data = state.source.get(state.router.link);
 
     // like bootstrap breakpoints md, lg, xl
-    const breakPointXL = 1200;
+    const breakPointXL = 1199;
     const breakPointLG = 992;
     const breakPointMD = 768;
     const breakPointSM = 576;
     const breakPointXS = 425;
 
     // variable which changes color of toggler menu on click
-    const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.5)')
-    const [togglerShowHide, setTogglerShowHide] = useState('navbar-toggler collapsed')
-    const [toggleArea, setToggleArea] = useState('justify-content-end navbar-collapse collapse')
+    const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.6)')
 
+    // toggles background color when data.isHome = true
     const onClickToggleBGColor = () => {
-        (toggleBGColor == 'rgba(0,0,0,0.5)' ? setToggleBGColor('rgba(0,0,0,0.9)') : setToggleBGColor('rgba(0,0,0,0.5)'))
+        (toggleBGColor == 'rgba(0,0,0,0.6)' ? setToggleBGColor('rgba(0,0,0,1)') : setToggleBGColor('rgba(0,0,0,0.6)'))
     }
 
     const dynamicLinkStyle = () => {
         return (data.isHome ? css`color: #EDE4E5 !important;` : css`color: #333232 !important;`)
     }
 
+    const dynamicTogglerStyle = () => {
+        return(
+            css`border: none; 
+                background-color: none; 
+                padding: 2px;
+                
+                @media (max-width: ${breakPointXS}px) {
+                    font-size: 18px; 
+                }`
+        )
+    }
+
+    const dynamicNavbarStyle = () => {
+        return(
+            data.isHome ?
+                css`padding: 15px 50px;
+                    background-color: ${toggleBGColor};
+                    display: flex;
+                    align-items: center; 
+
+                    @media (max-width: ${breakPointSM}px) {
+                        padding: 15px 15px;
+                    }
+                `
+                :
+                css`padding: 15px 50px;
+                    background-color: rgba(235,221,209,1.0);
+
+                    @media (max-width: ${breakPointSM}px) {
+                        padding: 15px 15px;
+                    }
+                `
+        )
+    }
+
+    const dynamicLogoStyle = () => {
+        return (data.isHome ?
+            css`color: #EDE4E5;
+                font-family: LibreBaskerville-Regular;
+                font-size: 30px;
+                letter-spacing: 10.86px;
+                white-space: nowrap;
+                margin: 0px;
+
+                @media (max-width: ${breakPointLG}px) {
+                    font-size: 26px; 
+                    letter-spacing: 9.86px;
+                }
+
+                @media (max-width: ${breakPointSM}px) {
+                    font-size: 22px; 
+                    letter-spacing: 8.86px;
+                }
+                
+                @media (max-width: ${breakPointXS}px) {
+                    font-size: 21px; 
+                    letter-spacing: 5.86px;
+                }`
+            :
+            css`color: #333232;
+                font-family: LibreBaskerville-Regular;
+                font-size: 30px;
+                letter-spacing: 10.86px;
+                white-space: nowrap;
+                margin: 0px;
+                
+                @media (max-width: ${breakPointLG}px) {
+                    font-size: 26px; 
+                    letter-spacing: 9.86px;
+                }
+
+                @media (max-width: ${breakPointSM}px) {
+                    font-size: 22px; 
+                    letter-spacing: 8.86px;
+                }
+                
+                @media (max-width: ${breakPointXS}px) {
+                    font-size: 21px; 
+                    letter-spacing: 5.86px;
+                }`)
+    }
 
     return (
+
         <div css={data.isHome ?
             css`    background-image: url(${almaBackground});
                     background-size:cover;
@@ -42,71 +124,24 @@ const NavbarCustom = ({ state }) => {
                     height: 100vh;`
             :
             css`    margin-bottom: 80px;`}>
-
-            <Navbar variant="dark" expand="xl" fixed="top" css={data.isHome ?
-                css`padding: 15px 50px;
-                    background-color: ${toggleBGColor};
-
-                    @media (max-width: ${breakPointSM}px) {
-                        padding: 15px 15px;
-                    }
-                `
-                :
-                css`padding: 15px 50px;
-                    background-color: rgba(235,221,209,0.8);
-
-                    @media (max-width: ${breakPointSM}px) {
-                        padding: 15px 15px;
-                    }
-                `}>
+             
+            {/* changes hamburger color according to home, not home with bootstrap default "dark", "light" */}
+            <Navbar variant={data.isHome ? "dark" : "light"} expand="xl" fixed="top" css={dynamicNavbarStyle}>
 
                 <div>
                     {/* logo Alma Stolte */}
-                    <NavbarCustomLink link={"/"} css={data.isHome ?
-                        css`color: #EDE4E5;
-                            font-family: LibreBaskerville-Regular;
-                            font-size: 30px;
-                            letter-spacing: 10.86px;
-                            white-space: nowrap;
-                            margin: 0px;
-
-                            @media (max-width: ${breakPointLG}px) {
-                                font-size: 26px; 
-                            }
-
-                        
-                            @media (max-width: ${breakPointSM}px) {
-                                font-size: 20px; 
-                            }`
-                        :
-                        css`color: #333232;
-                            font-family: LibreBaskerville-Regular;
-                            font-size: 30px;
-                            letter-spacing: 10.86px;
-                            white-space: nowrap;
-                            margin: 0px;
-                            
-                            @media (max-width: ${breakPointLG}px) {
-                                font-size: 26px; 
-                            }
-
-                            @media (max-width: ${breakPointSM}px) {
-                                font-size: 20px; 
-                            }`
-                    }>ALMA STOLTE
+                    <NavbarCustomLink link={"/"} css={dynamicLogoStyle}>ALMA STOLTE
                     </NavbarCustomLink>
                 </div>
 
                 {/* hamburger button */}
-                <Navbar.Toggle aria-controls="toggle-connection" css={data.isHome ?
-                    css`background-color: transparent; border: none;` :
-                    css`background-color: transparent; border: none;`} />
+                <Navbar.Toggle aria-controls="toggle-connection" css={dynamicTogglerStyle} onClick={onClickToggleBGColor}/>
 
                 {/* toggle menu when uncollapsed */}
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">
 
                     {/* toggle menu when collapsed */}
-                    <StyledToggleArea className="mr-auto" className="justify-content-end">
+                    <StyledToggleArea className="mr-auto" className="justify-content-end" css={css`margin-top: 15px;`}>
                         <StyledNavLink href={"/kalender/"} css={dynamicLinkStyle}>KALENDER</StyledNavLink>
                         <StyledNavLink href={"/projekte/"} css={dynamicLinkStyle}>PROJEKTE</StyledNavLink>
                         <StyledNavLink href={"/vita/"} css={dynamicLinkStyle}>VITA</StyledNavLink>
@@ -175,7 +210,6 @@ from {
 
 
 const StyledToggleArea = styled(Nav)`
-
 `
 const StyledMargin = styled.div`
     margin: 0px 6%;
@@ -188,7 +222,7 @@ const StyledNavLink = styled(Nav.Link)`
     font-size: 16px;
     color: #EDE4E5 !important;
     letter-spacing: 3.56px;
-    margin: 0px 6% !important;
+    margin: 0px 0px 0px 12% !important;
     padding: 0px; 
 
     // styling link text on hover
@@ -197,6 +231,10 @@ const StyledNavLink = styled(Nav.Link)`
     cursor: pointer; 
     color: rgb(175,175,175) !important;
     } 
+
+    @media (max-width: 1500px) {
+        margin: 0px 0px 0px 8% !important;
+    }
 
     @media (max-width: ${breakPointXL}px) {
         margin: 10px 0px !important; 

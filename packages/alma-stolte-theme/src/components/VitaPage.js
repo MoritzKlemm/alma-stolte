@@ -22,6 +22,11 @@ const VitaPage = ({state}) => {
 
 export default connect(VitaPage);
 
+const breakPointXL = 1199;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+
 const StyledCol = styled(Col)`
 `
 
@@ -37,4 +42,8 @@ const StyledParagraph = styled.div`
     &::first-letter {
         font-size: 200%;
       }
+
+    @media (max-width: ${breakPointSM}px) {
+        line-height: 22px;
+    }
 ` 

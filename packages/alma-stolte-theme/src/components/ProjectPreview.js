@@ -12,6 +12,7 @@ const ProjectPreview = ({ state, item }) => {
                 <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                 <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                 <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                <StyledButton href={item.link}>MEHR</StyledButton>
             </ProjectPreviewLink>
         </StyledCol>
     )
@@ -67,8 +68,17 @@ const StyledExcerpt = styled.div`
         @media (max-width: ${breakPointSM}px) {
             line-height: 22px;
         }
-    
     }
-
-   
 `;
+
+const StyledButton = styled.button`
+    font-family: LibreBaskerville-Regular;
+    font-size: 15.2px;
+    color: #3E59E8;
+    letter-spacing: 1.09px;
+    text-align: justify;
+    display: inline;
+    background: transparent;
+    border: none;
+
+`
