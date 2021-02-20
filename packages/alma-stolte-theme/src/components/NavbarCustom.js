@@ -6,8 +6,6 @@ import NavbarCustomLink from "./NavbarCustomLink";
 import { Share, Download, Menu } from 'react-feather';
 
 
-
-
 const NavbarCustom = ({ state }) => {
 
     // used to determine if the navbar needs to be styled light / dark
@@ -21,11 +19,11 @@ const NavbarCustom = ({ state }) => {
     const breakPointXS = 425;
 
     // variable which changes color of toggler menu on click
-    const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.6)')
+    const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.7)')
 
     // toggles background color when data.isHome = true
     const onClickToggleBGColor = () => {
-        (toggleBGColor == 'rgba(0,0,0,0.6)' ? setToggleBGColor('rgba(0,0,0,1)') : setToggleBGColor('rgba(0,0,0,0.6)'))
+        (toggleBGColor == 'rgba(0,0,0,0.7)' ? setToggleBGColor('rgba(0,0,0,1)') : setToggleBGColor('rgba(0,0,0,0.7)'))
     }
 
     const dynamicLinkStyle = () => {
@@ -33,24 +31,32 @@ const NavbarCustom = ({ state }) => {
     }
 
     const dynamicTogglerStyle = () => {
-        return(
+        return (
             css`border: none; 
                 background-color: none; 
-                padding: 2px;
+                padding: 2px; 
                 
-                @media (max-width: ${breakPointXS}px) {
+                @media (max-width: ${breakPointSM}px) {
                     font-size: 18px; 
+                    padding: 0px 0px 2px 0px; 
                 }`
         )
     }
 
     const dynamicNavbarStyle = () => {
-        return(
+        return (
             data.isHome ?
                 css`padding: 15px 50px;
                     background-color: ${toggleBGColor};
                     display: flex;
                     align-items: center; 
+
+                    // + right - left | + bottom - top | blure | size
+                    // box-shadow: 0px 2px 15px 2px  rgba(0,0,0,0.7);
+
+                    @media (max-width: ${breakPointMD}px) {
+                        padding: 20px 20px;
+                    }
 
                     @media (max-width: ${breakPointSM}px) {
                         padding: 15px 15px;
@@ -60,10 +66,31 @@ const NavbarCustom = ({ state }) => {
                 css`padding: 15px 50px;
                     background-color: rgba(235,221,209,1.0);
 
+                    @media (max-width: ${breakPointXL}px) {
+                        padding: 20px 40px;
+                    }
+                    @media (max-width: ${breakPointMD}px) {
+                        padding: 20px 20px;
+                    }
                     @media (max-width: ${breakPointSM}px) {
                         padding: 15px 15px;
                     }
                 `
+        )
+    }
+
+    const dynamicImageStyle = () => {
+        return(
+            data.isHome ?
+            css`    background-image: url(${almaBackground});
+                    background-size:cover;
+                    background-attachment: fixed; 
+                    background-position: top;
+                    height: 100vh;
+                    width: auto;
+                    max-width: 100%;`
+            :
+            css`    margin-bottom: 80px;`
         )
     }
 
@@ -116,15 +143,8 @@ const NavbarCustom = ({ state }) => {
 
     return (
 
-        <div css={data.isHome ?
-            css`    background-image: url(${almaBackground});
-                    background-size:cover;
-                    background-attachment: fixed; 
-                    background-position: top;
-                    height: 100vh;`
-            :
-            css`    margin-bottom: 80px;`}>
-             
+        <div css={dynamicImageStyle}>
+
             {/* changes hamburger color according to home, not home with bootstrap default "dark", "light" */}
             <Navbar variant={data.isHome ? "dark" : "light"} expand="xl" fixed="top" css={dynamicNavbarStyle}>
 
@@ -135,7 +155,7 @@ const NavbarCustom = ({ state }) => {
                 </div>
 
                 {/* hamburger button */}
-                <Navbar.Toggle aria-controls="toggle-connection" css={dynamicTogglerStyle} onClick={onClickToggleBGColor}/>
+                <Navbar.Toggle aria-controls="toggle-connection" css={dynamicTogglerStyle} onClick={onClickToggleBGColor} />
 
                 {/* toggle menu when uncollapsed */}
                 <Navbar.Collapse id="toggle-connection" className="justify-content-end">

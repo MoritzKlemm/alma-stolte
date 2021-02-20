@@ -12,7 +12,7 @@ const ProjectPreview = ({ state, item }) => {
                 <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                 <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                 <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
-                <StyledButton href={item.link}>MEHR</StyledButton>
+                {/** <StyledButton href={item.link}>MEHR</StyledButton> */}
             </ProjectPreviewLink>
         </StyledCol>
     )
