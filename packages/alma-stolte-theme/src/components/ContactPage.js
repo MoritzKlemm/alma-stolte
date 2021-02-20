@@ -1,13 +1,14 @@
 import { connect, css, styled } from "frontity";
-import {React, useState, useEffect} from 'react';
+import { React, useState, useEffect } from 'react';
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import Contact from './Contact';   
 
-const ContactPage = ({state}) => {
+import Contact from './Contact';
+
+const ContactPage = ({ state }) => {
 
     // saving ID of "contact" page to be independent from ID when it should be deleted and recreated in wp cms
     const [contactPageID] = useState(state.source.get(state.router.link).id)
@@ -22,7 +23,7 @@ const ContactPage = ({state}) => {
             </Row>
             <Row>
                 <StyledCol md={12}>
-                    <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent}} />
+                    <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent }} />
                 </StyledCol>
             </Row>
         </Container>

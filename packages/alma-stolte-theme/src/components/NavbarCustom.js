@@ -35,6 +35,7 @@ const NavbarCustom = ({ state }) => {
             css`border: none; 
                 background-color: none; 
                 padding: 2px; 
+                display: flex;
                 
                 @media (max-width: ${breakPointSM}px) {
                     font-size: 18px; 

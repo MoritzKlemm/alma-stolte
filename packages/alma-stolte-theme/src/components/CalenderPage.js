@@ -100,11 +100,6 @@ const StyledRenderDiv = styled.div`
         font-size: 15.2px;
         color: #333232;
         letter-spacing: 1.09px;
-        margin: 0px 5px 0px 0px; 
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
 
         @media (max-width: ${breakPointXL}px) {
             font-size: 14px; 

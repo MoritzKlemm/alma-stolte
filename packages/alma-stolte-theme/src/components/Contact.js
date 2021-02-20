@@ -4,10 +4,14 @@ import { Form, Button } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
 import emailjs from 'emailjs-com';
+import ContactAlert from './ContactAlert'
+import Alert from 'react-bootstrap/Alert'
 
 export default function ContactUs() {
+
+    const [alertStatus, setAlertStatus] = useState(null);
+    const [displayToggle, setDisplayToggle] = useState('none')
 
     function sendEmail(e) {
         e.preventDefault();
@@ -16,14 +20,20 @@ export default function ContactUs() {
         emailjs.sendForm('service_cmv2a0i', 'template_icmanhg', e.target, 'user_qyKXt1Dj8Hq0dM0sJ1q8r')
             .then((result) => {
                 console.log(result.text);
+                if (result.text == "OK") {
+                    setAlertStatus(true)
+                    setDisplayToggle('')
+                }
             }, (error) => {
                 console.log(error.text);
+                setAlertStatus(false)
             });
         //   e.target.reset();
     }
 
     return (
         <StyledContainer id="contact-smooth-scroll">
+
             <Form className="contact-form" onSubmit={sendEmail}>
                 <Form.Group>
                     <StyledInput type="text" name="user_name" placeholder="Vor -und Nachname" />
@@ -41,6 +51,18 @@ export default function ContactUs() {
                     <StyledFormButton type="submit" value="Send">senden</StyledFormButton>
                 </Form.Group>
             </Form>
+
+            {alertStatus 
+                ?
+                <StyledSuccessAlert variant="success" onClick={() => {setDisplayToggle("none")}} css={css`display: ${displayToggle}`} dismissible >
+                    Ihre Nachricht wurde verschickt!
+                </StyledSuccessAlert> 
+                :
+                <Alert variant="warning" onClick={() => {setDisplayToggle("none")}} css={css`display: ${displayToggle}`} dismissible>
+                    Leider ist etwas schief gegangen. 
+                </Alert>
+            }
+
         </StyledContainer>
     );
 }
@@ -106,4 +128,7 @@ const StyledFormButton = styled.button`
     &:hover {
         background-color: #5F8046;
     }
+`
+
+const StyledSuccessAlert = styled(Alert)`
 `
