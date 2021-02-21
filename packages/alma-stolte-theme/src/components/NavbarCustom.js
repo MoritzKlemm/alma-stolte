@@ -164,7 +164,6 @@ const NavbarCustom = ({ state }) => {
                     {/* toggle menu when collapsed */}
                     <StyledToggleArea className="mr-auto" className="justify-content-end" css={css`margin-top: 15px;`}>
                         <StyledNavLink href={"/kalender/"} css={dynamicLinkStyle}>KALENDER</StyledNavLink>
-                        <StyledNavLink href={"/projekte/"} css={dynamicLinkStyle}>PROJEKTE</StyledNavLink>
                         <StyledNavLink href={"/vita/"} css={dynamicLinkStyle}>VITA</StyledNavLink>
                         <StyledNavLink href={"/media/"} css={dynamicLinkStyle}>MEDIA</StyledNavLink>
                         <StyledNavLink href={"/kontakt/"} css={dynamicLinkStyle}>KONTAKT</StyledNavLink>

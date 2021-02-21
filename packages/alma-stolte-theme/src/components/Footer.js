@@ -18,7 +18,7 @@ const Footer = ({ state }) => {
                 <StyledCol md={12}>
                     <StyledFrontityLink href={"/impressum/"}>impressum</StyledFrontityLink>
                     <StyledParagraph>© alma stolte</StyledParagraph>
-                    <StyledLink href="mailto:designed.containers@gmail.com">created by ds</StyledLink>
+                    <StyledLink href="mailto:designed.containers@gmail.com">created by byte affairs</StyledLink>
                 </StyledCol>
             </StyledRow>
         </StyledContainer>

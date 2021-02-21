@@ -29,7 +29,7 @@ const breakPointXS = 425;
 
 const StyledCol = styled(Col)`
     width: 100%; 
-    margin: 10px 0px; 
+    margin: 20px 0px; 
     padding: 0px; 
 `
 
@@ -39,9 +39,7 @@ const StyledContent = styled.div`
     font-family: LibreBaskerville-Regular;
     margin: 0px 15px 0px 0px;  
 
-    &:hover {
-        background-color: #DDBBA4;
-    }
+    
 
     // big date
     & h4 {
@@ -86,6 +84,8 @@ const StyledContent = styled.div`
         color: #333232;
         letter-spacing: 1.09px;
         margin: 0px 5px 0px 0px; 
+
+        // limits preview to 3 lines
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;

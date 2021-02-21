@@ -38,6 +38,13 @@ const Theme = ({ state }) => {
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
         />
+
+        {/** default material ui font */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        
+        {/** default material ui icons */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
         <script type="text/javascript"></script>
       </Head>
       <Global styles={globalStyles} />
