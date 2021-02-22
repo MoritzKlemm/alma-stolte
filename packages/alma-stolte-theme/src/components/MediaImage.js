@@ -26,13 +26,17 @@ const breakPointXS = 425;
 
 
 const StyledCol = styled(Col)`
+    padding: 0px;
+
+    @media (max-width: ${breakPointSM}px) {
+        padding: 0px 15px; 
+    }
 `
 
 const StyledContent = styled.div`
     & img {
        width: 100%;
        height: auto;
-       padding-bottom: 15px; 
+       padding: 0px;
     }
-
 `

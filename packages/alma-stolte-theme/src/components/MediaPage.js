@@ -88,25 +88,3 @@ export default connect(MediaPage);
 
 const StyledRow = styled(Row)`
 `
-
-const StyledCol = styled(Col)`
-    display: flex;
-    justify-content: center; 
-
-`
-
-const StyledIframeWrapper = styled.div`
-    border: 2px solid blue;
-
-    & iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0; top: 0;   
-    }
-`
-
-const StyledRenderDiv = styled.div`
-    text-align: center; 
-    width: 100%;
-` 

@@ -18,10 +18,15 @@ const MediaIframe = ({ state, item }) => {
 
 export default connect(MediaIframe);
 
+const breakPointSM = 576;
 
 const StyledCol = styled(Col)`
     text-align: center;
-    padding-bottom: 30px; 
+    padding: 0px 0px 15px 0px; 
+
+    @media (max-width: ${breakPointSM}px) {
+        padding: 0px 15px 15px 15px; 
+    }
 `
 
 const StyledContent = styled.div`
