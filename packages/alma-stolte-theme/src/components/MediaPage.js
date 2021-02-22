@@ -35,4 +35,10 @@ const StyledCol = styled(Col)`
 const StyledRenderDiv = styled.div`
     display: inline; 
     margin: 0px 15px; 
+
+    & iframe {
+        position: relative;
+        width: 100%;
+        height: 0;
+    }
 ` 
