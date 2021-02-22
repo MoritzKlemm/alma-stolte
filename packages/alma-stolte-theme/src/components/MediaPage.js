@@ -13,17 +13,19 @@ const MediaPage = ({state}) => {
 
     return (
         <Container>
-            <Row>
+            <StyledRow>
                 <StyledCol md={12}>
                     <StyledRenderDiv dangerouslySetInnerHTML={{ __html: mediaContent}} />
                 </StyledCol>
-            </Row>
+            </StyledRow>
         </Container>
     )
 }
 
 export default connect(MediaPage);
 
+const StyledRow = styled(Row)`
+`
 
 const StyledCol = styled(Col)`
     display: flex;
@@ -32,4 +34,11 @@ const StyledCol = styled(Col)`
 
 const StyledRenderDiv = styled.div`
     display: inline; 
+    margin: 0px 15px; 
+
+    & iframe {
+        position: relative;
+        width: 100%;
+        height: 0;
+    }
 ` 

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
+import Container from 'react-bootstrap/Container'
 import Loading from './loading'
 import PageError from './PageError'
 
@@ -8,19 +9,18 @@ import LibreBaskervilleRegular from '../assets/fonts/LibreBaskerville/LibreBaske
 import LibreBaskervilleBold from '../assets/fonts/LibreBaskerville/LibreBaskervilleBold.ttf'
 
 import HomeContainer from './HomeContainer';
-
 import NavbarCustom from './NavbarCustom';
 import Footer from './Footer';
 import VitaPage from "./VitaPage";
 import CalenderPage from "./CalenderPage";
-import MediaPage from "./MediaPage";
 import ContactPage from "./ContactPage";
 import ProjectGrid from "./ProjectGrid";
 import ProjectPage from "./ProjectPage";
+import MediaPage from "./MediaPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
-import CalenderPreview from "./CalenderPreview";
 
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -31,12 +31,21 @@ const Theme = ({ state }) => {
         <title>Alma Stolte</title>
         <meta name="description"/>
         <html lang="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
         />
+
+        {/** default material ui font */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        
+        {/** default material ui icons */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        <script type="text/javascript"></script>
       </Head>
       <Global styles={globalStyles} />
 
@@ -75,13 +84,6 @@ const globalStyles = css`
     scroll-behavior: smooth; 
     margin: 0px;
     padding: 0px; 
-  }
-  .row, col-md-6, .col-md-12 {
-      // margin: 0px;
-      // padding: 0px; 
-  }
-  .container {
-      padding: 0px; 
   }
 `
 

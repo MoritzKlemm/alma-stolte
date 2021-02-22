@@ -5,11 +5,10 @@ import CalenderPreview from './CalenderPreview';
 import Contact from './Contact';
 import Vita from './Vita';
 import ProjectGrid from './ProjectGrid';
-import List from './list/List';
+import List from './list';
 
 
 const HomeContainer = ({ state }) => {
-    const data = state.source.get(state.router.link);
 
     return (
         <StyledContainer>

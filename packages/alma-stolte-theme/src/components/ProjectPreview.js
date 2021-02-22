@@ -12,6 +12,7 @@ const ProjectPreview = ({ state, item }) => {
                 <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
                 <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                 <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                {/** <StyledButton href={item.link}>MEHR</StyledButton> */}
             </ProjectPreviewLink>
         </StyledCol>
     )
@@ -19,25 +20,14 @@ const ProjectPreview = ({ state, item }) => {
 
 export default connect(ProjectPreview)
 
-const generalWidth = "90%"
 
-// const backGroundHighlight = keyframes`
-// from {
-//     background-color: rgb(235, 221, 209);
-//   }
-//   to {
-//     background-color: rgb(226,211,200);
-//   }
-// `;
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+
 
 const StyledCol = styled(Col)`
-    // border-radius: 5px; 
-
-    &:hover {
-        // animation: ${backGroundHighlight} 0.2s ease-in-out;  
-        // animation-fill-mode: forwards;  
-        // box-shadow: 10px 10px 5px rgb(226, 207,192);
-    }
 `
 
 const StyledTitle = styled.div`
@@ -45,11 +35,8 @@ const StyledTitle = styled.div`
     font-size: 26.6px;
     color: #444C92;
     letter-spacing: 3.0px;
-    margin: 20px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
 
-    @media (max-width: 1000px) {
-        font-size: 20px; 
-    }
 `;
 
 // hiding full paragraph which automatically comes in with "item.content.rendered"
@@ -74,14 +61,24 @@ const StyledExcerpt = styled.div`
         font-size: 15.2px;
         color: #0F0D0E;
         letter-spacing: 1.00px;
-        text-align: justify;
         line-height: 33.25px;
+        text-align: justify;
+        margin-bottom: 30px; 
 
-        @media (max-width: 1000px) {
-            font-size: 14px; 
+        @media (max-width: ${breakPointSM}px) {
+            line-height: 22px;
         }
-    
     }
-
-   
 `;
+
+const StyledButton = styled.button`
+    font-family: LibreBaskerville-Regular;
+    font-size: 15.2px;
+    color: #3E59E8;
+    letter-spacing: 1.09px;
+    text-align: justify;
+    display: inline;
+    background: transparent;
+    border: none;
+
+`

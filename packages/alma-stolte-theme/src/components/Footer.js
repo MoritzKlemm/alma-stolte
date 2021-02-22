@@ -18,7 +18,7 @@ const Footer = ({ state }) => {
                 <StyledCol md={12}>
                     <StyledFrontityLink href={"/impressum/"}>impressum</StyledFrontityLink>
                     <StyledParagraph>© alma stolte</StyledParagraph>
-                    <StyledLink href="mailto:designed.containers@gmail.com">created by ds</StyledLink>
+                    <StyledLink href="mailto:designed.containers@gmail.com">created by byte affairs</StyledLink>
                 </StyledCol>
             </StyledRow>
         </StyledContainer>
@@ -32,14 +32,15 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledRow = styled(Row)`
-    border-top: 1px solid rgba(140,140,140); 
-    padding: 30px 0px; 
 `;
 
 const StyledCol = styled(Col)`
     display: flex; 
     justify-content: space-around;
     align-items: center;
+    border-top: 1px solid rgba(140,140,140); 
+    padding-top: 30px;
+    padding-bottom: 30px; 
 `;
 
 const StyledFrontityLink = styled(LinkFrontity)`
