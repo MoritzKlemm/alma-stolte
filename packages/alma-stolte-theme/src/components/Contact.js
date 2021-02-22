@@ -133,7 +133,7 @@ export default function ContactUs() {
                 );
             // e.target.reset();
         } else {
-            alert("Ihre Eingabens ind noch nicht vollständig!")
+            alert("Ihre Eingabenind noch nicht vollständig!")
         }
     }
 
@@ -141,7 +141,7 @@ export default function ContactUs() {
         <StyledContainer id="contact-smooth-scroll">
             <Form className="contact-form" onSubmit={sendEmail}>
                 <Form.Group> 
-                    <StyledInput type="text" name="user_name" placeholder="Vor -und Nachname" value={name} onChange={(e) => { validateName(e.target.value) }} className={nameCorrect} />
+                    <StyledInput type="text" name="user_name" placeholder="Name" value={name} onChange={(e) => { validateName(e.target.value) }} className={nameCorrect} />
                 </Form.Group>
                 <Form.Group>
                     <StyledInput type="email" name="user_email" placeholder="Email" value={email} onChange={(e) => { validateMail(e.target.value) }} className={emailCorrect} />

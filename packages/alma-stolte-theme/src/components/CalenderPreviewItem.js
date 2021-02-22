@@ -20,12 +20,6 @@ const CalenderPreviewItem = ({ state, item }) => {
 
 export default connect(CalenderPreviewItem);
 
-const breakPointXL = 1200;
-const breakPointLG = 992;
-const breakPointMD = 768;
-const breakPointSM = 576;
-const breakPointXS = 425;
-
 
 const StyledCol = styled(Col)`
     width: 100%; 
