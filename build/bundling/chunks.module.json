@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "46c66d133f94f24ca44e",
+  "hash": "196ca4eefc8aa73876ec",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
@@ -11,7 +11,7 @@
   "assets": [
     {
       "name": "alma-stolte.module.js",
-      "size": 12853553,
+      "size": 12884428,
       "chunks": [
         "alma-stolte"
       ],
@@ -85,14 +85,14 @@
       "rendered": false,
       "initial": true,
       "entry": true,
-      "size": 3036240,
+      "size": 3061760,
       "names": [
         "alma-stolte"
       ],
       "files": [
         "alma-stolte.module.js"
       ],
-      "hash": "cf8489a6ec9d40a3c842",
+      "hash": "43e508b95d7f37940652",
       "siblings": [],
       "parents": [],
       "children": [],

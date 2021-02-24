@@ -13,9 +13,9 @@ const CalenderPage = ({ state }) => {
     return (
         <Container>
             <Row>
-                <Col md={12}>
+                <StyledCol md={12}>
                     <StyledRenderDiv dangerouslySetInnerHTML={{ __html: calenderContent }} />
-                </Col>
+                </StyledCol>
             </Row>
         </Container>
     )
@@ -29,10 +29,22 @@ const breakPointMD = 768;
 const breakPointSM = 576;
 const breakPointXS = 425;
 
+const StyledCol = styled(Col)`
+    padding: 0px; 
+`
+
 const StyledRenderDiv = styled.div`
 
     // general settings
-    padding-top: 0px; 
+    font-family: LibreBaskerville-Regular;
+    font-size: 15.2px;
+    color: #0F0D0E;
+    letter-spacing: 1.00px;
+    text-align: justify;
+    line-height: 33.25px;
+    margin-bottom: 60px; 
+    padding: 15px; 
+
 
     // year seperator
     & h2 {
@@ -64,23 +76,14 @@ const StyledRenderDiv = styled.div`
         }
     }
 
-    font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
-    color: #0F0D0E;
-    letter-spacing: 1.00px;
-    text-align: justify;
-    line-height: 33.25px;
-    margin-bottom: 60px; 
-    padding: 15px; 
-
     // place
     & p:first-of-type {
         font-size: 15.2px;
         color: #3B487D;
         letter-spacing: 1.00px;
-        margin-bottom: 10px; 
+        margin-bottom: 5px; 
 
-        @media (max-width: 1000px) {
+        @media (max-width: ${breakPointLG}px) {
             font-size: 14px; 
         }
     }
@@ -90,7 +93,7 @@ const StyledRenderDiv = styled.div`
         color: #333232;
         letter-spacing: 1.00px;
 
-        @media (max-width: 1000px) {
+        @media (max-width: ${breakPointLG}px) {
             font-size: 14px; 
         }
     }

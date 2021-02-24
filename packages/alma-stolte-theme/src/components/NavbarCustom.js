@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect, styled, css, keyframes } from 'frontity';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, NavbarBrand } from 'react-bootstrap';
 import almaBackground from '../assets/images/almaBackground.jpg'
 import NavbarCustomLink from "./NavbarCustomLink";
 import { Share, Download, Menu } from 'react-feather';
@@ -13,10 +13,10 @@ const NavbarCustom = ({ state }) => {
 
     // like bootstrap breakpoints md, lg, xl
     const breakPointXL = 1199;
-    const breakPointLG = 992;
-    const breakPointMD = 768;
-    const breakPointSM = 576;
-    const breakPointXS = 425;
+    const breakPointLG = 991;
+    const breakPointMD = 767;
+    const breakPointSM = 575;
+    const breakPointXS = 424;
 
     // variable which changes color of toggler menu on click
     const [toggleBGColor, setToggleBGColor] = useState('rgba(0,0,0,0.7)')
@@ -26,8 +26,13 @@ const NavbarCustom = ({ state }) => {
         (toggleBGColor == 'rgba(0,0,0,0.7)' ? setToggleBGColor('rgba(0,0,0,1)') : setToggleBGColor('rgba(0,0,0,0.7)'))
     }
 
+    // {console.log(data.link)}
     const dynamicLinkStyle = () => {
-        return (data.isHome ? css`color: #EDE4E5 !important;` : css`color: #333232 !important;`)
+        return (
+            data.isHome ? 
+                css`color: #EDE4E5 !important;` 
+                : 
+                css`color: #333232 !important;`)
     }
 
     const dynamicTogglerStyle = () => {
@@ -52,15 +57,12 @@ const NavbarCustom = ({ state }) => {
                     display: flex;
                     align-items: center; 
 
-                    // + right - left | + bottom - top | blure | size
-                    // box-shadow: 0px 2px 15px 2px  rgba(0,0,0,0.7);
-
-                    @media (max-width: ${breakPointMD}px) {
-                        padding: 20px 20px;
+                    @media (max-width: ${breakPointSM}px) {
+                        padding: 10px 15px;
                     }
 
-                    @media (max-width: ${breakPointSM}px) {
-                        padding: 15px 15px;
+                    @media (max-width: ${breakPointXS}px) {
+                        padding: 5px 15px;
                     }
                 `
                 :
@@ -70,11 +72,13 @@ const NavbarCustom = ({ state }) => {
                     @media (max-width: ${breakPointXL}px) {
                         padding: 20px 40px;
                     }
-                    @media (max-width: ${breakPointMD}px) {
-                        padding: 20px 20px;
-                    }
+                    
                     @media (max-width: ${breakPointSM}px) {
-                        padding: 15px 15px;
+                        padding: 10px 15px;
+                    }
+                    
+                    @media (max-width: ${breakPointXS}px) {
+                        padding: 5px 15px;
                     }
                 `
         )
@@ -134,6 +138,7 @@ const NavbarCustom = ({ state }) => {
                 @media (max-width: ${breakPointSM}px) {
                     font-size: 22px; 
                     letter-spacing: 8.86px;
+                    padding: 0px;
                 }
                 
                 @media (max-width: ${breakPointXS}px) {
@@ -142,42 +147,14 @@ const NavbarCustom = ({ state }) => {
                 }`)
     }
 
-    return (
-
-        <div css={dynamicImageStyle}>
-
-            {/* changes hamburger color according to home, not home with bootstrap default "dark", "light" */}
-            <Navbar variant={data.isHome ? "dark" : "light"} expand="xl" fixed="top" css={dynamicNavbarStyle}>
-
-                <div>
-                    {/* logo Alma Stolte */}
-                    <NavbarCustomLink link={"/"} css={dynamicLogoStyle}>ALMA STOLTE
-                    </NavbarCustomLink>
-                </div>
-
-                {/* hamburger button */}
-                <Navbar.Toggle aria-controls="toggle-connection" css={dynamicTogglerStyle} onClick={onClickToggleBGColor} />
-
-                {/* toggle menu when uncollapsed */}
-                <Navbar.Collapse id="toggle-connection" className="justify-content-end">
-
-                    {/* toggle menu when collapsed */}
-                    <StyledToggleArea className="mr-auto" className="justify-content-end" css={css`margin-top: 15px;`}>
-                        <StyledNavLink href={"/kalender/"} css={dynamicLinkStyle}>KALENDER</StyledNavLink>
-                        <StyledNavLink href={"/vita/"} css={dynamicLinkStyle}>VITA</StyledNavLink>
-                        <StyledNavLink href={"/media/"} css={dynamicLinkStyle}>MEDIA</StyledNavLink>
-                        <StyledNavLink href={"/kontakt/"} css={dynamicLinkStyle}>KONTAKT</StyledNavLink>
-                    </StyledToggleArea>
-                </Navbar.Collapse>
-
-            </Navbar>
-
-            <div css={data.isHome ?
+    const dynamicSubheadingStyle = () => {
+        return (
+            data.isHome ?
                 css`
                 padding: 120px 50px;
                 
                 @media (max-width: ${breakPointMD}px) {
-                    padding: 80px 50px; 
+                    padding: 100px 50px; 
                 }
                
                 @media (max-width: ${breakPointSM}px) {
@@ -187,7 +164,37 @@ const NavbarCustom = ({ state }) => {
                 :
                 css`
                 display: none;
-                `}>
+                `
+        )
+    }
+
+    return (
+
+        <div css={dynamicImageStyle}>
+
+            {/* changes hamburger color according to home / not home with bootstrap default "dark", "light" */}
+            <Navbar variant={data.isHome ? "dark" : "light"} expand="xl" fixed="top" css={dynamicNavbarStyle}>
+
+                <StyledLogoLink href={"/"} css={dynamicLogoStyle}>ALMA STOLTE</StyledLogoLink>
+
+                {/* hamburger button */}
+                <Navbar.Toggle aria-controls="toggle-connection" css={dynamicTogglerStyle} onClick={onClickToggleBGColor} />
+
+                {/* toggle menu when uncollapsed */}
+                <Navbar.Collapse id="toggle-connection" className="justify-content-end">
+
+                    {/* toggle menu when collapsed */}
+                    <StyledToggleArea className="mr-auto" className="justify-content-end" css={css`@media (max-width: ${breakPointXL}px) {margin-top: 20px;}`}>
+                        <StyledNavLink href={"/kalender/"} css={dynamicLinkStyle}>KALENDER</StyledNavLink>
+                        <StyledNavLink href={"/vita/"} css={dynamicLinkStyle}>VITA</StyledNavLink>
+                        <StyledNavLink href={"/media/"} css={dynamicLinkStyle}>MEDIA</StyledNavLink>
+                        <StyledNavLink href={"/kontakt/"} css={dynamicLinkStyle}>KONTAKT</StyledNavLink>
+                    </StyledToggleArea>
+                </Navbar.Collapse>
+
+            </Navbar>
+
+            <div css={dynamicSubheadingStyle}>
                 <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
                 <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
             </div>
@@ -227,8 +234,6 @@ from {
   }
 `;
 
-
-
 const StyledToggleArea = styled(Nav)`
 `
 const StyledMargin = styled.div`
@@ -237,6 +242,10 @@ const StyledMargin = styled.div`
         margin: 10px 0px; 
     }
 `;
+
+const StyledLogoLink = styled(NavbarBrand)`
+
+`
 
 const StyledNavLink = styled(Nav.Link)`
     font-size: 16px;

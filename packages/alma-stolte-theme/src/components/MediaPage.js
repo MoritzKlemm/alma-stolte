@@ -16,28 +16,26 @@ const MediaPage = ({ state }) => {
     const [mediaContent] = useState(state.source["page"][mediaPageID].content.rendered);
     const [extractedIframes, setExtractedIframes] = useState([]);
     const [extractedImages, setExtractedImages] = useState([]);
+    const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g');
 
     useEffect(() => {
         fetchMediaData();
-        console.log("rendered!")
     }, [])
 
     // fetch calender data from public wp api
     const fetchMediaData = async () => {
         try {
-            const response = await axios.get('https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com/pages/269')
-            extractIframes(response.data.content.rendered)
-            extractImages(response.data.content.rendered)
+            const response = await axios.get('https://public-api.wordpress.com/wp/v2/sites/cmsalmastolte.wordpress.com/pages/'+mediaPageID)
+            extractIframes(response.data.content.rendered, RegExpFindLineBreaks)
+            extractImages(response.data.content.rendered, RegExpFindLineBreaks)
         } catch (error) {
             console.log("Fetching Calender Data went wrong: " + error)
         }
     }
 
-    const extractIframes = (medData) => {
-        console.log("frames fired!")
+    const extractIframes = (medData, regexLineFinder) => {
         // remove linebreaks and replace'm with ''
-        const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g')
-        const lineBreaksRemovedData = medData.replace(RegExpFindLineBreaks, '');
+        const lineBreaksRemovedData = medData.replace(regexLineFinder, '');
 
         // extract iframes
         let match;
@@ -50,14 +48,10 @@ const MediaPage = ({ state }) => {
             i++;
         }
     }
-    
-    const extractImages = (imData) => {
-        console.log("images fired!")
-        // remove linebreaks and replace'm with ''
-        const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g')
-        const lineBreaksRemovedData = imData.replace(RegExpFindLineBreaks, '');
 
-        // extract iframes
+    const extractImages = (imData, regexLineFinder) => {
+        const lineBreaksRemovedData = imData.replace(regexLineFinder, '');
+
         let match;
         let i = 0;
         const RegExpSeperateIframes = RegExp('<\s*figure[^>]*>(.*?)<\s*/\s*figure>', 'gm')

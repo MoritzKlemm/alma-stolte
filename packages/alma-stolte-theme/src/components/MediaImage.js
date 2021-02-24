@@ -3,7 +3,6 @@ import { connect, styled, css } from 'frontity';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import LinkFrontity from './LinkFrontity'
 
 
 
@@ -18,12 +17,7 @@ const MediaImage = ({ state, item }) => {
 
 export default connect(MediaImage);
 
-const breakPointXL = 1200;
-const breakPointLG = 992;
-const breakPointMD = 768;
 const breakPointSM = 576;
-const breakPointXS = 425;
-
 
 const StyledCol = styled(Col)`
     padding: 0px;

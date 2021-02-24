@@ -133,7 +133,7 @@ export default function ContactUs() {
                 );
             // e.target.reset();
         } else {
-            alert("Ihre Eingabenind noch nicht vollständig!")
+            alert("Ihre Eingaben noch nicht vollständig!")
         }
     }
 
@@ -158,15 +158,16 @@ export default function ContactUs() {
             </Form>
 
             {/** rendering alert according to "alertStatus" */}
-            {alertStatus == 'hide' ? null :
-                alertStatus == 'success' ?
-                    <StyledSuccessAlert variant="success" onClick={() => { setAlertStatus('hide') }} dismissible fade show>
-                        Ihre Nachricht wurde verschickt!
-                </StyledSuccessAlert>
-                    :
-                <StyledWarningAlert variant="warning" onClick={() => { setAlertStatus('hide') }} dismissible className="fade show">
-                        Achtung! Ihre Nachricht wurde nicht verschickt.
-                </StyledWarningAlert>
+            {alertStatus == 'hide' ? 
+                null :
+                    alertStatus == 'success' ?
+                        <StyledSuccessAlert variant="success" onClick={() => { setAlertStatus('hide') }} dismissible fade show>
+                                Ihre Nachricht wurde verschickt!
+                        </StyledSuccessAlert>
+                        :
+                        <StyledWarningAlert variant="warning" onClick={() => { setAlertStatus('hide') }} dismissible className="fade show">
+                                Achtung! Ihre Nachricht wurde nicht verschickt.
+                        </StyledWarningAlert>
             }
 
         </StyledContainer>
@@ -183,7 +184,7 @@ const StyledContainer = styled(Container)`
 // bootstrap <input> component. with type = "x" saying what type 
 const StyledInput = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
+    font-size: 16px;
     color: #595555;
     letter-spacing: 1.0px;
     text-align: justify;
@@ -204,7 +205,7 @@ const StyledInput = styled(Form.Control)`
 `
 const StyledFormControlMessage = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
+    font-size: 16px;
     color: #595555;
     letter-spacing: 1.0px;
     text-align: justify;
