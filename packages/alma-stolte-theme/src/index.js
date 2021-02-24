@@ -1,10 +1,6 @@
 import Theme from "./components";
 
 const AlmaStolteTheme = {
-}
-
-export default {
-  
   name: "alma-stolte-theme",
   roots: {
     theme: Theme
@@ -21,8 +17,17 @@ export default {
       },
       closeMenu: ({ state }) => {
         state.theme.isMenuOpen = false;
+      },
+      getPreviousScrollPosition: ({ state }) => {
+        state.theme.frontity.scroll = window.pageYOffset;
+      }, 
+  
+      setScrollPosition: ({latestScrollPosition}) => {
+        state.theme.frontity.scroll = latestScrollPosition;
       }
     }
   }
-};
+}
+export default AlmaStolteTheme;
+
 

@@ -19,7 +19,13 @@ const MediaPage = ({ state }) => {
     const RegExpFindLineBreaks = RegExp('(?:\r\n|\r|\n)', 'g');
 
     useEffect(() => {
+        // fired when component mounts
         fetchMediaData();
+        
+        return () => {
+            // fires when component ummounts
+            // state.actions.setScrollPosition(window.pageYOffset)
+        };
     }, [])
 
     // fetch calender data from public wp api

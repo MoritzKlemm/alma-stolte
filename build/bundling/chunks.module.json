@@ -2,16 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "196ca4eefc8aa73876ec",
+  "hash": "f8ae3ba25b9adab9c2a5",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
-    "alma-stolte": "alma-stolte.module.js"
+    "alma-stolte": [
+      "alma-stolte.module.js",
+      "alma-stolte.30ee682af6d8f3bd1f96.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "30ee682af6d8f3bd1f96.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "alma-stolte.30ee682af6d8f3bd1f96.hot-update.js",
+      "size": 241406,
+      "chunks": [
+        "alma-stolte"
+      ],
+      "chunkNames": [
+        "alma-stolte"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "alma-stolte.module.js",
-      "size": 12884428,
+      "size": 12739079,
       "chunks": [
         "alma-stolte"
       ],
@@ -19,8 +48,7 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     },
     {
       "name": "fonts/LibreBaskervilleBold.ttf",
@@ -61,7 +89,8 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js"
+        "alma-stolte.module.js",
+        "alma-stolte.30ee682af6d8f3bd1f96.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -73,7 +102,8 @@
         "alma-stolte"
       ],
       "assets": [
-        "alma-stolte.module.js"
+        "alma-stolte.module.js",
+        "alma-stolte.30ee682af6d8f3bd1f96.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -82,17 +112,18 @@
   "chunks": [
     {
       "id": "alma-stolte",
-      "rendered": false,
+      "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 3061760,
+      "size": 3025826,
       "names": [
         "alma-stolte"
       ],
       "files": [
-        "alma-stolte.module.js"
+        "alma-stolte.module.js",
+        "alma-stolte.30ee682af6d8f3bd1f96.hot-update.js"
       ],
-      "hash": "43e508b95d7f37940652",
+      "hash": "c4fe3f8ee7705c953ef5",
       "siblings": [],
       "parents": [],
       "children": [],

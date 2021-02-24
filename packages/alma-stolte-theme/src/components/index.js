@@ -20,7 +20,6 @@ import MediaPage from "./MediaPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -29,19 +28,9 @@ const Theme = ({ state }) => {
     <div>
       <Head>
         <title>Alma Stolte</title>
-        <meta name="description"/>
+        <meta name="description" content="Historisches und Modernes Violoncello"/>
         <html lang="en" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/** defining favicons */}
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-        <link rel="manifest" href="/site.webmanifest"/>
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
-        <meta name="msapplication-TileColor" content="#2d89ef" />
-        <meta name="theme-color" content="#ffffff" />
-                
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -60,9 +49,7 @@ const Theme = ({ state }) => {
       <Global styles={globalStyles} />
 
       <main>
-
         <NavbarCustom />
-        
         <Switch>
           <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />
@@ -75,9 +62,7 @@ const Theme = ({ state }) => {
           <ImpressumPage when={data.isPage && state.router.link == "/impressum/"} />
           <PageError when={data.isError} /> 
         </Switch>
-
         <Footer />
-        
       </main>
 
     </div>

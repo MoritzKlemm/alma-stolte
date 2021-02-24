@@ -89,7 +89,6 @@ const NavbarCustom = ({ state }) => {
             data.isHome ?
             css`    background-image: url(${almaBackground});
                     background-size:cover;
-                    background-attachment: fixed; 
                     background-position: top;
                     height: 100vh;
                     width: auto;
