@@ -175,7 +175,7 @@ export default function ContactUs() {
 }
 
 const StyledContainer = styled(Container)`
-    max-width: 450px; 
+    max-width: 540px; 
     padding: 0px; 
 `
 
@@ -192,7 +192,7 @@ const StyledInput = styled(Form.Control)`
     border: none; 
     border-bottom: 1px solid grey;
     border-radius: 0px; 
-    padding: 2px 10px; 
+    padding: 2px 0px; 
     margin: 20px 0px; 
  
     &:focus {

@@ -92,9 +92,38 @@ const NavbarCustom = ({ state }) => {
                     background-position: top;
                     height: 100vh;
                     width: auto;
-                    max-width: 100%;`
+                    max-width: 100%;
+                    
+                    // from top to bottom, makes first 75% transparent and then "gradiating" into rgb, with bg alma
+                    // background-image: linear-gradient(to bottom, transparent 80%, rgba(235,221,209,100)), url(${almaBackground});
+                    // background-size:cover;
+                    // background-position: top;
+                    // height: 100vh;
+                    // width: auto;
+                    // max-width: 100%;
+                    `
+                    
+
             :
-            css`    margin-bottom: 80px;`
+            css`    // when menu collapsed, pushes content according to navbar height down which comes from default bootstrap behavior.
+                    margin-bottom: 85px; 
+
+                    @media (max-width: ${breakPointXL}px) {
+                        margin-bottom: 95px; 
+                    }
+                    
+                    @media (max-width: ${breakPointLG}px) {
+                        margin-bottom: 89px; 
+                    }
+                    
+                    @media (max-width: ${breakPointSM}px) {
+                        margin-bottom: 53px; 
+                    }
+                    
+                    @media (max-width: ${breakPointXS}px) {
+                        margin-bottom: 41px; 
+                    }
+                    `
         )
     }
 

@@ -7,12 +7,17 @@ const AlmaStolteTheme = {
   },
   state: {
     theme: {
-      isMenuOpen: false 
+      isMenuOpen: false,
+      breakPointXL : 1199,
+      breakPointLG : 991,
+      breakPointMD : 767,
+      breakPointSM : 575,
+      breakPointXS : 424,
     }
   },
   actions: {
     theme: {
-      openMenu: ({state}) => {
+      openMenu: ({ state }) => {
         state.theme.isMenuOpen = true;
       },
       closeMenu: ({ state }) => {
@@ -20,9 +25,9 @@ const AlmaStolteTheme = {
       },
       getPreviousScrollPosition: ({ state }) => {
         state.theme.frontity.scroll = window.pageYOffset;
-      }, 
-  
-      setScrollPosition: ({latestScrollPosition}) => {
+      },
+
+      setScrollPosition: ({ latestScrollPosition }) => {
         state.theme.frontity.scroll = latestScrollPosition;
       }
     }

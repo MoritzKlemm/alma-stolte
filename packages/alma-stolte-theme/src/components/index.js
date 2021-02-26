@@ -75,6 +75,7 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     background-color: rgba(235,221,209,100);
+    // background: linear-gradient(180deg, #ebddd1, #726E60);
     font-family: "LibreBaskervilleRegular";
     scroll-behavior: smooth; 
     margin: 0px;

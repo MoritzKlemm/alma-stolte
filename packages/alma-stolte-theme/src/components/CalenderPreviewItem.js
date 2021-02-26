@@ -1,5 +1,5 @@
 import { React, useState, setState, useEffect } from 'react';
-import { connect, styled, css } from 'frontity';
+import { connect, styled, css, keyframes } from 'frontity';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -27,9 +27,28 @@ const breakPointSM = 575;
 const breakPointXS = 424;
 
 
+const hoverAnimationIn = keyframes`
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgb(221, 205, 191);
+    }
+`
+
+const hoverAnimationOut = keyframes`
+    0% {
+        background-color: rgb(221, 205, 191);
+    }
+    100% {
+        background-color: transparent;
+    }
+`
+
 const StyledCol = styled(Col)`
     margin: 20px 0px; 
     padding: 0px; 
+
 `
 
 const StyledContent = styled.div`
@@ -40,6 +59,20 @@ const StyledContent = styled.div`
 
     @media (max-width: ${breakPointMD}px) {
         margin: 0px;  
+    }
+
+    &:hover {
+        animation: ${hoverAnimationIn};
+        animation-duration: 0.3s;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-out; 
+    }
+
+    &:not( :hover ) {
+        animation: ${hoverAnimationOut};
+        animation-duration: 0.3s;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-in; 
     }
 
     // big date

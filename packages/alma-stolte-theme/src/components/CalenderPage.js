@@ -1,4 +1,4 @@
-import { connect, css, styled } from "frontity";
+import { connect, css, styled, keyframes } from "frontity";
 import { React, useState, useEffect } from 'react';
 
 import Container from 'react-bootstrap/Container'
@@ -112,4 +112,5 @@ const StyledRenderDiv = styled.div`
             line-height: 22px;
         }
     }
+
 ` 

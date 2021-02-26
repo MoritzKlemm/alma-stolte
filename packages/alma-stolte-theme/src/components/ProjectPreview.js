@@ -9,9 +9,11 @@ const ProjectPreview = ({ state, item }) => {
     return (
         <StyledCol md={6}>
             <ProjectPreviewLink link={item.link}>
-                <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-                <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
-                <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                <StyledAnimation>
+                    <StyledTitle dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
+                    <StyledImage dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
+                    <StyledExcerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                </StyledAnimation>
                 {/** <StyledButton href={item.link}>MEHR</StyledButton> */}
             </ProjectPreviewLink>
         </StyledCol>
@@ -26,8 +28,35 @@ const breakPointLG = 992;
 const breakPointMD = 768;
 const breakPointSM = 576;
 
+const hoverAnimationIn = keyframes`
+    0% {background-color: rgb(235, 221, 209, 0.8);}
+    100% {background-color: rgb(221, 205, 191);}
+`
+
+const hoverAnimationOut = keyframes`
+    0% {background-color: rgb(221, 205, 191, 0.8);}
+    100% {background-color: rgb(235, 221, 209);}
+`
 
 const StyledCol = styled(Col)`
+    margin-bottom: 30px;
+
+   
+`
+const StyledAnimation = styled.div`
+    &:hover {
+        animation: ${hoverAnimationIn};
+        animation-duration: 0.3s;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-out; 
+    }
+
+    &:not( :hover ) {
+        animation: ${hoverAnimationOut};
+        animation-duration: 0.3s;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-in; 
+    }
 `
 
 const StyledTitle = styled.div`
@@ -35,7 +64,7 @@ const StyledTitle = styled.div`
     font-size: 26.6px;
     color: #444C92;
     letter-spacing: 3.0px;
-    margin: 0px 0px 10px 0px;
+    margin: 5px 0px;
 
 `;
 
@@ -63,7 +92,7 @@ const StyledExcerpt = styled.div`
         letter-spacing: 1.00px;
         line-height: 33.25px;
         text-align: justify;
-        margin-bottom: 30px; 
+        margin-bottom 0px; 
 
         @media (max-width: ${breakPointSM}px) {
             line-height: 22px;
