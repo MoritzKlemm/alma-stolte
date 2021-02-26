@@ -17,8 +17,8 @@ const Footer = ({ state }) => {
             <StyledRow>
                 <StyledCol md={12}>
                     <StyledFrontityLink href={"/impressum/"}>impressum</StyledFrontityLink>
-                    <StyledParagraph>© alma stolte</StyledParagraph>
                     <StyledLink href="mailto:designed.containers@gmail.com">created by byte affairs</StyledLink>
+                    <StyledParagraph>©alma stolte</StyledParagraph>
                 </StyledCol>
             </StyledRow>
         </StyledContainer>
@@ -26,6 +26,9 @@ const Footer = ({ state }) => {
 }
 
 export default connect(Footer);
+
+const breakPointSM = 576;
+const breakPointXS = 425;
 
 const StyledContainer = styled(Container)`
     padding: 125px 15px 0px 15px ; 
@@ -41,19 +44,13 @@ const StyledCol = styled(Col)`
     border-top: 1px solid rgba(140,140,140); 
     padding-top: 30px;
     padding-bottom: 30px; 
+
+    @media (max-width: ${breakPointXS}px) {
+        justify-content: space-between;
+    }
 `;
 
 const StyledFrontityLink = styled(LinkFrontity)`
-    text-decoration: none; 
-    color: rgba(115,115,115) !important;
-    font-size: 12px;
-    letter-spacing: 1.3px;
-    
-    &:hover {
-        curser: pointer; 
-        text-decoration: none; 
-        color: rgba(100,100,100);
-    }
 `
 
 const StyledLink = styled.a`
@@ -68,6 +65,15 @@ const StyledLink = styled.a`
         text-decoration: none; 
         color: rgba(100,100,100);
     }
+
+    @media (max-width: ${breakPointSM}px) {
+        font-size: 11px;
+        letter-spacing: 1px; 
+    }
+
+    @media (max-width: ${breakPointXS}px) {
+        font-size: 10px;
+    }
 ` 
 
 const StyledParagraph = styled.p`
@@ -77,4 +83,13 @@ const StyledParagraph = styled.p`
     font-size: 12px;
     letter-spacing: 1.3px;
     margin: 0px; 
+
+    @media (max-width: ${breakPointSM}px) {
+        font-size: 11px;
+        letter-spacing: 1px; 
+    }
+
+    @media (max-width: ${breakPointXS}px) {
+        font-size: 10px;
+    }
 ` 

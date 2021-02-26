@@ -2,19 +2,30 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "112940a9a6d591c1e115",
+  "hash": "d6927f1ba73d94b70301",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.e828e1c8abc5f0ec1561.hot-update.js"
+      "alma-stolte.9ff9e16efaba03a1ded8.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "alma-stolte.e828e1c8abc5f0ec1561.hot-update.js",
-      "size": 14250,
+      "name": "9ff9e16efaba03a1ded8.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "alma-stolte.9ff9e16efaba03a1ded8.hot-update.js",
+      "size": 64799,
       "chunks": [
         "alma-stolte"
       ],
@@ -29,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 12827895,
+      "size": 12838967,
       "chunks": [
         "alma-stolte"
       ],
@@ -37,17 +48,6 @@
         "alma-stolte"
       ],
       "info": {},
-      "emitted": false
-    },
-    {
-      "name": "e828e1c8abc5f0ec1561.hot-update.json",
-      "size": 53,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
       "emitted": false
     },
     {
@@ -90,7 +90,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.e828e1c8abc5f0ec1561.hot-update.js"
+        "alma-stolte.9ff9e16efaba03a1ded8.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -103,7 +103,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.e828e1c8abc5f0ec1561.hot-update.js"
+        "alma-stolte.9ff9e16efaba03a1ded8.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -115,15 +115,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 3026978,
+      "size": 3115212,
       "names": [
         "alma-stolte"
       ],
       "files": [
         "alma-stolte.module.js",
-        "alma-stolte.e828e1c8abc5f0ec1561.hot-update.js"
+        "alma-stolte.9ff9e16efaba03a1ded8.hot-update.js"
       ],
-      "hash": "93cef61a802c481cb8c0",
+      "hash": "166533f0dc5ea0efe7eb",
       "siblings": [],
       "parents": [],
       "children": [],

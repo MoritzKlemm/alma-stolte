@@ -1,6 +1,7 @@
 # alma-stolte
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
+latest deployment: https://alma-stolte-nv0ngc2tv-moritzklemm.vercel.app/
 
 #### Table of Contents
 

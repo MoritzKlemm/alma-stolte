@@ -133,7 +133,7 @@ export default function ContactUs() {
                 );
             // e.target.reset();
         } else {
-            alert("Ihre Eingabens ind noch nicht vollständig!")
+            alert("Ihre Eingaben noch nicht vollständig!")
         }
     }
 
@@ -141,7 +141,7 @@ export default function ContactUs() {
         <StyledContainer id="contact-smooth-scroll">
             <Form className="contact-form" onSubmit={sendEmail}>
                 <Form.Group> 
-                    <StyledInput type="text" name="user_name" placeholder="Vor -und Nachname" value={name} onChange={(e) => { validateName(e.target.value) }} className={nameCorrect} />
+                    <StyledInput type="text" name="user_name" placeholder="Name" value={name} onChange={(e) => { validateName(e.target.value) }} className={nameCorrect} />
                 </Form.Group>
                 <Form.Group>
                     <StyledInput type="email" name="user_email" placeholder="Email" value={email} onChange={(e) => { validateMail(e.target.value) }} className={emailCorrect} />
@@ -158,15 +158,16 @@ export default function ContactUs() {
             </Form>
 
             {/** rendering alert according to "alertStatus" */}
-            {alertStatus == 'hide' ? null :
-                alertStatus == 'success' ?
-                    <StyledSuccessAlert variant="success" onClick={() => { setAlertStatus('hide') }} dismissible fade show>
-                        Ihre Nachricht wurde verschickt!
-                </StyledSuccessAlert>
-                    :
-                <StyledWarningAlert variant="warning" onClick={() => { setAlertStatus('hide') }} dismissible className="fade show">
-                        Achtung! Ihre Nachricht wurde nicht verschickt.
-                </StyledWarningAlert>
+            {alertStatus == 'hide' ? 
+                null :
+                    alertStatus == 'success' ?
+                        <StyledSuccessAlert variant="success" onClick={() => { setAlertStatus('hide') }} dismissible fade show>
+                                Ihre Nachricht wurde verschickt!
+                        </StyledSuccessAlert>
+                        :
+                        <StyledWarningAlert variant="warning" onClick={() => { setAlertStatus('hide') }} dismissible className="fade show">
+                                Achtung! Ihre Nachricht wurde nicht verschickt.
+                        </StyledWarningAlert>
             }
 
         </StyledContainer>
@@ -174,7 +175,7 @@ export default function ContactUs() {
 }
 
 const StyledContainer = styled(Container)`
-    max-width: 450px; 
+    max-width: 540px; 
     padding: 0px; 
 `
 
@@ -183,7 +184,7 @@ const StyledContainer = styled(Container)`
 // bootstrap <input> component. with type = "x" saying what type 
 const StyledInput = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
+    font-size: 16px;
     color: #595555;
     letter-spacing: 1.0px;
     text-align: justify;
@@ -191,7 +192,7 @@ const StyledInput = styled(Form.Control)`
     border: none; 
     border-bottom: 1px solid grey;
     border-radius: 0px; 
-    padding: 2px 10px; 
+    padding: 2px 0px; 
     margin: 20px 0px; 
  
     &:focus {
@@ -204,7 +205,7 @@ const StyledInput = styled(Form.Control)`
 `
 const StyledFormControlMessage = styled(Form.Control)`
     font-family: LibreBaskerville-Regular;
-    font-size: 15.2px;
+    font-size: 16px;
     color: #595555;
     letter-spacing: 1.0px;
     text-align: justify;

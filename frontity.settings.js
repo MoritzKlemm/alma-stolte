@@ -32,7 +32,11 @@ const settings = {
               "KONTAKT",
               "/"
             ],
-          ]
+          ],
+
+          frontity: {
+            scroll: 100
+          }
         }
       }
     },

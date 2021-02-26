@@ -20,7 +20,6 @@ import MediaPage from "./MediaPage";
 import Project from "./Project";
 import ImpressumPage from "./ImpressumPage";
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -29,15 +28,15 @@ const Theme = ({ state }) => {
     <div>
       <Head>
         <title>Alma Stolte</title>
-        <meta name="description"/>
+        <meta name="description" content="Historisches und Modernes Violoncello"/>
         <html lang="en" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />                
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
-        />
+        /> 
 
         {/** default material ui font */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -50,9 +49,7 @@ const Theme = ({ state }) => {
       <Global styles={globalStyles} />
 
       <main>
-
         <NavbarCustom />
-        
         <Switch>
           <Loading when={data.isFetching} />
           <HomeContainer when={data.isHome} />
@@ -65,9 +62,7 @@ const Theme = ({ state }) => {
           <ImpressumPage when={data.isPage && state.router.link == "/impressum/"} />
           <PageError when={data.isError} /> 
         </Switch>
-
         <Footer />
-        
       </main>
 
     </div>
@@ -80,6 +75,7 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     background-color: rgba(235,221,209,100);
+    // background: linear-gradient(180deg, #ebddd1, #726E60);
     font-family: "LibreBaskervilleRegular";
     scroll-behavior: smooth; 
     margin: 0px;

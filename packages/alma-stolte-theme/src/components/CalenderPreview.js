@@ -61,6 +61,12 @@ const CalenderPreview = ({ state, actions }) => {
 
 export default connect(CalenderPreview);
 
+const breakPointXL = 1199;
+const breakPointLG = 991;
+const breakPointMD = 767;
+const breakPointSM = 575;
+const breakPointXS = 424;
+
 const StyledContainer = styled(Container)`
     margin: 40px 0px; 
     justify-content: center; 
@@ -69,6 +75,6 @@ const StyledContainer = styled(Container)`
 `
 
 const StyledRow = styled(Row)`
-    padding: 0px 0px; 
-    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
 `

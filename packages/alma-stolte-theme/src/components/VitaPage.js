@@ -45,5 +45,8 @@ const StyledParagraph = styled.div`
 
     @media (max-width: ${breakPointSM}px) {
         line-height: 22px;
+        &::first-letter {
+            font-size: 150%;
+          }
     }
 ` 
