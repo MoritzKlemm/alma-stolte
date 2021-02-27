@@ -16,7 +16,7 @@ const Project = ({ state }) => {
             <Row>
                 <Col md={12}>
                     <StyledContent dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-                    </Col>
+                </Col>
             </Row>
         </StyledContainer>
     )
@@ -30,7 +30,6 @@ const breakPointMD = 768;
 const breakPointSM = 576;
 
 const StyledContainer = styled(Container)`
-    margin-top: 75px; 
     padding: 0px 15px;
 `
 
@@ -42,7 +41,7 @@ const StyledContent = styled.div`
         color: #0F0D0E;
         letter-spacing: 1.00px;
         text-align: justify;
-        line-height: 33.25px;
+        line-height: 28px;
 
         @media (max-width: ${breakPointXL}px) {
             font-size: 14px; 

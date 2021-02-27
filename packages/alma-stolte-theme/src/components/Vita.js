@@ -47,7 +47,7 @@ const StyledParagraph = styled.div`
     color: #0F0D0E;
     letter-spacing: 1.00px;
     text-align: justify;
-    line-height: 33.25px;
+    line-height: 28px;
     margin-bottom: 60px; 
 
     &::first-letter {

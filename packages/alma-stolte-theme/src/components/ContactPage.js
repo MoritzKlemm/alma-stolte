@@ -4,6 +4,9 @@ import { React, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 
 import Contact from './Contact';
@@ -17,18 +20,17 @@ const ContactPage = ({ state }) => {
     return (
         <Container>
             <Row>
-                <StyledCol md={6}>
+                <StyledCol md={12}>
                     <Contact />
                 </StyledCol>
-                <StyledColRight md={6}>
-                    <StyledGreeting>Gerne beantworte ich ihre Nachricht oder nehme ihren Anruf entgegen! </StyledGreeting> 
-                    <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent }} />
-                    <StyledButtonWrapper>
-                        <StyledInstagram target="_blank" href="https://www.instagram.com/alma.s.cello/">instagram</StyledInstagram> 
-                        <StyledFacebook target="_blank" href="https://www.facebook.com/alma.stolte">facebook</StyledFacebook> 
-                        <StyledYoutube target="_blank" href="https://www.youtube.com/user/MsAlmaCello/featured">youtube</StyledYoutube> 
-                    </StyledButtonWrapper>
-                </StyledColRight>
+            </Row>
+            <Row>
+                <StyledCol md={12}>
+                    <StyledWrapper>
+                        <StyledGreeting>Gerne beantworte ich ihre Nachricht oder <br />nehme ihren Anruf entgegen! </StyledGreeting>
+                        <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent }} />
+                    </StyledWrapper>
+                </StyledCol>
             </Row>
         </Container>
     )
@@ -37,36 +39,38 @@ const ContactPage = ({ state }) => {
 export default connect(ContactPage);
 
 const linkColor = "rgba(89,85,85,0.59)"
-const linkFontSize = "18px;"
+const linkFontSize = "16px;"
+const margin = "2px 0px"
 
 const StyledCol = styled(Col)` 
     display: flex;
-    justify-content: center; 
-`
-
-const StyledColRight = styled(Col)` 
-    display: flex;
-    justify-content: left; 
+    align-items: center; 
     flex-direction: column; 
 `
 
-const StyledGreeting = styled.p `
+const StyledWrapper = styled.div`
+    max-width: 540px; 
+`
+
+const StyledGreeting = styled.p`
     font-family: LibreBaskerville-Regular;
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(89,85,85,0.59);
-    letter-spacing: 1.02px;
+    letter-spacing: 1px;
     line-height: 30px;
-    margin: 22px 0px 20px 0px; 
+    margin: 22px 0px 0px 0px; 
+    text-align: center; 
 `
 
 const StyledPhoneNumber = styled.div`
     font-family: LibreBaskerville-Regular;
-    font-size: 18px;
-    color: ${linkColor};
-    letter-spacing: 1.02px;
+    font-size: 16px;
+    color: rgba(89,85,85,0.59);
+    letter-spacing: 1px;
     line-height: 30px;
     padding: 0px;
-    margin: 5px 0px; 
+    margin: ${margin};
+    text-align: center; 
     
     & p {
         margin: 0px; 
@@ -74,7 +78,7 @@ const StyledPhoneNumber = styled.div`
 `
 const StyledButtonWrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    
 `
 
 const StyledInstagram = styled.a`
@@ -84,7 +88,7 @@ const StyledInstagram = styled.a`
     letter-spacing: 1.02px;
     line-height: 30px;
     padding: 0px;
-    margin: 5px 0px; 
+    margin: ${margin};
     background-color: rgba(129, 52, 175, 0.8); 
     border-radius: 0px;
     border: none;  
@@ -96,7 +100,7 @@ const StyledInstagram = styled.a`
     &:hover {
         text-decoration: none; 
         curser: pointer; 
-        color: rgba(129, 52, 175, 0.6);
+        color: rgba(129, 52, 175, 0.8);
     }
 `
 
@@ -107,7 +111,7 @@ const StyledFacebook = styled.a`
     letter-spacing: 1.02px;
     line-height: 30px;
     padding: 0px;
-    margin: 5px 0px; 
+    margin: ${margin};
     border-radius: 0px;
     border: none;  
     flex-grow: 3;
@@ -118,7 +122,7 @@ const StyledFacebook = styled.a`
     &:hover {
         text-decoration: none; 
         curser: pointer; 
-        color: rgba(59, 89, 152, 0.6);
+        color: rgba(59, 89, 152, 0.8);
     }
 `
 
@@ -129,7 +133,7 @@ const StyledYoutube = styled.a`
     letter-spacing: 1.02px;
     line-height: 30px;
     padding: 0px;
-    margin: 5px 0px; 
+    margin: ${margin};
     border-radius: 0px;
     border: none;  
     flex-grow: 3;
@@ -140,6 +144,6 @@ const StyledYoutube = styled.a`
     &:hover {
         text-decoration: none; 
         curser: pointer; 
-        color: rgba(230, 33, 23, 0.6);
+        color: rgba(230, 33, 23, 0.8);
     }
 `

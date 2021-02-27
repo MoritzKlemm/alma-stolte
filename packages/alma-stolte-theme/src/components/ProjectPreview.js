@@ -40,7 +40,9 @@ const hoverAnimationOut = keyframes`
 
 const StyledCol = styled(Col)`
     margin-bottom: 30px;
-
+    @media (max-width: ${breakPointMD}px) {
+        margin-bottom: 0px; 
+    }
    
 `
 const StyledAnimation = styled.div`
@@ -90,7 +92,7 @@ const StyledExcerpt = styled.div`
         font-size: 15.2px;
         color: #0F0D0E;
         letter-spacing: 1.00px;
-        line-height: 33.25px;
+        line-height: 28px;
         text-align: justify;
         margin-bottom 0px; 
 

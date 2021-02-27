@@ -75,11 +75,11 @@ const MediaPage = ({ state }) => {
                     return <MediaIframe key={item.id} item={item} />
                 })}
             </StyledRow>
-            <StyledRow>
+            <StyledImageRow>
                 {extractedImages.map((item) => {
                     return <MediaImage key={item.id} item={item} />
                 })}
-            </StyledRow>
+            </StyledImageRow>
         </Container>
     )
 }
@@ -87,4 +87,7 @@ const MediaPage = ({ state }) => {
 export default connect(MediaPage);
 
 const StyledRow = styled(Row)`
+`
+const StyledImageRow = styled(Row)`
+    
 `
