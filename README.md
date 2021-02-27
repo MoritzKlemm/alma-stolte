@@ -4,7 +4,7 @@ This project was bootstrapped with [Frontity](https://frontity.org/).
 
 #### Latest Deveploeyment 
 
-https://alma-stolte-nv0ngc2tv-moritzklemm.vercel.app/
+https://alma-stolte-750j74wqy-moritzklemm.vercel.app/
 
 #### Table of Contents
 
