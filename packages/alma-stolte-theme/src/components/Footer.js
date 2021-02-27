@@ -19,11 +19,11 @@ const Footer = ({ state }) => {
         <StyledContainer>
             <StyledRow>
                 <StyledCol md={3}>
-                    <div>
+                    <StyledSocialsWrapper>
                         <StyledInstagram target="_blank" href="https://www.instagram.com/alma.s.cello/"><InstagramIcon fontSize="small" /></StyledInstagram>
                         <StyledFacebook target="_blank" href="https://www.facebook.com/alma.stolte"><FacebookIcon fontSize="small" /></StyledFacebook>
                         <StyledYoutube target="_blank" href="https://www.youtube.com/user/MsAlmaCello/featured"><YouTubeIcon fontSize="small" /></StyledYoutube>
-                    </div>
+                    </StyledSocialsWrapper>
                 </StyledCol>
                 <StyledCol md={3}>
                     <StyledFrontityLink href={"/impressum/"}>impressum</StyledFrontityLink>
@@ -49,14 +49,26 @@ const breakPointXS = 425;
 
 const linkColor = "rgba(89,85,85,0.59)"
 const linkFontSize = "16px;"
-const socialsMargin = "0px 2px"
+const socialsMargin = "0px 3px"
 
 const StyledContainer = styled(Container)`
-    padding: 125px 15px 0px 15px ; 
+    padding: 125px 15px 0px 15px; 
+
+    @media (max-width: ${breakPointMD}px) {
+        padding: 100px 10px 0px 10px ; 
+    }
+    
+    @media (max-width: ${breakPointSM}px) {
+        padding: 80px 10px 0px 10px ; 
+    }
 `;
 
 const StyledRow = styled(Row)`
     border-top: 1px solid rgba(140,140,140); 
+    
+    @media (max-width: ${breakPointSM}px) {
+        background-color: #DECFC3;
+    }
 `;
 
 const StyledCol = styled(Col)`
@@ -69,10 +81,6 @@ const StyledCol = styled(Col)`
 
     @media (max-width: ${breakPointMD}px) {
         padding: 15px 0px; 
-    }
-
-    @media (max-width: ${breakPointXS}px) {
-        justify-content: space-between;
     }
 `;
 
@@ -91,15 +99,6 @@ const StyledLink = styled.a`
         text-decoration: none; 
         color: rgba(100,100,100);
     }
-
-    @media (max-width: ${breakPointSM}px) {
-        font-size: 11px;
-        letter-spacing: 1px; 
-    }
-
-    @media (max-width: ${breakPointXS}px) {
-        font-size: 10px;
-    }
 `
 
 const StyledParagraph = styled.p`
@@ -109,15 +108,9 @@ const StyledParagraph = styled.p`
     font-size: 12px;
     letter-spacing: 1.3px;
     margin: 0px; 
+`
 
-    @media (max-width: ${breakPointSM}px) {
-        font-size: 11px;
-        letter-spacing: 1px; 
-    }
-
-    @media (max-width: ${breakPointXS}px) {
-        font-size: 10px;
-    }
+const StyledSocialsWrapper = styled.div`
 `
 
 const StyledInstagram = styled.a`

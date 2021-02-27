@@ -1,4 +1,4 @@
 .build
 .cache
-
 .vercel
+.DS_Store

@@ -38,6 +38,12 @@ const ContactPage = ({ state }) => {
 
 export default connect(ContactPage);
 
+const breakPointXL = 1200;
+const breakPointLG = 992;
+const breakPointMD = 768;
+const breakPointSM = 576;
+const breakPointXS = 425;
+
 const linkColor = "rgba(89,85,85,0.59)"
 const linkFontSize = "16px;"
 const margin = "2px 0px"

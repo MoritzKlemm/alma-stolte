@@ -188,6 +188,10 @@ const NavbarCustom = ({ state }) => {
                 @media (max-width: ${breakPointSM}px) {
                     padding: 80px 15px;
                 }
+                
+                @media (max-width: ${breakPointXS}px) {
+                    padding: 60px 15px;
+                }
                 `
                 :
                 css`
@@ -223,8 +227,8 @@ const NavbarCustom = ({ state }) => {
             </Navbar>
 
             <div css={dynamicSubheadingStyle}>
-                <StyledSubHeading>Historisches Violoncello</StyledSubHeading>
-                <StyledSubHeading>Modernes Violoncello</StyledSubHeading>
+                <StyledSubHeading><i>Historisches Violoncello</i></StyledSubHeading>
+                <StyledSubHeading><i>Modernes Violoncello</i></StyledSubHeading>
             </div>
 
         </div>
@@ -238,6 +242,7 @@ const breakPointXL = 1199;
 const breakPointLG = 992;
 const breakPointMD = 768;
 const breakPointSM = 576;
+const breakPointXS = 425;
 
 
 // -----------------------------------------
@@ -299,7 +304,7 @@ const StyledNavLink = styled(Nav.Link)`
 `
 
 const StyledSubHeading = styled.h4`
-    font-family: LibreBaskerville-Italic;
+    font-family: LibreBaskerville-Regular;
     font-size: 20px;
     color: rgba(219, 204, 205, 0.9);
     letter-spacing: 3.53px;
@@ -307,12 +312,17 @@ const StyledSubHeading = styled.h4`
     animation: ${appear} 1.8s ease-in-out;
 
     @media (max-width: ${breakPointMD}px) {
-        font-size: 18px; 
         line-height: 25px;
+        color: rgba(219, 204, 205, 1);
     }
-
-    @media (max-width: ${breakPointMD}px) {
+    
+    @media (max-width: ${breakPointSM}px) {
+        font-size: 18px; 
+    }
+    
+    @media (max-width: ${breakPointXS}px) {
         font-size: 16px; 
+        letter-spacing: 3px;
         line-height: 20px;
     }
 

@@ -133,7 +133,7 @@ export default function ContactUs() {
                 );
             // e.target.reset();
         } else {
-            alert("Ihre Eingaben noch nicht vollständig!")
+            alert("Ihre Eingaben sind noch nicht vollständig!")
         }
     }
 

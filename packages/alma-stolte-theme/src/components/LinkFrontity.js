@@ -25,15 +25,6 @@ const LinkFrontity = ({ state, href, actions, children }) => {
             curser: pointer; 
             text-decoration: none; 
             color: rgba(100,100,100);
-        }
-        
-        @media (max-width: ${breakPointSM}px) {
-          font-size: 11px;
-          letter-spacing: 1px; 
-        }
-      
-        @media (max-width: ${breakPointXS}px) {
-          font-size: 10px;
         }`}
     >
       {children}
