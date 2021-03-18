@@ -15,6 +15,7 @@ export default function ContactUs() {
 
     // variables to keep name updated onChange
     const [name, setName] = useState('')
+
     // variables manipulating bootstrap form control classes 
     const [nameCorrect, setNameCorrect] = useState('form-control')
     const [email, setEmail] = useState('')
@@ -24,13 +25,16 @@ export default function ContactUs() {
 
     const [content, setContent] = useState('')
     const [contentCorrect, setContentCorrect] = useState(false)
+    const [buttonToggle, setButtonToggle] = useState(false)
+
+
 
     const validateName = (nameInput) => {
 
         // keep input field "synchron" with user input
         setName(nameInput)
 
-        // define email pattern 
+        // define user name pattern 
         const regExName = /^[a-zA-Z\s]+$/;
 
         // create regex object 
@@ -102,7 +106,7 @@ export default function ContactUs() {
             (nameCorrect == 'form-control is-valid'
             && emailCorrect == 'form-control is-valid'
             && subjectCorrect == 'form-control is-valid'
-            && contentCorrect) ? "false" : "true"
+            && contentCorrect) ? setButtonToggle(false) : setButtonToggle(true)
         )
     }
 
@@ -153,11 +157,11 @@ export default function ContactUs() {
                     <StyledFormControlMessage as="textarea" rows={8} name="message" placeholder="Nachricht an Alma Stolte..." value={content} onChange={(e) => { validateContent(e.target.value) }} />
                 </Form.Group>
                 <Form.Group>
-                    <StyledFormButton disabled={toggleAbility} type="submit" value="Send" css={dynamicButtonStyle}>senden</StyledFormButton>
+                    <StyledFormButton disabled={buttonToggle} type="submit" value="Send" css={dynamicButtonStyle}>senden</StyledFormButton>
                 </Form.Group>
             </Form>
 
-            {/** rendering alert according to "alertStatus" */}
+            {/** conditional rendering alert according to "alertStatus" */}
             {alertStatus == 'hide' ? 
                 null :
                     alertStatus == 'success' ?

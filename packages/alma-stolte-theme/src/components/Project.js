@@ -59,6 +59,15 @@ const StyledContent = styled.div`
         height: 100%; 
     }
 
+    & a {
+        color: #3B487D;
+    }
+
+    & a:hover {
+        text-decoration: none; 
+        color: #5D6898;
+    }
+
    
 
 `;

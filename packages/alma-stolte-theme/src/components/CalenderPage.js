@@ -103,6 +103,16 @@ const StyledRenderDiv = styled.div`
         font-size: 15.2px;
         color: #333232;
         letter-spacing: 1.09px;
+        line-height: 28px;
+
+        & a {
+            color: #3B487D;
+        }
+    
+        & a:hover {
+            text-decoration: none; 
+            color: #5D6898;
+        }
 
         @media (max-width: ${breakPointXL}px) {
             font-size: 14px; 

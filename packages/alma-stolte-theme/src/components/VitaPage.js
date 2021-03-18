@@ -43,6 +43,15 @@ const StyledParagraph = styled.div`
         font-size: 200%;
       }
 
+    & a {
+        color: #3B487D;
+    }
+
+    & a:hover {
+        text-decoration: none; 
+        color: #5D6898;
+    }
+    
     @media (max-width: ${breakPointSM}px) {
         line-height: 22px;
         &::first-letter {

@@ -56,6 +56,14 @@ const StyledContent = styled.div`
     // general div settings
     font-family: LibreBaskerville-Regular;
     margin: 0px 15px 0px 0px;  
+    
+    & a {
+        color: #727272;
+    }
+
+    & a:hover {
+        text-decoration: none; 
+    }
 
     @media (max-width: ${breakPointMD}px) {
         margin: 0px;  
@@ -117,6 +125,7 @@ const StyledContent = styled.div`
         font-size: 15.2px;
         color: #333232;
         letter-spacing: 1.09px;
+        line-height: 28px;
         margin: 0px; 
 
         // limits preview to 3 lines

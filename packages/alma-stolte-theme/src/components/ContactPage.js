@@ -24,14 +24,31 @@ const ContactPage = ({ state }) => {
                     <Contact />
                 </StyledCol>
             </Row>
+
+            <Row>
+                <StyledCol md={12}>
+                    <StyledWrapper>
+                        <StyledGreeting>
+                            Gerne beantworte ich ihnen hier ihre Nachricht, oder über meine Kanäle auf 
+                            <StyledFacebook target="_blank" href="https://www.facebook.com/alma.stolte"> Facebook</StyledFacebook> oder 
+                            <StyledInstagram target="_blank" href="https://www.instagram.com/alma.s.cello/"> Instagram</StyledInstagram>.
+                        </StyledGreeting> 
+                    </StyledWrapper>
+                </StyledCol>
+            </Row>
+            
+            {/** 
             <Row>
                 <StyledCol md={12}>
                     <StyledWrapper>
                         <StyledGreeting>Gerne beantworte ich ihre Nachricht oder <br />nehme ihren Anruf entgegen! </StyledGreeting>
-                        <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent }} />
+                        
+                        <StyledPhoneNumber dangerouslySetInnerHTML={{ __html: contactContent }} /> 
                     </StyledWrapper>
                 </StyledCol>
             </Row>
+            */}
+            
         </Container>
     )
 }
@@ -43,6 +60,8 @@ const breakPointLG = 992;
 const breakPointMD = 768;
 const breakPointSM = 576;
 const breakPointXS = 425;
+
+
 
 const linkColor = "rgba(89,85,85,0.59)"
 const linkFontSize = "16px;"
@@ -63,9 +82,18 @@ const StyledGreeting = styled.p`
     font-size: 16px;
     color: rgba(89,85,85,0.59);
     letter-spacing: 1px;
-    line-height: 30px;
+    line-height: 28px;
     margin: 22px 0px 0px 0px; 
     text-align: center; 
+
+    @media (max-width: ${breakPointXL}px) {
+        font-size: 14px; 
+    }
+
+    @media (max-width: ${breakPointSM}px) {
+        line-height: 22px;
+    }  
+
 `
 
 const StyledPhoneNumber = styled.div`
@@ -90,7 +118,7 @@ const StyledButtonWrapper = styled.div`
 const StyledInstagram = styled.a`
     font-family: LibreBaskerville-Regular;
     font-size: ${linkFontSize};
-    color: ${linkColor};
+    color: rgba(129, 52, 175, 0.8);
     letter-spacing: 1.02px;
     line-height: 30px;
     padding: 0px;
@@ -104,16 +132,24 @@ const StyledInstagram = styled.a`
     // border: 1px solid grey; 
 
     &:hover {
+        color: rgba(129, 52, 175, 0.8);
         text-decoration: none; 
         curser: pointer; 
-        color: rgba(129, 52, 175, 0.8);
     }
+
+    @media (max-width: ${breakPointXL}px) {
+        font-size: 14px; 
+    }
+
+    @media (max-width: ${breakPointSM}px) {
+        line-height: 22px;
+    }  
 `
 
 const StyledFacebook = styled.a`
     font-family: LibreBaskerville-Regular;
     font-size: ${linkFontSize};
-    color: ${linkColor};
+    color: rgba(59, 89, 152, 0.8);
     letter-spacing: 1.02px;
     line-height: 30px;
     padding: 0px;
@@ -130,6 +166,14 @@ const StyledFacebook = styled.a`
         curser: pointer; 
         color: rgba(59, 89, 152, 0.8);
     }
+
+    @media (max-width: ${breakPointXL}px) {
+        font-size: 14px; 
+    }
+
+    @media (max-width: ${breakPointSM}px) {
+        line-height: 22px;
+    }  
 `
 
 const StyledYoutube = styled.a`

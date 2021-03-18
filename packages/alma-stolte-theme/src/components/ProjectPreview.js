@@ -99,6 +99,15 @@ const StyledExcerpt = styled.div`
         @media (max-width: ${breakPointSM}px) {
             line-height: 22px;
         }
+
+        & a {
+            color: #3B487D;
+        }
+    
+        & a:hover {
+            text-decoration: none; 
+            color: #5D6898;
+        }
     }
 `;
 

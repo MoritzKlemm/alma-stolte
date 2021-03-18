@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "d94e4b1cdd9d54b5f406",
+  "hash": "d8f3429c0516db278f9b",
   "publicPath": "/static/",
   "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.41b0bcedb0f90187d0c7.hot-update.js"
+      "alma-stolte.1f5ee03622d5c26d6eab.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "41b0bcedb0f90187d0c7.hot-update.json",
+      "name": "1f5ee03622d5c26d6eab.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.41b0bcedb0f90187d0c7.hot-update.js",
-      "size": 87431,
+      "name": "alma-stolte.1f5ee03622d5c26d6eab.hot-update.js",
+      "size": 13494,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 14033385,
+      "size": 14053536,
       "chunks": [
         "alma-stolte"
       ],
@@ -90,7 +90,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.41b0bcedb0f90187d0c7.hot-update.js"
+        "alma-stolte.1f5ee03622d5c26d6eab.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -103,7 +103,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.41b0bcedb0f90187d0c7.hot-update.js"
+        "alma-stolte.1f5ee03622d5c26d6eab.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -115,15 +115,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 3379003,
+      "size": 3398492,
       "names": [
         "alma-stolte"
       ],
       "files": [
         "alma-stolte.module.js",
-        "alma-stolte.41b0bcedb0f90187d0c7.hot-update.js"
+        "alma-stolte.1f5ee03622d5c26d6eab.hot-update.js"
       ],
-      "hash": "07d3b19266f336a18f6f",
+      "hash": "3087089f4bc8c44df5ab",
       "siblings": [],
       "parents": [],
       "children": [],
