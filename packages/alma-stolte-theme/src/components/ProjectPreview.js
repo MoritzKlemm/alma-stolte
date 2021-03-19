@@ -68,6 +68,10 @@ const StyledTitle = styled.div`
     letter-spacing: 3.0px;
     margin: 5px 0px;
 
+    @media (max-width: ${breakPointMD}px) {
+        font-size: 24px;
+    }
+
 `;
 
 // hiding full paragraph which automatically comes in with "item.content.rendered"
@@ -100,6 +104,10 @@ const StyledExcerpt = styled.div`
             line-height: 22px;
         }
 
+        @media (max-width: ${breakPointSM}px) {
+            line-height: 22px;
+        }
+        
         & a {
             color: #3B487D;
         }

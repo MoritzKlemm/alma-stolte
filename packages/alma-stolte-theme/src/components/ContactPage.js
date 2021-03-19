@@ -30,7 +30,7 @@ const ContactPage = ({ state }) => {
                     <StyledWrapper>
                         <StyledGreeting>
                             Gerne beantworte ich ihnen hier ihre Nachricht, oder über meine Kanäle auf 
-                            <StyledFacebook target="_blank" href="https://www.facebook.com/alma.stolte"> Facebook</StyledFacebook> oder 
+                            <StyledFacebook target="_blank" href="https://www.facebook.com/alma.stolte"> Facebook</StyledFacebook> und 
                             <StyledInstagram target="_blank" href="https://www.instagram.com/alma.s.cello/"> Instagram</StyledInstagram>.
                         </StyledGreeting> 
                     </StyledWrapper>

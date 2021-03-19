@@ -134,11 +134,16 @@ const StyledContent = styled.div`
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
 
-        @media (max-width: 1000px) {
+        @media (max-width: ${breakPointXL}px) {
             font-size: 14px; 
+        }
+    
+        @media (max-width: ${breakPointMD}px) {
+            line-height: 22px;
         }
     }
 
+    
     & hr {
         display: none;
     }
