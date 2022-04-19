@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "c757226d3e8e56b9f547",
+  "hash": "cc1951ffd4b4c30cb3aa",
   "publicPath": "/static/",
-  "outputPath": "/Users/moritzklemm/Documents/Firma/Projekte/alma stolte/code/alma-stolte/build/static",
+  "outputPath": "/Users/moritzklemm/Documents/Byte Affairs/Projekte/alma stolte/code/alma-stolte/build/static",
   "assetsByChunkName": {
     "alma-stolte": [
       "alma-stolte.module.js",
-      "alma-stolte.a8ded060bcc6de41e25f.hot-update.js"
+      "alma-stolte.8c252f70b79852562519.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "a8ded060bcc6de41e25f.hot-update.json",
+      "name": "8c252f70b79852562519.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -24,8 +24,8 @@
       "emitted": false
     },
     {
-      "name": "alma-stolte.a8ded060bcc6de41e25f.hot-update.js",
-      "size": 81173,
+      "name": "alma-stolte.8c252f70b79852562519.hot-update.js",
+      "size": 1893917,
       "chunks": [
         "alma-stolte"
       ],
@@ -40,7 +40,7 @@
     },
     {
       "name": "alma-stolte.module.js",
-      "size": 14055843,
+      "size": 14057398,
       "chunks": [
         "alma-stolte"
       ],
@@ -90,7 +90,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.a8ded060bcc6de41e25f.hot-update.js"
+        "alma-stolte.8c252f70b79852562519.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -103,7 +103,7 @@
       ],
       "assets": [
         "alma-stolte.module.js",
-        "alma-stolte.a8ded060bcc6de41e25f.hot-update.js"
+        "alma-stolte.8c252f70b79852562519.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -115,15 +115,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 3400198,
+      "size": 3401746,
       "names": [
         "alma-stolte"
       ],
       "files": [
         "alma-stolte.module.js",
-        "alma-stolte.a8ded060bcc6de41e25f.hot-update.js"
+        "alma-stolte.8c252f70b79852562519.hot-update.js"
       ],
-      "hash": "017cea3aa6e0b7ee1b42",
+      "hash": "5e1cd8609b99d8d7ca8f",
       "siblings": [],
       "parents": [],
       "children": [],
