@@ -38,7 +38,7 @@ const Footer = ({ state }) => {
                     <StyledParagraph>©alma stolte</StyledParagraph>
                 </StyledCol>
                 <StyledCol md={3}>
-                    <StyledLink href="mailto:hello@byteaffairs.de"><PaletteIcon style={{ fontSize: 20 }} />byte affairs</StyledLink>
+                    <StyledLink href="mailto:designed.containers@gmail.com"><PaletteIcon style={{ fontSize: 20 }} />desgined containers</StyledLink>
                 </StyledCol>
             </StyledRow>
         </StyledContainer>
